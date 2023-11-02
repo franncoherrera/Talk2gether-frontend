@@ -9,26 +9,24 @@ La plataforma se lleva a cabo con el propósito de promover el aprendizaje ling�
 
 Módulos principales.
 
-‭Módulo‬ ‭de‬ ‭usuario
-Módulo de seguridad
+○ Módulo de usuario
+○ Módulo de seguridad
+○ Módulo de reuniones virtuales
+○ Módulo de mensajería
+○ Módulo de seguimiento
+○ Módulo de parámetros
+○ Módulo de gamificación
+○ Módulo de reportes
+○ Módulo de calificación
 
-
-‭Módulo‬ ‭de‬ ‭seguridad
-‭Módulo‬ ‭de‬ ‭reuniones‬ ‭virtuales
-‭Módulo‬ ‭de‬ ‭mensajería
-Módulo ‬‭de ‬‭seguimiento
-‭Módulo‬ ‭de‬ ‭parámetros
-‭Módulo ‬‭de‬‭ gamificación
-‭Módulo‬ ‭de‬ ‭reportes
-‭Módulo‬ ‭de‬ ‭calificación
 
 Tecnologías.
 
-○‬ ‭Angular CLI 16.1.1‬
-○‬ ‭Node 18.16.0‬
-○‬ ‭TypeScript‬
-○‬ ‭HTML‬
-○‬ ‭SCSS‬
-○‬ ‭Bootstrap 5‬
+○ Angular CLI 16.1.1
+○ Node 18.16.0
+○ TypeScript
+○ HTML
+○ SCSS
+○ Bootstrap 5
 
 ![images](https://github.com/franncoherrera/Talk2gether/assets/88279035/09bfc75c-a9fb-4f4a-8f3e-fa4e000f9046)
