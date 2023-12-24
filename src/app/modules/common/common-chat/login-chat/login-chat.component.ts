@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { CometChat } from '@cometchat-pro/chat';
-import { COMETCHAT_CONSTANTS } from 'src/CONSTS';
 import { NavbarService } from 'src/app/shared/general-navbar/service/navbar.service';
 import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
 import Swal from 'sweetalert2';
 import { ChatService } from '../services/chat-service.service';
+import { COMETCHAT_CONSTANTS } from 'src/app/constants/COMETCHAT_CONSTANTS';
 
 @Component({
   selector: 'app-login-chat',

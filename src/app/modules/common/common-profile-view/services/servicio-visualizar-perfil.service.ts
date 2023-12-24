@@ -5,7 +5,7 @@ import { SesionService } from 'src/app/interceptors/sesion.service';
 import { environment } from 'src/environments/environment';
 import { UsuarioVisualizarPerfil } from '../models/usuario-visualizar';
 import { itemModal } from '../models/item-modal';
-import { COMETCHAT_CONSTANTS } from 'src/CONSTS';
+import { COMETCHAT_CONSTANTS } from 'src/app/constants/COMETCHAT_CONSTANTS';
 
 @Injectable({
   providedIn: 'root',

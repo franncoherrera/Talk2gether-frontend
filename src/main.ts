@@ -3,7 +3,7 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { CometChat } from "@cometchat-pro/chat";
 import { AppModule } from './app/app.module';
-import { COMETCHAT_CONSTANTS } from './CONSTS';
+import { COMETCHAT_CONSTANTS } from './app/constants/COMETCHAT_CONSTANTS';
 
 
 const appID = "245472a631aa053e";

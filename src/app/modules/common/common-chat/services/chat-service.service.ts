@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { COMETCHAT_CONSTANTS } from 'src/CONSTS';
+import { COMETCHAT_CONSTANTS } from 'src/app/constants/COMETCHAT_CONSTANTS';
 import { environment } from 'src/environments/environment';
 
 @Injectable({

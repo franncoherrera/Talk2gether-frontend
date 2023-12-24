@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CometChat } from '@cometchat-pro/chat';
-import { COMETCHAT_CONSTANTS } from 'src/CONSTS';
 import { ChatService } from '../services/chat-service.service';
 
 @Component({
