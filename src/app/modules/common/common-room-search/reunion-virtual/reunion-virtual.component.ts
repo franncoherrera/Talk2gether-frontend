@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { BuscarUsuariosService } from '../servicios/buscar-usuarios.service';
-import { NavbarService } from 'src/app/shared/navbar/service/navbar.service';
+import { NavbarService } from 'src/app/shared/general-navbar/service/navbar.service';
 import Swal from 'sweetalert2';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-carga-general/spinner.service';
+import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
 import { Router } from '@angular/router';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';

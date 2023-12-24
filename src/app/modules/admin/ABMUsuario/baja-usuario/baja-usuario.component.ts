@@ -14,10 +14,10 @@ import {
 import { ModalService } from '../../../common/common-register/servicios/modal.service';
 
 import { Router } from '@angular/router';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-carga-general/spinner.service';
+import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
 import { UsuarioService } from '../services/usuario.service';
 import Swal from 'sweetalert2';
-import { NavbarService } from 'src/app/shared/navbar/service/navbar.service';
+import { NavbarService } from 'src/app/shared/general-navbar/service/navbar.service';
 import { ChatService } from '../../../common/common-chat/services/chat-service.service';
 
 @Component({

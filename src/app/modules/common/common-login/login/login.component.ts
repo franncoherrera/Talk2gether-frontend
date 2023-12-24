@@ -4,8 +4,8 @@ import { Router } from '@angular/router';
 import { LoginService } from '../servicios/login.service';
 import Swal from 'sweetalert2';
 import { SesionService } from 'src/app/interceptors/sesion.service';
-import { NavbarService } from 'src/app/shared/navbar/service/navbar.service';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-carga-general/spinner.service';
+import { NavbarService } from 'src/app/shared/general-navbar/service/navbar.service';
+import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
 import { VerificarCuentaService } from '../../common-verify-account/servicios/verificar-cuenta.service';
 import { ChatService } from '../../common-chat/services/chat-service.service';
 

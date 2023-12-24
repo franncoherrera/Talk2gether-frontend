@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-carga-general/spinner.service';
+import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
 import { ReportarUsuarioService } from '../services/reportar-usuario.service';
 import { ServicioVisualizarPerfilService } from '../services/servicio-visualizar-perfil.service';
 import Swal from 'sweetalert2';

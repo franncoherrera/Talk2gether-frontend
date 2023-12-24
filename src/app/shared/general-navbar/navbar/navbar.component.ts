@@ -4,7 +4,7 @@ import { SesionService } from 'src/app/interceptors/sesion.service';
 import { LoginService } from 'src/app/modules/common/common-login/servicios/login.service';
 import { NavbarService } from '../service/navbar.service';
 import Swal from 'sweetalert2';
-import { SpinnerServiceGeneral } from '../../spinner-carga-general/spinner.service';
+import { SpinnerServiceGeneral } from '../../spinner-world-loading/spinner.service';
 import { ChatService } from 'src/app/modules/common/common-chat/services/chat-service.service';
 import { PopupsInicioService } from 'src/app/modules/common/common-room-search/servicios/popups-inicio.service';
 

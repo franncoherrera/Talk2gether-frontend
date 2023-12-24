@@ -6,7 +6,7 @@ import { Location } from '@angular/common';
 import { UsuarioService } from '../services/usuario.service';
 import Swal from 'sweetalert2';
 import { UsuarioPost } from '../modelo/usuarioPost';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-carga-general/spinner.service';
+import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
 
 @Component({
   selector: 'app-aniadir-usuario',

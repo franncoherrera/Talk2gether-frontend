@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ServicioVisualizarPerfilService } from '../services/servicio-visualizar-perfil.service';
-import { NavbarService } from 'src/app/shared/navbar/service/navbar.service';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-carga-general/spinner.service';
+import { NavbarService } from 'src/app/shared/general-navbar/service/navbar.service';
+import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
 import { UsuarioVisualizarPerfil } from '../models/usuario-visualizar';
 import {
   Observable,

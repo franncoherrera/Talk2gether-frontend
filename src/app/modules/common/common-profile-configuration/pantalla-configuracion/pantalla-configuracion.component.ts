@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { EditarUsuarioService } from '../servicios/editar-usuario.service';
-import { NavbarService } from 'src/app/shared/navbar/service/navbar.service';
+import { NavbarService } from 'src/app/shared/general-navbar/service/navbar.service';
 import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import Swal from 'sweetalert2';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-carga-general/spinner.service';
+import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
 import { EliminarCuentaModalComponent } from '../eliminar-cuenta-modal/eliminar-cuenta-modal.component';
 import { CambiarContraseniaModalComponent } from '../cambiar-contrasenia-modal/cambiar-contrasenia-modal.component';
 import { UsuariosBloqueadosModalComponent } from '../usuarios-bloqueados-modal/usuarios-bloqueados-modal.component';

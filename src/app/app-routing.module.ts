@@ -19,7 +19,7 @@ import { loggedGuard } from './security/logged.guard';
 import { ChatPadreComponent } from './modules/common/common-chat/chat-padre.component';
 import { RankingComponent } from './modules/common/common-room-search/ranking/ranking.component';
 import { ReunionVirtualComponent } from './modules/common/common-room-search/reunion-virtual/reunion-virtual.component';
-import { SideBarAyudaComponent } from './shared/side-bar-ayuda/side-bar-ayuda.component';
+import { SideBarAyudaComponent } from './shared/help-side-bar/side-bar-ayuda.component';
 import { CuentaEliminadaComponent } from './modules/common/common-profile-configuration/cuenta-eliminada/cuenta-eliminada.component';
 import { ChatPadreAbiertoComponent } from './modules/common/common-chat/chat-padre-abierto.component';
 import { ConfiguracionPadreComponent } from './modules/common/common-profile-configuration/configuracion-padre.component';

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { nivelIdioma } from '../modelos/nivelIdioma';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-carga-general/spinner.service';
+import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { NivelIdiomaService } from '../service/nivel-idioma.service';

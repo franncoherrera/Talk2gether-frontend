@@ -3,7 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { PaisService } from '../service/pais.service';
 import { Router } from '@angular/router';
 
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-carga-general/spinner.service';
+import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
 import Swal from 'sweetalert2';
 import { InfoPaisComponent } from '../info-pais/info-pais.component';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';

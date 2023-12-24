@@ -3,7 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
 import { Router } from '@angular/router';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-carga-general/spinner.service';
+import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
 import Swal from 'sweetalert2';
 import { PuntosPorActividadService } from '../service/puntos-por-actividad.service';
 import { combineLatest } from 'rxjs-compat/operator/combineLatest';

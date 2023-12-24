@@ -4,7 +4,7 @@ import { RegistroChatComponent } from './registro-chat/registro-chat.component';
 import { PrincipalChatComponent } from './principal-chat/principal-chat.component';
 import { CometChatConversationListScreenPageComponent } from './comet-chat-conversation-list-screen-page/comet-chat-conversation-list-screen-page.component';
 import { CommonModule } from '@angular/common';
-import { NavbarModule } from 'src/app/shared/navbar/navbar.module';
+import { NavbarModule } from 'src/app/shared/general-navbar/navbar.module';
 import { FormsModule } from '@angular/forms';
 import { ChatPadreComponent } from './chat-padre.component';
 import {

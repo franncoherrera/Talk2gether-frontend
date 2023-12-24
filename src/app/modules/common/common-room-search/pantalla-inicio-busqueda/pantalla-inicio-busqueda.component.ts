@@ -5,9 +5,9 @@ import { ModalService } from 'src/app/modules/common/common-register/servicios/m
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { FiltrosModalComponent } from '../filtros-modal/filtros-modal.component';
 import { Router } from '@angular/router';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-carga-general/spinner.service';
+import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
 import Swal from 'sweetalert2';
-import { NavbarService } from 'src/app/shared/navbar/service/navbar.service';
+import { NavbarService } from 'src/app/shared/general-navbar/service/navbar.service';
 
 @Component({
   selector: 'app-pantalla-inicio-busqueda',

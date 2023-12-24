@@ -3,7 +3,7 @@ import { Interes } from '../models/Interes';
 import { ModalService } from '../../servicios/modal.service';
 import { InteresesService } from '../../servicios/intereses.service';
 import { Observable } from 'rxjs';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-carga-general/spinner.service';
+import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
 
 @Component({
   selector: 'app-intereses-modal',

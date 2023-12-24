@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-carga-general/spinner.service';
+import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable, combineLatest, of, switchMap, tap } from 'rxjs';
 import { PermisosService } from '../service/permisos.service';

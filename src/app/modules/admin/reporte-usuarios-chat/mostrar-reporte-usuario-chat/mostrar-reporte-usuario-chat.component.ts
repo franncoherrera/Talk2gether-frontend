@@ -18,7 +18,7 @@ import {
   fromEvent,
   of,
 } from 'rxjs';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-carga-general/spinner.service';
+import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
 import Swal from 'sweetalert2';
 
 @Component({
