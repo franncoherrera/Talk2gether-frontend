@@ -7,7 +7,7 @@ import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import Swal from 'sweetalert2';
 import { ModificarIdiomaComponent } from '../modificar-idioma/modificar-idioma.component';
 import { AniadirIdiomaComponent } from '../aniadir-idioma/aniadir-idioma.component';
-import { ModalService } from 'src/app/modules/common/registro/servicios/modal.service';
+import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
 
 @Component({
   selector: 'app-visualizar-idioma',

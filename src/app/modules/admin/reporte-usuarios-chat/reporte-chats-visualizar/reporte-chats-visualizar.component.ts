@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ReporteUsuarioChatService } from '../services/reporte-usuario-chat.service';
 import { ChatReport } from '../models/chatReport';
 import { Observable, combineLatest, of, switchMap } from 'rxjs';
-import { ChatService } from 'src/app/modules/common/chat/services/chat-service.service';
+import { ChatService } from 'src/app/modules/common/common-chat/services/chat-service.service';
 
 @Component({
   selector: 'app-reporte-chats-visualizar',
@@ -28,46 +28,44 @@ export class ReporteChatsVisualizarComponent {
     this.isChat$ = combineLatest([
       this.reporteChat.getId(),
       this.reporteChat.getId2(),
-      this.reporteChat.getChats()
+      this.reporteChat.getChats(),
     ]).pipe(
       switchMap(([id1, id2]) => {
         this.id1 = id1;
         this.id2 = id2;
-        this.chats =this.receptorChat
+        this.chats = this.receptorChat;
         const chatsFiltrados = this.chats.filter(
           (chat) =>
             (chat.entities.receiver.entity.uid === this.id1.toString() &&
-            chat.entities.sender.entity.uid === this.id2.toString()) ||
+              chat.entities.sender.entity.uid === this.id2.toString()) ||
             (chat.entities.receiver.entity.uid === this.id2.toString() &&
-            chat.entities.sender.entity.uid === this.id1.toString()
-            )
+              chat.entities.sender.entity.uid === this.id1.toString())
         );
         //aca tendria que traer las fechas y hacer una validacion por si no lo escribe
         //Y volver a filtrar los chats
         this.chats = chatsFiltrados;
         const isChat = chatsFiltrados.length > 0;
         return of(isChat);
-      }
-    )
-    )
-
+      })
+    );
   }
 
   formatTime(timestamp: number): string {
     const timestampMilisegundos = timestamp * 1000;
-  
+
     // Creamos el objeto Date con el timestamp en milisegundos
     const fecha = new Date(timestampMilisegundos);
-  
+
     // Obtenemos los componentes de la fecha
     const dia = fecha.getDate();
     const mes = fecha.getMonth() + 1; // Nota: los meses en Date son indexados desde 0 (enero) a 11 (diciembre)
     const anio = fecha.getFullYear();
-  
+
     // Componemos el string de la fecha en el formato deseado (ejemplo: dd/mm/yyyy)
-    const fechaFormateada = `${dia.toString().padStart(2, '0')}/${mes.toString().padStart(2, '0')}/${anio}`;
-  
+    const fechaFormateada = `${dia.toString().padStart(2, '0')}/${mes
+      .toString()
+      .padStart(2, '0')}/${anio}`;
+
     return fechaFormateada;
   }
-
 }

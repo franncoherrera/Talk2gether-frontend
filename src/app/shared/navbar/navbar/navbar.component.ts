@@ -1,12 +1,12 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { SesionService } from 'src/app/interceptors/sesion.service';
-import { LoginService } from 'src/app/modules/common/login/servicios/login.service';
+import { LoginService } from 'src/app/modules/common/common-login/servicios/login.service';
 import { NavbarService } from '../service/navbar.service';
-import { PopupsInicioService } from 'src/app/modules/common/inicio/servicios/popups-inicio.service';
 import Swal from 'sweetalert2';
 import { SpinnerServiceGeneral } from '../../spinner-carga-general/spinner.service';
-import { ChatService } from 'src/app/modules/common/chat/services/chat-service.service';
+import { ChatService } from 'src/app/modules/common/common-chat/services/chat-service.service';
+import { PopupsInicioService } from 'src/app/modules/common/common-room-search/servicios/popups-inicio.service';
 
 @Component({
   selector: 'app-navbar',

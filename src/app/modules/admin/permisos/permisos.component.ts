@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import Swal from 'sweetalert2';
-import { ModalService } from '../../common/registro/servicios/modal.service';
+import { ModalService } from '../../common/common-register/servicios/modal.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SpinnerServiceGeneral } from 'src/app/shared/spinner-carga-general/spinner.service';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';

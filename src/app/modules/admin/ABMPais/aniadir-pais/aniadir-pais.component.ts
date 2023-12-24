@@ -6,7 +6,7 @@ import { SpinnerServiceGeneral } from 'src/app/shared/spinner-carga-general/spin
 import Swal from 'sweetalert2';
 import { InfoPaisComponent } from '../info-pais/info-pais.component';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { ModalService } from 'src/app/modules/common/registro/servicios/modal.service';
+import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
 
 @Component({
   selector: 'app-aniadir-pais',

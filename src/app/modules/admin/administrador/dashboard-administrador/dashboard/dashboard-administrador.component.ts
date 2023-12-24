@@ -3,7 +3,7 @@ import * as pdfMake from 'pdfmake/build/pdfmake';
 import * as pdfFonts from 'pdfmake/build/vfs_fonts';
 import Chart, { ChartType } from 'chart.js/auto';
 import { DashboardAdminService } from '../service/dashboard-admin.service';
-import { ModalService } from 'src/app/modules/common/registro/servicios/modal.service';
+import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { FiltroFechaComponent } from '../filtro-fecha/filtro-fecha.component';
 import { Router } from '@angular/router';

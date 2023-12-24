@@ -18,7 +18,7 @@ import { DashboardAdministradorComponent } from './dashboard-administrador/dashb
 import { FiltroFechaComponent } from './dashboard-administrador/filtro-fecha/filtro-fecha.component';
 import { NavbarModule } from 'src/app/shared/navbar/navbar.module';
 import { ABMUsuarioModule } from '../ABMUsuario/ABMusuario.module';
-import { ReporteUsuarioModule } from '../../common/reporte-usuarios/reporte-usuario.module';
+import { ReporteUsuarioModule } from '../../common/common-user-report/reporte-usuario.module';
 
 @NgModule({
   declarations: [

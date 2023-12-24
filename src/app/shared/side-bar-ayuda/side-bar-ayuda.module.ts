@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SideBarAyudaComponent } from './side-bar-ayuda.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { PregFreqModule } from 'src/app/modules/common/preguntas-frecuentes/preg-freq.module';
+import { PregFreqModule } from 'src/app/modules/common/common-help-section/preg-freq.module';
 
 @NgModule({
   declarations: [SideBarAyudaComponent],

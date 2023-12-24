@@ -7,7 +7,7 @@ import { Interes } from '../modelo/interes';
 import { InteresService } from '../service/interes.service';
 import { ModificarInteresComponent } from '../modificar-interes/modificar-interes.component';
 import { AniadirInteresComponent } from '../aniadir-interes/aniadir-interes.component';
-import { ModalService } from 'src/app/modules/common/registro/servicios/modal.service';
+import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
 
 @Component({
   selector: 'app-visualizar-interes',

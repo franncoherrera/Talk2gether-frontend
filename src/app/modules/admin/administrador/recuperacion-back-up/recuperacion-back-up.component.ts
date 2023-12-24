@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SpinnerServiceGeneral } from 'src/app/shared/spinner-carga-general/spinner.service';
-import { ChatService } from 'src/app/modules/common/chat/services/chat-service.service';
+import { ChatService } from 'src/app/modules/common/common-chat/services/chat-service.service';
 
 @Component({
   selector: 'app-recuperacion-back-up',

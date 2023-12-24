@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
-import { ModalService } from 'src/app/modules/common/registro/servicios/modal.service';
+import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
 import { Router } from '@angular/router';
 import { SpinnerServiceGeneral } from 'src/app/shared/spinner-carga-general/spinner.service';
 import { MotivoService } from '../service/motivo.service';

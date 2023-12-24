@@ -12,7 +12,7 @@ import {
   ValidatorFn,
   Validators,
 } from '@angular/forms';
-import { ModalService } from 'src/app/modules/common/registro/servicios/modal.service';
+import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
 
 @Component({
   selector: 'app-filtro-fecha',

@@ -10,7 +10,7 @@ import {
 import { Observable, of, switchMap } from 'rxjs';
 import { SesionService } from '../interceptors/sesion.service';
 import Swal from 'sweetalert2';
-import { LoginService } from '../modules/common/login/servicios/login.service';
+import { LoginService } from '../modules/common/common-login/servicios/login.service';
 
 @Injectable({ providedIn: 'root' })
 export class blockedRoutes implements CanActivate {

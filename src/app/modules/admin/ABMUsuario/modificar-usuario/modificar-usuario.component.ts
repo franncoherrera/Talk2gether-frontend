@@ -7,7 +7,7 @@ import {
   Validators,
 } from '@angular/forms';
 import Swal from 'sweetalert2';
-import { ModalService } from '../../../common/registro/servicios/modal.service';
+import { ModalService } from '../../../common/common-register/servicios/modal.service';
 import { IdiomaService } from '../../ABMIdioma/service/idioma.service';
 import { Router } from '@angular/router';
 import { SpinnerServiceGeneral } from 'src/app/shared/spinner-carga-general/spinner.service';

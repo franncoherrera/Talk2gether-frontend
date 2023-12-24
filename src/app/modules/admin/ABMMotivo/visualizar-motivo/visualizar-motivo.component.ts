@@ -3,7 +3,7 @@ import Swal from 'sweetalert2';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { SpinnerServiceGeneral } from 'src/app/shared/spinner-carga-general/spinner.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ModalService } from 'src/app/modules/common/registro/servicios/modal.service';
+import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
 import { Motivo } from '../modelo/motivo';
 import { MotivoService } from '../service/motivo.service';
 import { AniadirMotivoComponent } from '../aniadir-motivo/aniadir-motivo.component';

@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 import { NivelIdiomaService } from '../service/nivel-idioma.service';
 import { ModificarNivelIdiomaComponent } from '../modificar-nivel-idioma/modificar-nivel-idioma.component';
 import { AniadirNivelIdiomaComponent } from '../aniadir-nivel-idioma/aniadir-nivel-idioma.component';
-import { ModalService } from 'src/app/modules/common/registro/servicios/modal.service';
+import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
 
 @Component({
   selector: 'app-visualizar-nivel-idioma',

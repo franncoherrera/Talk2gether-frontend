@@ -11,14 +11,14 @@ import {
   switchMap,
   tap,
 } from 'rxjs';
-import { ModalService } from '../../../common/registro/servicios/modal.service';
+import { ModalService } from '../../../common/common-register/servicios/modal.service';
 
 import { Router } from '@angular/router';
 import { SpinnerServiceGeneral } from 'src/app/shared/spinner-carga-general/spinner.service';
 import { UsuarioService } from '../services/usuario.service';
 import Swal from 'sweetalert2';
 import { NavbarService } from 'src/app/shared/navbar/service/navbar.service';
-import { ChatService } from '../../../common/chat/services/chat-service.service';
+import { ChatService } from '../../../common/common-chat/services/chat-service.service';
 
 @Component({
   selector: 'app-baja-usuario',

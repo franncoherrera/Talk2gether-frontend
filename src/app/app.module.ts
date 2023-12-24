@@ -13,22 +13,22 @@ import { SpinnerCargaGeneralModule } from './shared/spinner-carga-general/spinne
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { AUTH_TOKEN } from './interceptors/auth.token';
 import { SesionService } from './interceptors/sesion.service';
-import { CambioContraseniaModule } from './modules/common/cambio-contrasenia/cambio-contrasenia.module';
-import { InicioModule } from './modules/common/inicio/inicio.module';
-import { LoginModule } from './modules/common/login/login-module.module';
-import { PantallaPrincipalModule } from './modules/common/pantalla-principal/pantalla-principal.module';
-import { RecuperarContraseniaModule } from './modules/common/recuperar-contrasenia/recuperar-contrasenia.module';
-import { RegistroModule } from './modules/common/registro/registro.module';
-import { VerificarCuentaModule } from './modules/common/verificar-cuenta/verificar-cuenta.module';
-import { SeguirModalModule } from './modules/common/visualizar-perfil/seguir-modal/seguir-modal.module';
+import { CambioContraseniaModule } from './modules/common/common-change-password/cambio-contrasenia.module';
+import { InicioModule } from './modules/common/common-room-search/inicio.module';
+import { LoginModule } from './modules/common/common-login/login-module.module';
+import { PantallaPrincipalModule } from './modules/common/common-main-page/pantalla-principal.module';
+import { RecuperarContraseniaModule } from './modules/common/common-recover-password/recuperar-contrasenia.module';
+import { RegistroModule } from './modules/common/common-register/registro.module';
+import { VerificarCuentaModule } from './modules/common/common-verify-account/verificar-cuenta.module';
+import { SeguirModalModule } from './modules/common/common-profile-view/seguir-modal/seguir-modal.module';
 import { SinFuncionarComponent } from './shared/not-working-layout/sin-funcionar.component';
-import { CalificarUsuarioModule } from './modules/common/calificar-usuario/calificar-usuario.module';
-import { ChatModule } from './modules/common/chat/chat.module';
+import { ChatModule } from './modules/common/common-chat/chat.module';
 import { SideBarAyudaModule } from './shared/side-bar-ayuda/side-bar-ayuda.module';
-import { PregFreqModule } from './modules/common/preguntas-frecuentes/preg-freq.module';
-import { ConfiguracionModule } from './modules/common/configuracion/configuracion.module';
-import { ReportarUsuarioModalModule } from './modules/common/visualizar-perfil/reportar-usuario-modal/reportar-usuario-modal.module';
+import { PregFreqModule } from './modules/common/common-help-section/preg-freq.module';
+import { ConfiguracionModule } from './modules/common/common-profile-configuration/configuracion.module';
+import { ReportarUsuarioModalModule } from './modules/common/common-profile-view/reportar-usuario-modal/reportar-usuario-modal.module';
 import { ModuloAdministradorModule } from './modules/admin/administrador/modulo-administrador.module';
+import { CalificarUsuarioModule } from './modules/common/common-rate-user/calificar-usuario.module';
 
 @NgModule({
   declarations: [AppComponent, SinFuncionarComponent],
