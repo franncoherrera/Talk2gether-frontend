@@ -10,7 +10,7 @@ import {
 import { Observable, of, switchMap } from 'rxjs';
 import { SesionService } from '../interceptors/sesion.service';
 import Swal from 'sweetalert2';
-import { LoginService } from '../modulos/login/servicios/login.service';
+import { LoginService } from '../modules/common/login/servicios/login.service';
 
 @Injectable({ providedIn: 'root' })
 export class blockedRoutes implements CanActivate {
@@ -35,19 +35,22 @@ export class blockedRoutes implements CanActivate {
         switchMap((rutasPermitidas) => {
           const currentUrl = state.url.split('?')[0];
           const parts = currentUrl.split('/');
-          let extractedPart='';
+          let extractedPart = '';
           if (parts[1] === 'administrador') {
             extractedPart = parts.join('/');
           } else if (parts[1] === 'perfilUsuario') {
-            extractedPart = '/'+parts[1]; 
+            extractedPart = '/' + parts[1];
           } else if (parts[1] === 'chat') {
-            extractedPart = '/'+parts[1];
-          } else if (parts[1]+'/'+parts[2] === 'perfilUsuario/logros') {
-            extractedPart = '/'+parts[1]+'/'+parts[2];
-          } else if (parts[1]+'/'+parts[2] === 'perfilUsuario/estaditicas') {
-            extractedPart = '/'+parts[1];   
+            extractedPart = '/' + parts[1];
+          } else if (parts[1] + '/' + parts[2] === 'perfilUsuario/logros') {
+            extractedPart = '/' + parts[1] + '/' + parts[2];
+          } else if (
+            parts[1] + '/' + parts[2] ===
+            'perfilUsuario/estaditicas'
+          ) {
+            extractedPart = '/' + parts[1];
           } else {
-            extractedPart = '/'+parts[1]
+            extractedPart = '/' + parts[1];
           }
           const rutasPermitidasArray = Object.values(rutasPermitidas);
           if (!rutasPermitidasArray.includes(extractedPart)) {
