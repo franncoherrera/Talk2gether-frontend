@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LoginService } from '../servicios/login.service';
+import { LoginService } from '../login-services/login.service';
 import Swal from 'sweetalert2';
-import { SesionService } from 'src/app/interceptors/sesion.service';
-import { NavbarService } from 'src/app/shared/general-navbar/service/navbar.service';
 import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
 import { VerificarCuentaService } from '../../common-verify-account/servicios/verificar-cuenta.service';
-import { ChatService } from '../../common-chat/services/chat-service.service';
+import { common_login } from 'src/app/transalation/COMMON_MESSAGES_es';
+import { routes_path } from 'src/app/constants/ROUTES';
 
 @Component({
   selector: 'app-login',
@@ -26,7 +25,17 @@ export class LoginComponent implements OnInit {
   repeatPasswordType: string = 'password';
   localSesion: string;
 
+  /*Variable especial para los mensajes*/
+  common_login: any = common_login;
+
   motivosReporte: string[];
+
+  constructor(
+    private router: Router,
+    private loginService: LoginService,
+    private spinnerServiceGeneral: SpinnerServiceGeneral,
+    private verificarCuentaService: VerificarCuentaService,
+  ) {}
 
   ngOnInit(): void {
     this.loginForm = new FormGroup(
@@ -42,18 +51,9 @@ export class LoginComponent implements OnInit {
       }
     );
   }
-  constructor(
-    private router: Router,
-    private loginService: LoginService,
-    private sesion: SesionService,
-    private nav: NavbarService,
-    private spinnerServiceGeneral: SpinnerServiceGeneral,
-    private verificarCuentaService: VerificarCuentaService,
-    private chatService: ChatService
-  ) {}
 
-  irRestablecerContrasenia() {
-    this.router.navigate(['recuperarContrasenia']);
+  recoverPassword() {
+    this.router.navigate([routes_path.recover_pass_path]);
   }
 
   enviarDatos() {

@@ -1,7 +1,7 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { SesionService } from 'src/app/interceptors/sesion.service';
-import { LoginService } from 'src/app/modules/common/common-login/servicios/login.service';
+import { LoginService } from 'src/app/modules/common/common-login/login-services/login.service';
 import { NavbarService } from '../service/navbar.service';
 import Swal from 'sweetalert2';
 import { SpinnerServiceGeneral } from '../../spinner-world-loading/spinner.service';

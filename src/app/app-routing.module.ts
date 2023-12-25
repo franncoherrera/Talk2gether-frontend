@@ -10,7 +10,6 @@ import { PrincipalComponent } from './modules/common/common-main-page/principal/
 import { RecuperarContraseniaComponent } from './modules/common/common-recover-password/recuperar-contrasenia.component';
 import { SinFuncionarComponent } from './shared/not-working-layout/sin-funcionar.component';
 import { AuthGuard } from './security/auth-guard.guard';
-import { LoginInhabilitadoComponent } from './modules/common/common-login/login-inhabilitado/login-inhabilitado.component';
 import { VisualizarPerfilComponent } from './modules/common/common-profile-view/visualizar-perfil/visualizar-perfil.component';
 import { NuevaContraseniaComponent } from './modules/common/common-change-password/nueva-contrasenia/nueva-contrasenia.component';
 import { ConfirmarContraseniaComponent } from './modules/common/common-change-password/confirmar-contrasenia/confirmar-contrasenia.component';
@@ -28,8 +27,23 @@ import { LogrosComponent } from './modules/common/common-profile-view/logros/log
 import { EstadisticasComponent } from './modules/common/common-profile-view/estadisticas/estadisticas.component';
 import { SideBarComponent } from './modules/admin/administrador/side-bar/side-bar.component';
 import { DashboardAdministradorComponent } from './modules/admin/administrador/dashboard-administrador/dashboard/dashboard-administrador.component';
+import { LoginDisabledComponent } from './modules/common/common-login/login-disabled/login-inhabilitado.component';
+import { general_path, routes_path } from './constants/ROUTES';
+import { AppComponent } from './app.component';
+import { CommonLoginModule } from './modules/common/common-login/common-login.module';
+import { PantallaPrincipalModule } from './modules/common/common-main-page/pantalla-principal.module';
 
 const routes: Routes = [
+  {
+    path: general_path.main_path,
+    component: PrincipalComponent,
+  },
+  {
+    path: general_path.main_path,
+    component: AppComponent,
+    loadChildren: () => CommonLoginModule
+  },
+
   {
     path: 'registro',
     component: RegistroPadreComponent,
@@ -75,14 +89,7 @@ const routes: Routes = [
     component: CuentaVerificadaComponent,
     canActivate: [AuthGuard],
   },
-  { path: '', component: PrincipalComponent },
   { path: 'proximamente', component: SinFuncionarComponent },
-  { path: 'login', component: LoginComponent, canActivate: [AuthGuard] },
-  {
-    path: 'recuperarContrasenia',
-    component: RecuperarContraseniaComponent,
-    canActivate: [AuthGuard],
-  },
   {
     path: 'nuevaContrasenia',
     component: NuevaContraseniaComponent,
@@ -95,7 +102,7 @@ const routes: Routes = [
   },
   {
     path: 'bloqueado',
-    component: LoginInhabilitadoComponent,
+    component: LoginDisabledComponent,
     canActivate: [AuthGuard],
   },
   {

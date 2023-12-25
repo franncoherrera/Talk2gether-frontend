@@ -15,7 +15,6 @@ import { AUTH_TOKEN } from './interceptors/auth.token';
 import { SesionService } from './interceptors/sesion.service';
 import { CambioContraseniaModule } from './modules/common/common-change-password/cambio-contrasenia.module';
 import { InicioModule } from './modules/common/common-room-search/inicio.module';
-import { LoginModule } from './modules/common/common-login/login-module.module';
 import { PantallaPrincipalModule } from './modules/common/common-main-page/pantalla-principal.module';
 import { RecuperarContraseniaModule } from './modules/common/common-recover-password/recuperar-contrasenia.module';
 import { RegistroModule } from './modules/common/common-register/registro.module';
@@ -29,6 +28,7 @@ import { ConfiguracionModule } from './modules/common/common-profile-configurati
 import { ReportarUsuarioModalModule } from './modules/common/common-profile-view/reportar-usuario-modal/reportar-usuario-modal.module';
 import { ModuloAdministradorModule } from './modules/admin/administrador/modulo-administrador.module';
 import { CalificarUsuarioModule } from './modules/common/common-rate-user/calificar-usuario.module';
+import { CommonLoginModule } from './modules/common/common-login/common-login.module';
 
 @NgModule({
   declarations: [AppComponent, SinFuncionarComponent],
@@ -46,7 +46,7 @@ import { CalificarUsuarioModule } from './modules/common/common-rate-user/califi
     InicioModule,
     AppRoutingModule,
     NavbarModule,
-    LoginModule,
+    CommonLoginModule,
     RecuperarContraseniaModule,
     PantallaPrincipalModule,
     CambioContraseniaModule,

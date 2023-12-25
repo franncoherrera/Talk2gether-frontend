@@ -1,49 +1,37 @@
 <div class="login-container">
   <form class="login-form" [formGroup]="loginForm" (ngSubmit)="enviarDatos()">
-    <h2>Iniciar sesión</h2>
+    <h2>{{common_login.login_title}}</h2>
     <div class="form-group">
-      <label for="username">Correo
-      <input
-        type="email"
-        id="username"
-        name="username"
-        placeholder="Ingresá tu usuario"
-        required
-        formControlName="email"
-      />
+      <label for="username">{{common_login.login_email}}
+        <input type="email" id="username" name="username" placeholder="Ingresá tu usuario" required
+          formControlName="email" />
       </label>
       <div *ngIf="loginForm.get('email').hasError('pattern') && submitForm">
         <p class="text-error text-error-input-exception">
-          El email no respeta una estructura. Ejemplo: hola@talk2gether.com
+          {{common_login.login_structure_error}}
         </p>
       </div>
       <div *ngIf="loginForm.get('email').hasError('required') && submitForm">
-        <p class="text-error text-error-input">El email es requerido</p>
+        <p class="text-error text-error-input">{{common_login.login_email_required}}</p>
       </div>
     </div>
     <div class="form-group">
-      <label for="password">Contraseña
-      <input
-        [type]="passwordType"
-        id="password"
-        name="password"
-        placeholder="Ingresá tu contraseña"
-        required
-        formControlName="password"
-      />
+      <label for="password">{{common_login.login_password}}
+        <input [type]="passwordType" id="password" name="password" placeholder="Ingresá tu contraseña" required
+          formControlName="password" />
         <a class="password-eyes" (click)="togglePasswordView()">
           <span *ngIf="showPassword"><i class="fas fa-eye"></i></span>
           <span *ngIf="!showPassword"><i class="fas fa-eye-slash"></i></span>
         </a>
       </label>
       <div *ngIf="loginForm.get('password').hasError('required') && submitForm">
-        <p class="text-error text-error-input">La contraseña es requerido</p>
+        <p class="text-error text-error-input">{{common_login.login_password_required}}</p>
       </div>
     </div>
-      <div *ngIf="submitError" class="text-error text-error-response " margin-top="10px">
-        Correo o contraseña inválida
-      </div>
-      <button type="submit" class="button-continue grande">Iniciar sesión</button>
-      <a type="button" class="forgot-password grande" (click)="irRestablecerContrasenia()">¿Olvidaste tu contraseña?</a>
-    </form>
+    <div *ngIf="submitError" class="text-error text-error-response " margin-top="10px">
+      {{common_login.login_email_pasword_error}}
+    </div>
+    <button type="submit" class="button-continue grande">{{common_login.login_submit_button}}</button>
+    <a type="button" class="forgot-password grande" (click)="recoverPassword()">{{common_login.login_forgot_password}}</a>
+  </form>
 </div>

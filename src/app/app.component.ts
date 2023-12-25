@@ -14,12 +14,5 @@ export class AppComponent {
 
   title = 'frontend-talk2gether';
 
-  ngOnInit() {
-  this.router.events.subscribe(event => {
-    if (event instanceof NavigationEnd) {
-      this.currentUrl = event.url.split('?')[0];
-    }
-  });
-  }
 
 }

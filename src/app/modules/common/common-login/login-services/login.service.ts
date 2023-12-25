@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Usuario } from '../modelos/Usuario';
+import { Usuario } from '../login-models/Usuario';
 import { SesionService } from 'src/app/interceptors/sesion.service';
 
 @Injectable({
