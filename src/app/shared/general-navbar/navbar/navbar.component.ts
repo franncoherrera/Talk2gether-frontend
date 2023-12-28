@@ -46,7 +46,7 @@ export class NavbarComponent implements OnInit {
   }
 
   traerRol() {
-    this.loginservice.getRol().subscribe({
+    this.loginservice.getRole().subscribe({
       next: (response) => {
         this.rolNav = response;
       },

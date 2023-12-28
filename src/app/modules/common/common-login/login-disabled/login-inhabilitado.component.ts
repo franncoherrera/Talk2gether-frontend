@@ -12,7 +12,7 @@ export class LoginDisabledComponent implements OnInit {
 
   motivosReporte: string[];
   ngOnInit(): void {
-    this.loginService.getMotivo().subscribe({
+    this.loginService.getReason().subscribe({
       next: (response) => (this.motivosReporte = response),
       error: (error) => (this.motivosReporte = []),
     });

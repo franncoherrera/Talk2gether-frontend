@@ -6,15 +6,13 @@ import Swal from 'sweetalert2';
 })
 export class AlertsService {
 
-  errorAlert(message: string){
+  errorAlert(message: string, title: string){
     Swal.fire({
       icon: 'error',
-      title: 'Oops...',
+      title: title,
       text: message,
       confirmButtonColor: '#2b6a78',
     });
   }
-
-
 
 }

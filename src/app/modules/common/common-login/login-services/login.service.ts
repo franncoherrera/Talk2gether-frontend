@@ -2,63 +2,64 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Usuario } from '../login-models/Usuario';
 import { SesionService } from 'src/app/interceptors/sesion.service';
+import { UserSession } from '../login-models/UserSession';
 
 @Injectable({
   providedIn: 'root',
 })
 export class LoginService {
   url: string = environment?.apiUrl;
-  motivosReporte = new BehaviorSubject<string[]>(null);
-  motivosReporte$ = this.motivosReporte.asObservable();
+  reasonReport = new BehaviorSubject<string[]>(null);
+  reasonReport$ = this.reasonReport.asObservable();
 
-  rol = new BehaviorSubject<string>(null);
-  rol$ = this.rol.asObservable();
-  
+  role = new BehaviorSubject<string>(null);
+  role$ = this.role.asObservable();
+
   constructor(
     private httpClient: HttpClient,
     private sesionService: SesionService
   ) {}
 
-  login(correo: string, contrasenia: string) {
+  /* Endpoints del backend */
+  login(email: string, password: string) {
     const options = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
       }),
     };
     const urlEndpoint = this.url + 'iniciarsesion';
-    const body: Usuario = {
-      correo,
-      contrasenia,
+    const bodySession: UserSession = {
+      correo: email,
+      contrasenia: password,
     };
-    return this.httpClient.post(urlEndpoint, body, options).pipe(
-      tap((response) => {
-        const token = response;
+    return this.httpClient.post(urlEndpoint, bodySession, options).pipe(
+      tap((tokenSession) => {
+        const token = tokenSession;
         this.sesionService.startLocalSession(token);
       })
     );
   }
-
-  guardarMotivo(motivos: string[]) {
-    this.motivosReporte.next(motivos);
-  }
-  getMotivo(): Observable<string[]>{
-    return  this.motivosReporte$; 
-  }
-
-  logout() {
-    this.sesionService.clearLocalSession();
-  }
-
   traerRutasPermitidas() {
     const urlEndpoint = this.url + 'permisos/listarPermisosParaUnRol';
     return this.httpClient.get(urlEndpoint);
   }
-  guardarRol(rol: string) {
-    this.rol.next(rol);
+  logout() {
+    this.sesionService.clearLocalSession();
   }
-  getRol(): Observable<string>{
-    return this.rol$; 
+
+  /* Guardar observables */
+  saveReason(reasons: string[]) {
+    this.reasonReport.next(reasons);
   }
+  getReason(): Observable<string[]> {
+    return this.reasonReport$;
+  }
+  saveRole(role: string) {
+    this.role.next(role);
+  }
+  getRole(): Observable<string> {
+    return this.role$;
+  }
+
 }

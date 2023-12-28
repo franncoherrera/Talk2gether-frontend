@@ -100,11 +100,7 @@ const routes: Routes = [
     component: ConfirmarContraseniaComponent,
     canActivate: [AuthGuard],
   },
-  {
-    path: 'bloqueado',
-    component: LoginDisabledComponent,
-    canActivate: [AuthGuard],
-  },
+
   {
     path: 'perfilUsuario/:id',
     component: VisualizarPerfilComponent,
