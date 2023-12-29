@@ -5,7 +5,7 @@ import { CuentaVerificadaComponent } from './modules/common/common-verify-accoun
 import { RegistroPadreComponent } from './modules/common/common-register/registro-padre.component';
 import { TerminosComponent } from './modules/common/common-register/terminos/terminos.component';
 import { PantallaInicioBusquedaComponent } from './modules/common/common-room-search/pantalla-inicio-busqueda/pantalla-inicio-busqueda.component';
-import { HomePageComponent } from './modules/common/common-main-page/home-page.component';
+import { HomePageComponent } from './modules/common/common-home-page/home-page.component';
 
 import { SinFuncionarComponent } from './shared/not-working-layout/sin-funcionar.component';
 import { AuthGuard } from './security/auth-guard.guard';
@@ -30,7 +30,7 @@ import { LoginDisabledComponent } from './modules/common/common-login/login-disa
 import { general_path, routes_path } from './constants/ROUTES';
 import { AppComponent } from './app.component';
 import { CommonLoginModule } from './modules/common/common-login/common-login.module';
-import { PantallaPrincipalModule } from './modules/common/common-main-page/home-page.module';
+import { PantallaPrincipalModule } from './modules/common/common-home-page/home-page.module';
 
 const routes: Routes = [
   {
