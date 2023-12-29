@@ -108,6 +108,7 @@ export class LoginComponent implements OnInit, OnDestroy {
         sessionStorage.clear();
         localStorage.setItem('correo', this.loginForm.get('email').value);
         this.sessionSubscription.add(
+          /* No funciona porque no esta levantado el servidor de correo */
           this.verificarCuentaService
             .reenviarCorreo(localStorage.getItem('correo'))
             .pipe(

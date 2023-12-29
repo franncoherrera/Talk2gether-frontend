@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from '../login-services/login.service';
+import { Observable, catchError, map, of } from 'rxjs';
+import { AlertsService } from 'src/app/helpers/alerts.service';
+import { common_error, common_login } from 'src/app/transalation/COMMON_MESSAGES_es';
+import { general_path } from 'src/app/constants/ROUTES';
 
 @Component({
   selector: 'app-login-disabled',
@@ -8,16 +12,25 @@ import { LoginService } from '../login-services/login.service';
   styleUrls: ['./login-disabled.component.scss'],
 })
 export class LoginDisabledComponent implements OnInit {
-  constructor(private router: Router, private loginService: LoginService) {}
+  reasonReports$: Observable<string[]>;
+  common_login = common_login
+  constructor(
+    private router: Router,
+    private loginService: LoginService,
+    private alertService: AlertsService
+  ) {}
 
-  motivosReporte: string[];
   ngOnInit(): void {
-    this.loginService.getReason().subscribe({
-      next: (response) => (this.motivosReporte = response),
-      error: (error) => (this.motivosReporte = []),
-    });
+    this.reasonReports$ = this.loginService.getReason().pipe(
+      map((reasonReports) => reasonReports),
+      catchError((error) => {
+        this.alertService.errorAlert(common_error.general_error_title, error);
+        return of([]);
+      })
+    );
   }
-  menuPrincipal() {
-    this.router.navigate(['']);
+
+  redirectMainPage() {
+    this.router.navigate([general_path.main_path]);
   }
 }

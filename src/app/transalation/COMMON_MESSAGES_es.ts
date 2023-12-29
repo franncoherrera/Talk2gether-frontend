@@ -2,6 +2,7 @@
 export const common_error = {
   general_error_title: 'Ops...',
   general_error_description: '¡Algo anda mal! Intente nuevamente mas tarde.',
+  general_error_not_loaded: 'No se cargó correctamente, intente nuevamente mas tarde'
 };
 
 /* Mensajes del modulo "common_login" */
@@ -9,9 +10,11 @@ export const common_login = {
   /*Títulos*/
   login_title: 'Iniciar sesión',
   login_email: 'Correo',
+  account_deleted_title: 'Su cuenta ha sido eliminada por:',
   /*Botones*/
   login_submit_button: 'Iniciar sesión',
   login_forgot_password: '¿Olvidaste tu contraseña?',
+  return_home_page: 'Volver a la página principal',
   /* Mensajes de error de carga */
   login_structure_error:
     'El email no respeta una estructura. Ejemplo: hola@talk2gether.com',

@@ -10,6 +10,7 @@ import { UserSession } from '../login-models/UserSession';
 })
 export class LoginService {
   url: string = environment?.apiUrl;
+  
   reasonReport = new BehaviorSubject<string[]>(null);
   reasonReport$ = this.reasonReport.asObservable();
 
@@ -40,7 +41,6 @@ export class LoginService {
       })
     );
   }
-
 
   /* Guardar observables */
   saveReason(reasons: string[]) {

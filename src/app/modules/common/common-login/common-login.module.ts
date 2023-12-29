@@ -29,6 +29,7 @@ export const login_routes: Routes = [
     LoginModule,
     LoginDisabledModule,
     RouterModule.forChild(login_routes),
+    
   ],
   providers: [],
 })
