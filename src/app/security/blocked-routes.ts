@@ -11,6 +11,7 @@ import { Observable, of, switchMap } from 'rxjs';
 import { SesionService } from '../interceptors/sesion.service';
 import Swal from 'sweetalert2';
 import { LoginService } from '../modules/common/common-login/login-services/login.service';
+import { SecurityService } from './security.service';
 
 @Injectable({ providedIn: 'root' })
 export class blockedRoutes implements CanActivate {
@@ -22,7 +23,7 @@ export class blockedRoutes implements CanActivate {
   constructor(
     private router: Router,
     private sesion: SesionService,
-    private routesServices: LoginService
+    private securityService: SecurityService
   ) {}
 
   canActivate(
@@ -31,7 +32,7 @@ export class blockedRoutes implements CanActivate {
   ): Observable<boolean> {
     const iniciado = this.sesion.getCurrentSesion();
     if (iniciado != null) {
-      return this.routesServices.traerRutasPermitidas().pipe(
+      return this.securityService.traerRutasPermitidas().pipe(
         switchMap((rutasPermitidas) => {
           const currentUrl = state.url.split('?')[0];
           const parts = currentUrl.split('/');
