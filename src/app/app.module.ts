@@ -15,7 +15,7 @@ import { AUTH_TOKEN } from './interceptors/auth.token';
 import { SesionService } from './interceptors/sesion.service';
 import { CambioContraseniaModule } from './modules/common/common-change-password/cambio-contrasenia.module';
 import { InicioModule } from './modules/common/common-room-search/inicio.module';
-import { PantallaPrincipalModule } from './modules/common/common-main-page/pantalla-principal.module';
+import { PantallaPrincipalModule } from './modules/common/common-main-page/home-page.module';
 import { RecuperarContraseniaModule } from './modules/common/common-recover-password/recuperar-contrasenia.module';
 import { RegistroModule } from './modules/common/common-register/registro.module';
 import { VerificarCuentaModule } from './modules/common/common-verify-account/verificar-cuenta.module';
