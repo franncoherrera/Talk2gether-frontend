@@ -32,7 +32,8 @@ export class NavbarComponent implements OnInit {
     private navService: NavbarService,
     private popUpInicio: PopupsInicioService,
     private spinnerServiceGeneral: SpinnerServiceGeneral,
-    private chatService: ChatService
+    private chatService: ChatService,
+    private sesionService: SesionService
   ) {}
 
   ngOnInit() {
@@ -159,7 +160,7 @@ export class NavbarComponent implements OnInit {
   }
 
   redireccionCerrarSesion() {
-    this.loginservice.logout();
+    this.sesionService.clearLocalSession();
     document.location.href = 'login';
   }
   redireccionAdministrador() {

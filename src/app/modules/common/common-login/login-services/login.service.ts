@@ -40,13 +40,7 @@ export class LoginService {
       })
     );
   }
-  traerRutasPermitidas() {
-    const urlEndpoint = this.url + 'permisos/listarPermisosParaUnRol';
-    return this.httpClient.get(urlEndpoint);
-  }
-  logout() {
-    this.sesionService.clearLocalSession();
-  }
+
 
   /* Guardar observables */
   saveReason(reasons: string[]) {

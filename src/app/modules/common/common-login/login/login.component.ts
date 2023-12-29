@@ -139,7 +139,6 @@ export class LoginComponent implements OnInit, OnDestroy {
       }
     }
   }
-
   /* Método para mostrar u ocultar contraseña */
   togglePasswordView(fromRepeat: boolean = false) {
     if (!fromRepeat) {
