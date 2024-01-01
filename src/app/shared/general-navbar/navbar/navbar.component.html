@@ -1,6 +1,6 @@
 <ng-container *ngIf="currentUrl !== '/reunion-virtual' && currentUrl !== '/estadisticasPlataforma'">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand has-logo grande" type="button" (click)="redireccionMenuPrincipal()">
+    <a class="navbar-brand has-logo animation-button" type="button" (click)="redireccionMenuPrincipal()">
       <img src="../../../assets/talk2gether.svg" height="70px" class="d-inline-block align-top d-none d-md-block"
         alt="" />
       <img src="../../../assets/talk2gether_icono.svg" height="70px" class="d-inline-block align-top d-block d-md-none"
@@ -137,7 +137,7 @@
 
         </ng-container>
         <ng-container *ngIf="currentUrl==='/inicio' || currentUrl==='/ranking'">
-          <li class="nav-item d-none d-lg-block grande " type="button" (click)="redireccionChat()">
+          <li class="nav-item d-none d-lg-block animation-button " type="button" (click)="redireccionChat()">
             <i class="fa-solid fa-message" id="icono-menu" font-size="35px" ata-toggle="tooltip" data-placement="top"
               title="Chat">
               <div class="numero" *ngIf="numeroChats>0">
@@ -148,28 +148,28 @@
         </ng-container>
         <ng-container *ngIf="currentUrl==='/inicio'">
           <li class="nav-item d-none d-lg-block " type="button" (click)="redireccionRanking()">
-            <i class="fa-solid fa-ranking-star grande" id="icono" font-size="35px" ata-toggle="tooltip"
+            <i class="fa-solid fa-ranking-star animation-button" id="icono" font-size="35px" ata-toggle="tooltip"
               data-placement="top" title="Ranking"></i>
           </li>
         </ng-container>
         <ng-container *ngIf="currentUrl==='/inicio' || currentUrl==='/ranking'">
-          <li class="nav-item d-none d-lg-block grande" type="button" (click)="referirAmigos()">
+          <li class="nav-item d-none d-lg-block animation-button" type="button" (click)="referirAmigos()">
             <i class="fa-solid fa-bullhorn" id="icono" font-size="35px" ata-toggle="tooltip" data-placement="top"
               title="Invita amigos"></i>
           </li>
         </ng-container>
         <ng-container *ngIf="currentUrl==='/' && localSesion===null">
-          <li class="nav-item d-none d-lg-block grande">
+          <li class="nav-item d-none d-lg-block animation-button">
             <button type="button" class="boton-sesion" (click)="redireccionLogin()">Iniciar sesión</button>
           </li>
         </ng-container>
         <ng-container *ngIf="currentUrl==='/' && localSesion===null || currentUrl==='/login'">
-          <li class="nav-item d-none d-lg-block grande">
+          <li class="nav-item d-none d-lg-block animation-button">
             <button type="button" class="boton-registrar" (click)="redireccionRegistrate()">Regístrate</button>
           </li>
         </ng-container>
         <ng-container>
-          <li class="nav-item d-none d-lg-block grande" type="button" (click)="popUpInformacion()">
+          <li class="nav-item d-none d-lg-block animation-button" type="button" (click)="popUpInformacion()">
             <i class="fa-solid fa-circle-info" id="icono" font-size="35px" ata-toggle="tooltip" data-placement="top"
               title="Información"></i>
           </li>

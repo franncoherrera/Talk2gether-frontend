@@ -17,16 +17,19 @@
               <td>
                 <div class="iconos-orden-tabla">
                   <ng-container *ngIf="pais.fechaHoraFinVigenciaPais==null">
-                    <div type="button" (click)="desHabilitarPais(pais.id, pais.nombrePais)" ata-toggle="tooltip" title="Deshabilitar">
-                      <i class="fa-solid fa-circle-xmark grande"></i>
+                    <div type="button" (click)="desHabilitarPais(pais.id, pais.nombrePais)" ata-toggle="tooltip"
+                      title="Deshabilitar">
+                      <i class="fa-solid fa-circle-xmark animation-button"></i>
                     </div>
                   </ng-container>
                   <ng-container *ngIf="pais.fechaHoraFinVigenciaPais!=null">
-                    <div type="button" ata-toggle="tooltip" title="Editar" (click)="modificarPais(pais.id, pais.nombrePais,pais.urlBandera)">
-                      <i class="fa-solid fa-pencil grande"></i>
+                    <div type="button" ata-toggle="tooltip" title="Editar"
+                      (click)="modificarPais(pais.id, pais.nombrePais,pais.urlBandera)">
+                      <i class="fa-solid fa-pencil animation-button"></i>
                     </div>
-                    <div type="button" (click)="habilitarPais(pais.id, pais.nombrePais)" ata-toggle="tooltip" title="Habilitar">
-                      <i class="fa-solid fa-circle-check grande"></i>
+                    <div type="button" (click)="habilitarPais(pais.id, pais.nombrePais)" ata-toggle="tooltip"
+                      title="Habilitar">
+                      <i class="fa-solid fa-circle-check animation-button"></i>
                     </div>
                   </ng-container>
                 </div>
@@ -37,7 +40,7 @@
       </table>
     </div>
     <div class="button-right">
-      <div type="button" class="button-general-anadir grande" (click)="aniadirIdioma()">Añadir país</div>
+      <div type="button" class="button-general-anadir animation-button" (click)="aniadirIdioma()">Añadir país</div>
     </div>
   </div>
 </div>

@@ -18,7 +18,8 @@
                             No hay usuarios bloqueados
                         </div>
                     </div>
-                    <div *ngFor="let usuario of listaBloqueados" class="modal-body-content__list-items grande">
+                    <div *ngFor="let usuario of listaBloqueados"
+                        class="modal-body-content__list-items animation-button">
                         <a (click)="visitarPerfil(usuario.idCuenta)" class="modal-body-content__list-items-link">
                             <div class="modal-body-content__list-items-image">
                                 <img [src]="usuario.urlFoto" alt="">

@@ -7,12 +7,13 @@ import { VerificarCuentaService } from '../../common-verify-account/servicios/ve
 import {
   common_error,
   common_login,
-} from 'src/app/transalation/COMMON_MESSAGES_es';
+} from 'src/app/transalation/es/COMMON_MESSAGES_es';
 import { routes_path } from 'src/app/constants/ROUTES';
 import { Subscription, catchError, map, of, tap } from 'rxjs';
 import { VALIDATOR_PATTERNS } from 'src/app/constants/PATTERNS';
 import { AlertsService } from 'src/app/helpers/alerts.service';
 import { TokenSession } from '../login-models/TokenSession';
+import { icon_class } from 'src/assets/icons_class/icon_class';
 
 @Component({
   selector: 'app-login',
@@ -31,8 +32,9 @@ export class LoginComponent implements OnInit, OnDestroy {
   showRepeatPassword: boolean = false;
   repeatPasswordType: string = 'password';
 
-  /*Variable especial para los mensajes*/
+  /*Variable especial para los mensajes e iconos*/
   common_login = common_login;
+  icon_class = icon_class;
 
   sessionSubscription: Subscription;
 

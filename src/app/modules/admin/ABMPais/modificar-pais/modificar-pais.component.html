@@ -1,6 +1,6 @@
 <div class="modal-content-interes">
   <div class="modal-header">
-    <button type="button" class="btn btn-link grande" (click)="dismissModal()">
+    <button type="button" class="btn btn-link animation-button" (click)="dismissModal()">
       <i class="far fa-times-circle"></i>
     </button>
   </div>
@@ -14,13 +14,15 @@
         <input type="text" id="pais" formControlName="pais" placeholder="Ingresá el país" required />
       </div>
       <div *ngIf="paisForm.get('pais').invalid && submitForm">
-        <div *ngIf="paisForm.get('pais').hasError('required') && submitForm" class="text-error">El país es requerido</div>
-        <div class="text-error" *ngIf="paisForm.get('pais').errors?.['soloLetras']">Solo se permiten letras y espacios.</div>
+        <div *ngIf="paisForm.get('pais').hasError('required') && submitForm" class="text-error">El país es requerido
+        </div>
+        <div class="text-error" *ngIf="paisForm.get('pais').errors?.['soloLetras']">Solo se permiten letras y espacios.
+        </div>
       </div>
       <div class="estilo-letra">
         <div class="separacion">
           <label for="urlPais">URL Bandera del País*</label>
-          <i class="fa-solid fa-circle-info grande" (click)="abrirInfo()"></i>
+          <i class="fa-solid fa-circle-info animation-button" (click)="abrirInfo()"></i>
         </div>
       </div>
       <div class="estilo-letra">
@@ -28,13 +30,15 @@
       </div>
 
       <div *ngIf="paisForm.get('urlPais').invalid && submitForm">
-        <div class="text-error" *ngIf="paisForm.get('urlPais').errors?.['required']">La url de la foto es obligatoria.</div>
+        <div class="text-error" *ngIf="paisForm.get('urlPais').errors?.['required']">La url de la foto es obligatoria.
+        </div>
         <div class="text-error" *ngIf="paisForm.get('urlPais').errors?.['soloLetras']">Solo se permiten letras y
           espacios.</div>
       </div>
       <div class="botones">
-        <div type="button" class="botones-volver estilo-letra grande" type="button" (click)="dismissModal()">Volver</div>
-        <button class="botones-submit estilo-letra grande" type="submit">Confirmar</button>
+        <div type="button" class="botones-volver estilo-letra animation-button" type="button" (click)="dismissModal()">
+          Volver</div>
+        <button class="botones-submit estilo-letra animation-button" type="submit">Confirmar</button>
       </div>
     </div>
   </form>

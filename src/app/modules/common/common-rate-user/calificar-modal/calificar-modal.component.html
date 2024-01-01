@@ -10,7 +10,8 @@
             <div class="centrado">
                 <div class="columna">
                     <h2>Califique su experiencia con:</h2>
-                    <h2 class="grande" style ="font-weight: bold; text-decoration: underline;" (click)="dirigirPerfil()">{{nombreApellido}}</h2>
+                    <h2 class="animation-button" style="font-weight: bold; text-decoration: underline;"
+                        (click)="dirigirPerfil()">{{nombreApellido}}</h2>
                     <div class="centrado__tamanio">
                         <form>
                             <div class="clasificacion">
@@ -37,7 +38,7 @@
             </div>
             <div class="columna-error-boton">
                 <div class="centrado" *ngIf="submitForm">
-                    <div class="text-error" >
+                    <div class="text-error">
                         Debe calificar al aprendiz o cerrar el pop-up.</div>
                 </div>
                 <div class="botones">

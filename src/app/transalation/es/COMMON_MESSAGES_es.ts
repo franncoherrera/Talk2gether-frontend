@@ -23,6 +23,9 @@ export const common_login = {
   login_password: 'Contraseña',
   login_password_required: 'La contraseña es requerido',
   login_email_pasword_error: 'Correo o contraseña inválida',
+  /* Placeholders */
+  login_email_placeholder: 'Ingresá tu usuario',
+  login_pass_placeholder: 'Ingresá tu contraseña'
 };
 
 export const common_home_page = {

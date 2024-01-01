@@ -1,6 +1,6 @@
 <div class="modal-content-interes">
   <div class="modal-header">
-    <button type="button" class="btn btn-link grande" (click)="dismissModal()">
+    <button type="button" class="btn btn-link animation-button" (click)="dismissModal()">
       <i class="far fa-times-circle"></i>
     </button>
   </div>
@@ -31,12 +31,14 @@
         <option value="usuario">usuario</option>
         <option value="plataforma">plataforma</option>
       </select>
-      <div *ngIf="motivosForm.get('tipoMotivo').invalid && motivosForm.get('tipoMotivo').hasError('required') && submitForm">
+      <div
+        *ngIf="motivosForm.get('tipoMotivo').invalid && motivosForm.get('tipoMotivo').hasError('required') && submitForm">
         <div class="text-error">Debe seleccionar una opción.</div>
       </div>
       <div class="botones">
-        <div type="button" class="botones-volver estilo-letra grande" type="button" (click)="dismissModal()">Volver</div>
-        <button class="botones-submit estilo-letra grande" type="submit">Confirmar</button>
+        <div type="button" class="botones-volver estilo-letra animation-button" type="button" (click)="dismissModal()">
+          Volver</div>
+        <button class="botones-submit estilo-letra animation-button" type="submit">Confirmar</button>
       </div>
     </div>
   </form>

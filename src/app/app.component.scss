@@ -2,7 +2,32 @@ app-navbar {
   position: fixed;
   width: 100%;
   z-index: 5;
-  min-height: 105px;
+  min-height: 10.05rem;
   top: 0;
-  display: flex;
+}
+
+
+/* Extra Small (XS) */
+@media (max-width: 575.98px) {
+  /* Estilos para dispositivos extra pequeños */
+}
+
+/* Small (SM) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* Estilos para dispositivos pequeños */
+}
+
+/* Medium (MD) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Estilos para dispositivos medianos */
+}
+
+/* Large (LG) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* Estilos para dispositivos grandes */
+}
+
+/* Extra Large (XL) */
+@media (min-width: 1200px) {
+  /* Estilos para dispositivos extra grandes */
 }

@@ -6,7 +6,6 @@ import { RegistroPadreComponent } from './modules/common/common-register/registr
 import { TerminosComponent } from './modules/common/common-register/terminos/terminos.component';
 import { PantallaInicioBusquedaComponent } from './modules/common/common-room-search/pantalla-inicio-busqueda/pantalla-inicio-busqueda.component';
 import { HomePageComponent } from './modules/common/common-home-page/home-page.component';
-
 import { SinFuncionarComponent } from './shared/not-working-layout/sin-funcionar.component';
 import { AuthGuard } from './security/auth-guard.guard';
 import { VisualizarPerfilComponent } from './modules/common/common-profile-view/visualizar-perfil/visualizar-perfil.component';
@@ -26,11 +25,9 @@ import { LogrosComponent } from './modules/common/common-profile-view/logros/log
 import { EstadisticasComponent } from './modules/common/common-profile-view/estadisticas/estadisticas.component';
 import { SideBarComponent } from './modules/admin/administrador/side-bar/side-bar.component';
 import { DashboardAdministradorComponent } from './modules/admin/administrador/dashboard-administrador/dashboard/dashboard-administrador.component';
-import { LoginDisabledComponent } from './modules/common/common-login/login-disabled/login-inhabilitado.component';
-import { general_path, routes_path } from './constants/ROUTES';
+import { general_path } from './constants/ROUTES';
 import { AppComponent } from './app.component';
 import { CommonLoginModule } from './modules/common/common-login/common-login.module';
-import { PantallaPrincipalModule } from './modules/common/common-home-page/home-page.module';
 
 const routes: Routes = [
   {
@@ -39,7 +36,6 @@ const routes: Routes = [
   },
   {
     path: general_path.main_path,
-    component: AppComponent,
     loadChildren: () => CommonLoginModule,
   },
 

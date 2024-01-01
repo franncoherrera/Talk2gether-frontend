@@ -1,9 +1,10 @@
 <ng-container *ngIf="{user: isUser$ | async, perfil: isUserPerfil$ | async} as userCargado">
     <ng-container *ngIf="userCargado.user && userCargado.perfil">
-        
+
         <div class="entero">
             <div class="perfil-nombre">
-                <div class="imagen-perfil grande" type="button" (click)="openDialog(userCargado.perfil?.urlFoto)">
+                <div class="imagen-perfil animation-button" type="button"
+                    (click)="openDialog(userCargado.perfil?.urlFoto)">
                     <img class="imagen" [src]=userCargado.perfil?.urlFoto id="foto-perfil" />
                 </div>
                 <h6 class="nombre">{{userCargado.perfil?.nombreUsuario}}
@@ -13,28 +14,28 @@
             </div>
             <div *ngIf="!user">
                 <div class="container-first">
-                    <div class="columna grande" type="button" (click)="dirigirLogros()">
+                    <div class="columna animation-button" type="button" (click)="dirigirLogros()">
                         <i class="fa-solid fa-award tamanio"></i>
                         <h6 class="tamanio-letra">Logros</h6>
                     </div>
-                    <div class="columna grande" type="button" (click)="dirigirEstadisticas()">
+                    <div class="columna animation-button" type="button" (click)="dirigirEstadisticas()">
                         <i class="fa-solid fa-chart-column tamanio"></i>
                         <h6 class="tamanio-letra"> Estadísticas</h6>
                     </div>
                 </div>
                 <div class="container-second">
-                    <div class="columna grande" type="button" (click)="dirigirMensaje()">
+                    <div class="columna animation-button" type="button" (click)="dirigirMensaje()">
                         <i class="fa-solid fa-message tamanio"></i>
                         <h6 class="tamanio-letra">Mensaje</h6>
                     </div>
                     <div *ngIf="seguir" (click)="dejarSeguirUsuario()">
-                        <div class="columna grande" type="button">
+                        <div class="columna animation-button" type="button">
                             <i class="fa-solid fa-user tamanio"></i>
                             <h6 class="tamanio-letra"> Siguiendo</h6>
                         </div>
                     </div>
                     <div *ngIf="!seguir" (click)="seguirUsuario()">
-                        <div class="columna grande" type="button">
+                        <div class="columna animation-button" type="button">
                             <i class="fa-regular fa-user tamanio"></i>
                             <h6 class="tamanio-letra"> Seguir</h6>
                         </div>
@@ -43,9 +44,9 @@
                 <div class="container-third">
                     <div class="columna">
                         <ng-container>
-                            <button class="btn p-0 d-block grande" type="button" data-bs-toggle="dropdown"
+                            <button class="btn p-0 d-block animation-button" type="button" data-bs-toggle="dropdown"
                                 aria-expanded="true" style="color: white;">
-                                <i class="fa-solid fa-sliders tamanio-slider grande"></i>
+                                <i class="fa-solid fa-sliders tamanio-slider animation-button"></i>
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end" id="menuPerfil">
                                 <li class="nav-item d-block" type="button">
@@ -73,13 +74,13 @@
             </div>
             <div *ngIf="user">
                 <div class="container-first-miPerfil">
-                    <div class="columna tamanio grande" type="button" (click)="dirigirLogros()">
+                    <div class="columna tamanio animation-button" type="button" (click)="dirigirLogros()">
                         <i class="fa-solid fa-award tamanio"></i>
                         <h6 class="tamanio-letra">Logros</h6>
                     </div>
                 </div>
                 <div class="container-second">
-                    <div class="columna grande" type="button" (click)="dirigirEstadisticas()">
+                    <div class="columna animation-button" type="button" (click)="dirigirEstadisticas()">
                         <i class="fa-solid fa-chart-column tamanio"></i>
                         <h6 class="tamanio-letra "> Estadísticas</h6>
                     </div>
@@ -87,7 +88,7 @@
                 <div class="container-third">
                     <div class="columna">
                         <ng-container>
-                            <button class="btn p-0 d-block tamanio-slider grande" type="button"
+                            <button class="btn p-0 d-block tamanio-slider animation-button" type="button"
                                 data-bs-toggle="dropdown" aria-expanded="true" style="color: white;">
                                 <i class="fa-solid fa-sliders"></i>
                             </button>
@@ -150,7 +151,7 @@
 
                 </div>
                 <div class="login-buttons">
-                    <button class="button-left grande" type="button" (click)="volver()">Volver</button>
+                    <button class="button-left animation-button" type="button" (click)="volver()">Volver</button>
                 </div>
             </div>
             <div class="d-block d-md-none">

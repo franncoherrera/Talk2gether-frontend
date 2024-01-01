@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { LoginService } from '../login-services/login.service';
 import { Observable, catchError, map, of } from 'rxjs';
 import { AlertsService } from 'src/app/helpers/alerts.service';
-import { common_error, common_login } from 'src/app/transalation/COMMON_MESSAGES_es';
+import { common_error, common_login } from 'src/app/transalation/es/COMMON_MESSAGES_es';
 import { general_path } from 'src/app/constants/ROUTES';
 
 @Component({

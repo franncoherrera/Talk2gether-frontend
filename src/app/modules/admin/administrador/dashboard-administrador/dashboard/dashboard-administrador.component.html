@@ -14,9 +14,9 @@
             </div>
         </ng-template>
         <div class="posicion-botones">
-            <button class="grande" (click)="filtrarPorFecha()">Filtros</button>
-            <button class="grande" (click)="generatePDF()">Generar PDF</button>
-            <i class="far fa-times-circle grande" type="button" (click)="dirigirAdmin()"></i>
+            <button class="animation-button" (click)="filtrarPorFecha()">Filtros</button>
+            <button class="animation-button" (click)="generatePDF()">Generar PDF</button>
+            <i class="far fa-times-circle animation-button" type="button" (click)="dirigirAdmin()"></i>
         </div>
     </div>
     <div class="posicion-general">
@@ -28,7 +28,8 @@
         </div>
         <div class="item-1-1">
             <div class="estadistica">
-                <div class="titulo flex"><i class="fa-solid fa-circle fa-beat-fade" style="color: #41f500; font-size: 13px"></i>Usuarios online</div>
+                <div class="titulo flex"><i class="fa-solid fa-circle fa-beat-fade"
+                        style="color: #41f500; font-size: 13px"></i>Usuarios online</div>
                 <div class="dato">{{usuarioActivos}} usuarios</div>
                 <div class="label-filtro subtitulo">No aplica filtro</div>
             </div>
@@ -70,7 +71,8 @@
         </div>
         <div class="item-3-1">
             <div class="estadistica">
-                <div class="titulo superior">Usuarios que utilizan videollamada vs Usuarios que no utilizan videollamada</div>
+                <div class="titulo superior">Usuarios que utilizan videollamada vs Usuarios que no utilizan videollamada
+                </div>
                 <div class="inferior">
                     <canvas #torta></canvas>
                 </div>

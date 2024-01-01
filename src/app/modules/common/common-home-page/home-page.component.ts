@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { common_home_page } from 'src/app/transalation/COMMON_MESSAGES_es';
+import { common_home_page } from 'src/app/transalation/es/COMMON_MESSAGES_es';
 
 @Component({
   selector: 'app-home-page',
