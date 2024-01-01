@@ -9,7 +9,6 @@ export const routes_path = {
   /* Rutas de verificar cuenta */
   verify_account: 'verificar-cuenta',
   user_bloqued_by_admin: 'bloqueado',
-
   /* Rutas de la pantalla principal */
   principal_path: 'inicio',
 };

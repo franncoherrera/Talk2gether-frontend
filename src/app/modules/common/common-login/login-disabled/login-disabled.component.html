@@ -1,5 +1,4 @@
 <div class="container-disabled">
-  
   <div class="container-disabled__box">
     <h1 class="container-disabled__box__title">{{common_login.account_deleted_title}}</h1>
     <ul class="container-disabled__box__subtitle" *ngFor="let motivo of reasonReports$ | async">
@@ -10,5 +9,4 @@
     </div>
     <button class="container-disabled__box__button animation-button" type="button" (click)="redirectMainPage()">{{common_login.return_home_page}}</button>
   </div>
-
 </div>
