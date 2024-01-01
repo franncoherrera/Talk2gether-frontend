@@ -20,7 +20,7 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: calc(100vh - 10.05rem);
+  height: 100vh;
   overflow: hidden;
 
   &__form {
@@ -140,13 +140,19 @@
       }
     }
   }
+  .text-error {
+    font-size: 1.2rem;
+    &-response{
+      font-size: 1.5rem;
+    }
+  }
 }
 
-@media(max-height: 650px) {
+@media(max-height: 700px) {
   .login-container {
     display: block;
     overflow: scroll;
-
+    padding-top: 10.05rem;
     &__form {
       margin: 3% auto;
     }
@@ -159,7 +165,7 @@
 @media (max-width: 767.98px) {
   .login-container {
     &__form {
-      width: 80%;
+      width: 90%;
 
       &__title {
         font-weight: bold;
@@ -186,5 +192,8 @@
         }
       }
     }
+  }
+  .text-error {
+    font-size: 1rem;
   }
 }
