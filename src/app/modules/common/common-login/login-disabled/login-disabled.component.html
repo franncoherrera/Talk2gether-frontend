@@ -1,15 +1,14 @@
-<div class="container">
-  <div class="cuadrado">
-    <div class="mensaje">
-      <h1>{{common_login.account_deleted_title}}</h1>
-      <h1 *ngFor="let motivo of reasonReports$ | async">
-        {{motivo}}
-      </h1>
-      <div class="icono">
-        <i class="fa-solid fa-circle-exclamation"></i>
-      </div>
-      <button type="button" (click)="redirectMainPage()">{{common_login.return_home_page}}</button>
+<div class="container-disabled">
+  
+  <div class="container-disabled__box">
+    <h1 class="container-disabled__box__title">{{common_login.account_deleted_title}}</h1>
+    <ul class="container-disabled__box__subtitle" *ngFor="let motivo of reasonReports$ | async">
+      <li>{{motivo}}</li>
+    </ul>
+    <div class="container-disabled__box__icon">
+      <i class={{icon_class.exclamation_signal}}></i>
     </div>
-
+    <button class="container-disabled__box__button animation-button" type="button" (click)="redirectMainPage()">{{common_login.return_home_page}}</button>
   </div>
+
 </div>
