@@ -1,4 +1,3 @@
-// @import 'bootstrap/scss/bootstrap';
 @import "~@ng-select/ng-select/themes/default.theme.css";
 
 /*Definición variables*/
@@ -23,7 +22,6 @@
   /* Propiedades personalizadas */
   --border-radius-containers: 2rem;
   --border-radius-input: 1.5rem
-
 }
 
 /** Estilos generales**/
@@ -49,24 +47,24 @@ h6 {
   color: var(--color-title);
 }
 
-
+/* Definición de clase básica para los errores de formularios */
 .text-error {
   color: var(--color-message-error);
   font-weight: bold;
   font-size: 1.5rem;
 }
 
-.animation-button{
+/* Definición de clase básica de animación de los botones */
+.animation-button {
   display: inline-block;
   border: none;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }
 
-.animation-button:hover{
+.animation-button:hover {
   transform: scale(1.1);
 }
-
 
 /* Selectores separados del navbar */
 app-login,

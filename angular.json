@@ -17,22 +17,14 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "allowedCommonJsDependencies": [
-              "rxjs-compat",
-              "sweetalert2"
-           ],
+            "allowedCommonJsDependencies": ["rxjs-compat", "sweetalert2"],
             "outputPath": "dist/frontend-talk2gether",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/bootstrap.min.css",
               "src/styles.scss",
@@ -100,21 +92,14 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/styles.scss",
               "src/bootstrap.min.css",
               "node_modules/sweetaler2/src/sweetalert2.scss"
-
             ],
             "scripts": [
               "src/js/bootstrap.bundle.min.js",
@@ -128,6 +113,5 @@
   },
   "cli": {
     "analytics": "2af7dc71-9d22-4826-a2ac-c1528ca34c1d"
-
   }
 }
