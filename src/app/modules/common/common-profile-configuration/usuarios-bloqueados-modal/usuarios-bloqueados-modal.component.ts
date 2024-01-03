@@ -3,9 +3,9 @@ import { ModalService } from 'src/app/modules/common/common-register/servicios/m
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import Swal from 'sweetalert2';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
 import { UsuariosBloqueadosService } from '../servicios/usuarios-bloqueados.service';
-import { NavbarService } from 'src/app/shared/general-navbar/service/navbar.service';
+import { NavbarService } from 'src/app/shared/shared-components/general-navbar/service/navbar.service';
+import { SpinnerServiceGeneral } from 'src/app/shared/shared-components/spinner-world-loading/spinner.service';
 
 @Component({
   selector: 'app-usuarios-bloqueados-modal',

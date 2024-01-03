@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import Swal from 'sweetalert2';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
+import { SpinnerServiceGeneral } from 'src/app/shared/shared-components/spinner-world-loading/spinner.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Interes } from '../modelo/interes';

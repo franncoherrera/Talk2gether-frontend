@@ -4,7 +4,6 @@ import { RegistroChatComponent } from './registro-chat/registro-chat.component';
 import { PrincipalChatComponent } from './principal-chat/principal-chat.component';
 import { CometChatConversationListScreenPageComponent } from './comet-chat-conversation-list-screen-page/comet-chat-conversation-list-screen-page.component';
 import { CommonModule } from '@angular/common';
-import { NavbarModule } from 'src/app/shared/general-navbar/navbar.module';
 import { FormsModule } from '@angular/forms';
 import { ChatPadreComponent } from './chat-padre.component';
 import {
@@ -28,6 +27,7 @@ import {
 import { CometChatOutgoingDirectCall } from 'src/cometchat-pro-angular-ui-kit/CometChatWorkspace/src/components/Calls/CometChatOutgoingDirectCall/cometchat-outgoing-direct-call.module';
 import { CometChatIncomingDirectCall } from 'src/cometchat-pro-angular-ui-kit/CometChatWorkspace/src/components/Calls/CometChatIncomingDirectCall/cometchat-incoming-direct-call.module';
 import { ChatPadreAbiertoComponent } from './chat-padre-abierto.component';
+import { NavbarModule } from 'src/app/shared/shared-components/general-navbar/navbar.module';
 
 @NgModule({
   declarations: [

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import Swal from 'sweetalert2';
 import { FormControl, FormGroup } from '@angular/forms';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
 import { Router } from '@angular/router';
 import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
@@ -11,6 +10,7 @@ import { ReporteModalComponent } from '../modal-reportes/reporte-modal/reporte-m
 import { FiltrosModalComponent } from '../filtros-modal/filtros-modal.component';
 import { UsuarioService } from 'src/app/modules/admin/ABMUsuario/services/usuario.service';
 import { BajaUsuarioComponent } from 'src/app/modules/admin/ABMUsuario/baja-usuario/baja-usuario.component';
+import { SpinnerServiceGeneral } from 'src/app/shared/shared-components/spinner-world-loading/spinner.service';
 @Component({
   selector: 'app-reporte-usuario',
   templateUrl: './reporte-usuario.component.html',

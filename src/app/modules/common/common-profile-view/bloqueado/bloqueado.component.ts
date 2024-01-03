@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { catchError, combineLatest, map, of, switchMap, take, tap } from 'rxjs';
-import { NavbarService } from 'src/app/shared/general-navbar/service/navbar.service';
 import { ServicioVisualizarPerfilService } from '../services/servicio-visualizar-perfil.service';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
+import { SpinnerServiceGeneral } from 'src/app/shared/shared-components/spinner-world-loading/spinner.service';
 
 @Component({
   selector: 'app-bloqueado',

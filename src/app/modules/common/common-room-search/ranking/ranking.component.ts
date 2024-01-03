@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { RankingUsuariosService } from '../servicios/ranking-usuarios.service';
-import { NavbarService } from 'src/app/shared/general-navbar/service/navbar.service';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
 import Swal from 'sweetalert2';
+import { NavbarService } from 'src/app/shared/shared-components/general-navbar/service/navbar.service';
+import { SpinnerServiceGeneral } from 'src/app/shared/shared-components/spinner-world-loading/spinner.service';
 
 @Component({
   selector: 'app-ranking',

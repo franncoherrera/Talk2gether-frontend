@@ -2,7 +2,6 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { detalleReporte } from '../../model/detalleReporte';
 import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
 import { ReporteUsuarioService } from '../../service/reporte-usuario.service';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
 import {
   Observable,
   catchError,
@@ -12,6 +11,7 @@ import {
   switchMap,
   tap,
 } from 'rxjs';
+import { SpinnerServiceGeneral } from 'src/app/shared/shared-components/spinner-world-loading/spinner.service';
 
 @Component({
   selector: 'app-reporte-modal',

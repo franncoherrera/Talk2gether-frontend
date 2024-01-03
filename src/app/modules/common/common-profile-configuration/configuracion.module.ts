@@ -8,7 +8,7 @@ import { EliminarCuentaModalComponent } from './eliminar-cuenta-modal/eliminar-c
 import { ConfiguracionPadreComponent } from './configuracion-padre.component';
 import { CambiarContraseniaModalComponent } from './cambiar-contrasenia-modal/cambiar-contrasenia-modal.component';
 import { UsuariosBloqueadosModalComponent } from './usuarios-bloqueados-modal/usuarios-bloqueados-modal.component';
-import { SpinnerModule } from 'src/app/shared/spinner-general-loading/spinner.module';
+import { SpinnerModule } from 'src/app/shared/shared-components/spinner-general-loading/spinner.module';
 
 @NgModule({
   declarations: [

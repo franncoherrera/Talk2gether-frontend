@@ -8,7 +8,7 @@ import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { FiltroFechaComponent } from '../filtro-fecha/filtro-fecha.component';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
+import { SpinnerServiceGeneral } from 'src/app/shared/shared-components/spinner-world-loading/spinner.service';
 import { DatePipe } from '@angular/common';
 
 (pdfMake as any).vfs = pdfFonts.pdfMake.vfs;

@@ -18,7 +18,7 @@ import { EditarUsuarioService } from '../servicios/editar-usuario.service';
 import { EditarUsuario } from '../modelos/editar-usuario';
 import { lastValueFrom } from 'rxjs';
 import { ChatService } from '../../common-chat/services/chat-service.service';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
+import { SpinnerServiceGeneral } from 'src/app/shared/shared-components/spinner-world-loading/spinner.service';
 
 @Component({
   selector: 'app-editar-perfil',

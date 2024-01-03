@@ -12,14 +12,9 @@ import {
 import { ReporteUsuarioChatService } from '../services/reporte-usuario-chat.service';
 import {
   Observable,
-  Subscription,
-  debounceTime,
-  distinctUntilChanged,
-  fromEvent,
-  of,
 } from 'rxjs';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
 import Swal from 'sweetalert2';
+import { SpinnerServiceGeneral } from 'src/app/shared/shared-components/spinner-world-loading/spinner.service';
 
 @Component({
   selector: 'app-mostrar-reporte-usuario-chat',

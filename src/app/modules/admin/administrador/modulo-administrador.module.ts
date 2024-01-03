@@ -16,9 +16,9 @@ import { PuntosPorActividadModule } from '../ABMPuntoActividad/puntos-por-activi
 import { BackupDbComponent } from './backup-db/backup-db.component';
 import { DashboardAdministradorComponent } from './dashboard-administrador/dashboard/dashboard-administrador.component';
 import { FiltroFechaComponent } from './dashboard-administrador/filtro-fecha/filtro-fecha.component';
-import { NavbarModule } from 'src/app/shared/general-navbar/navbar.module';
 import { ABMUsuarioModule } from '../ABMUsuario/ABMusuario.module';
 import { ReporteUsuarioModule } from '../../common/common-user-report/reporte-usuario.module';
+import { NavbarModule } from 'src/app/shared/shared-components/general-navbar/navbar.module';
 
 @NgModule({
   declarations: [

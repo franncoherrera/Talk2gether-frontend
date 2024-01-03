@@ -1,11 +1,11 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
-import { NavbarService } from 'src/app/shared/general-navbar/service/navbar.service';
 import { EliminarCuentaService } from '../servicios/eliminar-cuenta.service';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
 import { SesionService } from 'src/app/interceptors/sesion.service';
+import { NavbarService } from 'src/app/shared/shared-components/general-navbar/service/navbar.service';
+import { SpinnerServiceGeneral } from 'src/app/shared/shared-components/spinner-world-loading/spinner.service';
 
 @Component({
   selector: 'app-eliminar-cuenta-modal',

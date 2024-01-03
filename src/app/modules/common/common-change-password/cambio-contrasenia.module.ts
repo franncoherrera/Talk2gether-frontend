@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NuevaContraseniaComponent } from './nueva-contrasenia/nueva-contrasenia.component';
-import { ConfirmarContraseniaComponent } from './confirmar-contrasenia/confirmar-contrasenia.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NuevaContraseniaComponent } from './chage-password-components/nueva-contrasenia/nueva-contrasenia.component';
+import { ConfirmarContraseniaComponent } from './chage-password-components/confirmar-contrasenia/confirmar-contrasenia.component';
 
 
 

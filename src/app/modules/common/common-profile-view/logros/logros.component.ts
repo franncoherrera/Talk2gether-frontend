@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ServicioVisualizarPerfilService } from '../services/servicio-visualizar-perfil.service';
-import { NavbarService } from 'src/app/shared/general-navbar/service/navbar.service';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
 import { UsuarioVisualizarPerfil } from '../models/usuario-visualizar';
 import {
   Observable,
@@ -21,6 +19,8 @@ import { itemModal } from '../models/item-modal';
 import { ModalFotoPerfilComponent } from '../modal-foto-perfil/modal-foto-perfil.component';
 import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
 import { CommonModule, NgIf } from '@angular/common';
+import { NavbarService } from 'src/app/shared/shared-components/general-navbar/service/navbar.service';
+import { SpinnerServiceGeneral } from 'src/app/shared/shared-components/spinner-world-loading/spinner.service';
 
 @Component({
   selector: 'app-logros',

@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import Swal from 'sweetalert2';
 import { ModalService } from '../../common/common-register/servicios/modal.service';
-import { ActivatedRoute, Router } from '@angular/router';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
+import { Router } from '@angular/router';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { IdiomaService } from '../ABMIdioma/service/idioma.service';
 import { Permiso } from './modelos/permiso';
 import { PermisosService } from './service/permisos.service';
 import { EditarPermisoComponent } from './editar-permiso/editar-permiso.component';
+import { SpinnerServiceGeneral } from 'src/app/shared/shared-components/spinner-world-loading/spinner.service';
 
 @Component({
   selector: 'app-permisos',
@@ -22,7 +21,6 @@ export class PermisosComponent {
   constructor(
     private permisoService: PermisosService,
     private spinnerServiceGeneral: SpinnerServiceGeneral,
-    private route: Router,
     private modalService: ModalService
   ) {}
 

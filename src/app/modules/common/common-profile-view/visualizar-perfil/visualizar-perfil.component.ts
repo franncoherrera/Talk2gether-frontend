@@ -18,8 +18,6 @@ import {
   take,
   tap,
 } from 'rxjs';
-import { NavbarService } from 'src/app/shared/general-navbar/service/navbar.service';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
 import Swal from 'sweetalert2';
 import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
 import { itemModal } from '../models/item-modal';
@@ -28,6 +26,8 @@ import { SeguirModalComponent } from '../seguir-modal/seguir-modal.component';
 import { ServicioVisualizarPerfilService } from '../services/servicio-visualizar-perfil.service';
 import { ModalFotoPerfilComponent } from '../modal-foto-perfil/modal-foto-perfil.component';
 import { ReportarUsuarioModalComponent } from '../reportar-usuario-modal/reportar-usuario-modal.component';
+import { NavbarService } from 'src/app/shared/shared-components/general-navbar/service/navbar.service';
+import { SpinnerServiceGeneral } from 'src/app/shared/shared-components/spinner-world-loading/spinner.service';
 
 @Component({
   selector: 'app-visualizar-perfil',

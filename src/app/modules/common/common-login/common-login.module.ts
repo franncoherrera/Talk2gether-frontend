@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { LoginModule } from './login/login.module';
-import { LoginDisabledModule } from './login-disabled/login-disabled.module';
+import { LoginModule } from './login-components/login/login.module';
+import { LoginDisabledModule } from './login-components/login-disabled/login-disabled.module';
 import { RouterModule, Routes } from '@angular/router';
 import { routes_path } from 'src/app/constants/ROUTES';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './login-components/login/login.component';
 import { AuthGuard } from 'src/app/security/auth-guard.guard';
-import { LoginDisabledComponent } from './login-disabled/login-inhabilitado.component';
+import { LoginDisabledComponent } from './login-components/login-disabled/login-inhabilitado.component';
 
 export const login_routes: Routes = [
   {
@@ -29,7 +29,6 @@ export const login_routes: Routes = [
     LoginModule,
     LoginDisabledModule,
     RouterModule.forChild(login_routes),
-    
   ],
   providers: [],
 })

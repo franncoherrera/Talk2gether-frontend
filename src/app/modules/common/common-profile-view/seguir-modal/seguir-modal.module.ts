@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { SeguirModalComponent } from './seguir-modal.component';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
-import { SpinnerModule } from 'src/app/shared/spinner-general-loading/spinner.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SpinnerModule } from 'src/app/shared/shared-components/spinner-general-loading/spinner.module';
 
 @NgModule({
   declarations: [SeguirModalComponent],

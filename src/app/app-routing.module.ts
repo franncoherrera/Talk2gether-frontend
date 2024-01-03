@@ -6,17 +6,13 @@ import { RegistroPadreComponent } from './modules/common/common-register/registr
 import { TerminosComponent } from './modules/common/common-register/terminos/terminos.component';
 import { PantallaInicioBusquedaComponent } from './modules/common/common-room-search/pantalla-inicio-busqueda/pantalla-inicio-busqueda.component';
 import { HomePageComponent } from './modules/common/common-home-page/home-page.component';
-import { SinFuncionarComponent } from './shared/not-working-layout/sin-funcionar.component';
 import { AuthGuard } from './security/auth-guard.guard';
 import { VisualizarPerfilComponent } from './modules/common/common-profile-view/visualizar-perfil/visualizar-perfil.component';
-import { NuevaContraseniaComponent } from './modules/common/common-change-password/nueva-contrasenia/nueva-contrasenia.component';
-import { ConfirmarContraseniaComponent } from './modules/common/common-change-password/confirmar-contrasenia/confirmar-contrasenia.component';
 import { BloqueadoComponent } from './modules/common/common-profile-view/bloqueado/bloqueado.component';
 import { loggedGuard } from './security/logged.guard';
 import { ChatPadreComponent } from './modules/common/common-chat/chat-padre.component';
 import { RankingComponent } from './modules/common/common-room-search/ranking/ranking.component';
 import { ReunionVirtualComponent } from './modules/common/common-room-search/reunion-virtual/reunion-virtual.component';
-import { SideBarAyudaComponent } from './shared/help-side-bar/side-bar-ayuda.component';
 import { CuentaEliminadaComponent } from './modules/common/common-profile-configuration/cuenta-eliminada/cuenta-eliminada.component';
 import { ChatPadreAbiertoComponent } from './modules/common/common-chat/chat-padre-abierto.component';
 import { ConfiguracionPadreComponent } from './modules/common/common-profile-configuration/configuracion-padre.component';
@@ -28,6 +24,10 @@ import { DashboardAdministradorComponent } from './modules/admin/administrador/d
 import { general_path } from './constants/ROUTES';
 import { AppComponent } from './app.component';
 import { CommonLoginModule } from './modules/common/common-login/common-login.module';
+import { SinFuncionarComponent } from './shared/shared-components/not-working-layout/sin-funcionar.component';
+import { NuevaContraseniaComponent } from './modules/common/common-change-password/chage-password-components/nueva-contrasenia/nueva-contrasenia.component';
+import { ConfirmarContraseniaComponent } from './modules/common/common-change-password/chage-password-components/confirmar-contrasenia/confirmar-contrasenia.component';
+import { SideBarAyudaComponent } from './shared/shared-components/help-side-bar/side-bar-ayuda.component';
 
 const routes: Routes = [
   {

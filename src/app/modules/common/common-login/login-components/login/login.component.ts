@@ -1,9 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LoginService } from '../login-services/login.service';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
-import { VerificarCuentaService } from '../../common-verify-account/servicios/verificar-cuenta.service';
+import { LoginService } from '../../login-services/login.service';
+import { VerificarCuentaService } from '../../../common-verify-account/servicios/verificar-cuenta.service';
 import {
   common_error,
   common_login,
@@ -12,8 +11,9 @@ import { routes_path } from 'src/app/constants/ROUTES';
 import { Subscription, catchError, map, of, tap } from 'rxjs';
 import { VALIDATOR_PATTERNS } from 'src/app/constants/PATTERNS';
 import { AlertsService } from 'src/app/helpers/alerts.service';
-import { TokenSession } from '../login-models/TokenSession';
+import { TokenSession } from '../../login-models/TokenSession';
 import { icon_class } from 'src/assets/icons_class/icon_class';
+import { SpinnerServiceGeneral } from 'src/app/shared/shared-components/spinner-world-loading/spinner.service';
 
 @Component({
   selector: 'app-login',

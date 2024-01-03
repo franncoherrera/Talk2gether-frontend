@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BackupService } from './backup.service';
 import Swal from 'sweetalert2';
 import { FormControl, FormGroup } from '@angular/forms';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
+import { SpinnerServiceGeneral } from 'src/app/shared/shared-components/spinner-world-loading/spinner.service';
 
 @Component({
   selector: 'app-backup-db',

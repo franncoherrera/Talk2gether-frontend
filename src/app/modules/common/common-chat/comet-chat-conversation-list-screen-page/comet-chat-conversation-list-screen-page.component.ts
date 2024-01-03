@@ -25,7 +25,7 @@ import Swal from 'sweetalert2';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ChatService } from '../services/chat-service.service';
 import { catchError, combineLatest, of, switchMap } from 'rxjs';
-import { NavbarService } from 'src/app/shared/general-navbar/service/navbar.service';
+import { NavbarService } from 'src/app/shared/shared-components/general-navbar/service/navbar.service';
 
 @Component({
   selector: 'app-comet-chat-conversation-list-screen-page',

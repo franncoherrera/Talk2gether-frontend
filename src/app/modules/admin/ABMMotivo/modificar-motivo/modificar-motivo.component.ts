@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
 import { MotivoService } from '../service/motivo.service';
 import { Router } from '@angular/router';
-import { SpinnerServiceGeneral } from 'src/app/shared/spinner-world-loading/spinner.service';
+import { SpinnerServiceGeneral } from 'src/app/shared/shared-components/spinner-world-loading/spinner.service';
 
 @Component({
   selector: 'app-modificar-motivo',
