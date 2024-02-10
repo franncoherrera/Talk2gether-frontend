@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
-import { NuevoUsuario } from './modelos/nuevo-usuario';
+import { NuevoUsuario } from './register-model/nuevo-usuario';
 import Swal from 'sweetalert2';
-import { RegistroService } from './servicios/registro.service';
+import { RegistroService } from './register-service/registro.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { NuevoUsuario2 } from './modelos/nuevo-usuario2';
-import { Usuario } from './modelos/usuario';
+import { NuevoUsuario2 } from './register-model/nuevo-usuario2';
+import { Usuario } from './register-model/usuario';
 import { TitleCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-registro-padre',
   templateUrl: './registro-padre.component.html',
-  styleUrls: ['./registro-padre.component.scss']
+  styleUrls: ['./registro-padre.component.scss'],
 })
 export class RegistroPadreComponent {
   pantalla2: boolean = false;
@@ -22,23 +22,24 @@ export class RegistroPadreComponent {
     private registroService: RegistroService,
     private titleCase: TitleCasePipe,
     private router: Router,
-    private route: ActivatedRoute) {}
+    private route: ActivatedRoute
+  ) {}
 
-  recibirDataPantalla1($event){
+  recibirDataPantalla1($event) {
     this.nuevoUsuario = $event;
     this.pantalla2 = true;
   }
 
-  recibirDataPantalla2($event){
+  recibirDataPantalla2($event) {
     this.nuevoUsuario2 = $event;
     this.registrarUsuario();
   }
 
-  volverPantalla1($event){
+  volverPantalla1($event) {
     this.pantalla2 = $event;
   }
 
-  registrarUsuario(){
+  registrarUsuario() {
     const usuario = new Usuario(
       this.titleCase.transform(this.nuevoUsuario.nombreUsuario),
       this.titleCase.transform(this.nuevoUsuario.apellidoUsuario),
@@ -59,44 +60,46 @@ export class RegistroPadreComponent {
       allowOutsideClick: false,
       didOpen: () => {
         Swal.showLoading();
-        this.route.queryParams.subscribe(params => {
+        this.route.queryParams.subscribe((params) => {
           const referidoValue = params['referido'];
           if (referidoValue) {
-            this.registroService.crearReferido(usuario, referidoValue).subscribe({
-              next: response => {
-                Swal.hideLoading();
-                this.mensajeConfirmacion();
-                this.router.navigate(['verificar-cuenta']);
-                sessionStorage.clear();
-                localStorage.setItem('correo', this.nuevoUsuario.correo);
-              },
-              error: error => {
-                Swal.hideLoading();
-                this.mensajeError(error);
-              }
-            })
+            this.registroService
+              .crearReferido(usuario, referidoValue)
+              .subscribe({
+                next: (response) => {
+                  Swal.hideLoading();
+                  this.mensajeConfirmacion();
+                  this.router.navigate(['verificar-cuenta']);
+                  sessionStorage.clear();
+                  localStorage.setItem('correo', this.nuevoUsuario.correo);
+                },
+                error: (error) => {
+                  Swal.hideLoading();
+                  this.mensajeError(error);
+                },
+              });
           } else {
             this.registroService.crear(usuario).subscribe({
-              next: response => {
+              next: (response) => {
                 Swal.hideLoading();
                 this.mensajeConfirmacion();
                 this.router.navigate(['verificar-cuenta']);
                 sessionStorage.clear();
                 localStorage.setItem('correo', this.nuevoUsuario.correo);
               },
-              error: error => {
+              error: (error) => {
                 Swal.hideLoading();
                 this.mensajeError(error);
                 console.log(error);
-              }
+              },
             });
           }
         });
-      }
+      },
     });
   }
 
-  mensajeConfirmacion(){
+  mensajeConfirmacion() {
     const Toast = Swal.mixin({
       toast: true,
       position: 'top-end',
@@ -104,17 +107,17 @@ export class RegistroPadreComponent {
       timer: 3000,
       timerProgressBar: true,
       didOpen: (toast) => {
-        toast.addEventListener('mouseenter', Swal.stopTimer)
-        toast.addEventListener('mouseleave', Swal.resumeTimer)
-      }
-    })
+        toast.addEventListener('mouseenter', Swal.stopTimer);
+        toast.addEventListener('mouseleave', Swal.resumeTimer);
+      },
+    });
     Toast.fire({
       icon: 'success',
-      title: 'Usuario creado correctamente'
-    })
+      title: 'Usuario creado correctamente',
+    });
   }
 
-  mensajeError(error){
+  mensajeError(error) {
     const Toast = Swal.mixin({
       toast: true,
       position: 'top-end',
@@ -122,14 +125,14 @@ export class RegistroPadreComponent {
       timer: 5000,
       timerProgressBar: true,
       didOpen: (toast) => {
-        toast.addEventListener('mouseenter', Swal.stopTimer)
-        toast.addEventListener('mouseleave', Swal.resumeTimer)
-      }
-    })
+        toast.addEventListener('mouseenter', Swal.stopTimer);
+        toast.addEventListener('mouseleave', Swal.resumeTimer);
+      },
+    });
     Toast.fire({
       icon: 'error',
       title: 'Error en el registro de usuario.',
-      text: error.error
-    })
+      text: error.error,
+    });
   }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
+import { ModalService } from 'src/app/shared/shared-services/custom-modal.service';
 import { EliminarCuentaService } from '../servicios/eliminar-cuenta.service';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';

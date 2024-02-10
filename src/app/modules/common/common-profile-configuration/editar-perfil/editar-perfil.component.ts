@@ -7,18 +7,18 @@ import {
   StorageReference,
 } from '@angular/fire/storage';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
-import { Interes } from '../../common-register/registrar-usuario2/models/Interes';
+import { Interes } from '../../common-register/register-user-step-2/models/Interes';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { InteresesModalComponent } from '../../common-register/registrar-usuario2/intereses-modal/intereses-modal.component';
+import { InteresesModalComponent } from '../../common-register/register-user-step-2/intereses-modal/intereses-modal.component';
 import Swal from 'sweetalert2';
-import { RegistroService } from '../../common-register/servicios/registro.service';
+import { RegistroService } from '../../common-register/register-service/registro.service';
 import { Router } from '@angular/router';
 import { EditarUsuarioService } from '../servicios/editar-usuario.service';
 import { EditarUsuario } from '../modelos/editar-usuario';
 import { lastValueFrom } from 'rxjs';
 import { ChatService } from '../../common-chat/services/chat-service.service';
 import { SpinnerServiceGeneral } from 'src/app/shared/shared-components/spinner-world-loading/spinner.service';
+import { ModalService } from 'src/app/shared/shared-services/custom-modal.service';
 
 @Component({
   selector: 'app-editar-perfil',

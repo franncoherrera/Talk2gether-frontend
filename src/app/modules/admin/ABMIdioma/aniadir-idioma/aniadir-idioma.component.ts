@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 import { IdiomaService } from '../service/idioma.service';
 import { Router } from '@angular/router';
 import { SpinnerServiceGeneral } from 'src/app/shared/shared-components/spinner-world-loading/spinner.service';
-import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
+import { ModalService } from 'src/app/shared/shared-services/custom-modal.service';
 
 @Component({
   selector: 'app-aniadir-idioma',

@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
-import { RegistroService } from '../../common-register/servicios/registro.service';
+import { RegistroService } from '../../common-register/register-service/registro.service';
+import { ModalService } from 'src/app/shared/shared-services/custom-modal.service';
 
 @Component({
   selector: 'app-filtros-modal',

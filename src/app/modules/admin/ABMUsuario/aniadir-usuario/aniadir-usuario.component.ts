@@ -1,7 +1,7 @@
 import { Component, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { PasswordValidator } from '../../../common/common-register/registrar-usuario1/password-validator';
+import { PasswordValidator } from '../../../common/common-register/register-user-step-1/password-validator';
 import { Location } from '@angular/common';
 import { UsuarioService } from '../services/usuario.service';
 import Swal from 'sweetalert2';

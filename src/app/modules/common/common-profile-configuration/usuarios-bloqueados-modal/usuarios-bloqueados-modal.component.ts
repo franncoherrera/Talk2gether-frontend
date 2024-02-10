@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
+import { ModalService } from 'src/app/shared/shared-services/custom-modal.service';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import Swal from 'sweetalert2';

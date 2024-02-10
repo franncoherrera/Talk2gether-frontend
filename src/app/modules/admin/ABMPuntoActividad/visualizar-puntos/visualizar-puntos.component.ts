@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { SpinnerServiceGeneral } from 'src/app/shared/shared-components/spinner-world-loading/spinner.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
+import { ModalService } from 'src/app/shared/shared-services/custom-modal.service';
 import Swal from 'sweetalert2';
 import { Puntos } from '../modelo/puntosPorActividad';
 import { PuntosPorActividadService } from '../service/puntos-por-actividad.service';

@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { detalleReporte } from '../../model/detalleReporte';
-import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
+import { ModalService } from 'src/app/shared/shared-services/custom-modal.service';
 import { ReporteUsuarioService } from '../../service/reporte-usuario.service';
 import {
   Observable,

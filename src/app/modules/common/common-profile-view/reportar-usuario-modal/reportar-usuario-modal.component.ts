@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
+import { ModalService } from 'src/app/shared/shared-services/custom-modal.service';
 import { ReportarUsuarioService } from '../services/reportar-usuario.service';
 import { ServicioVisualizarPerfilService } from '../services/servicio-visualizar-perfil.service';
 import Swal from 'sweetalert2';

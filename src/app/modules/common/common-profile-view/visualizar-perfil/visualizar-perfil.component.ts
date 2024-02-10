@@ -19,7 +19,7 @@ import {
   tap,
 } from 'rxjs';
 import Swal from 'sweetalert2';
-import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
+import { ModalService } from 'src/app/shared/shared-services/custom-modal.service';
 import { itemModal } from '../models/item-modal';
 import { UsuarioVisualizarPerfil } from '../models/usuario-visualizar';
 import { SeguirModalComponent } from '../seguir-modal/seguir-modal.component';

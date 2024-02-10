@@ -7,7 +7,7 @@ import { InteresService } from '../service/interes.service';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { InfoPaisComponent } from '../../ABMPais/info-pais/info-pais.component';
 import { InfoInteresComponent } from '../info-interes/info-interes.component';
-import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
+import { ModalService } from 'src/app/shared/shared-services/custom-modal.service';
 
 @Component({
   selector: 'app-aniadir-interes',

@@ -1,5 +1,4 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
 import { Router } from '@angular/router';
 import { itemModal } from '../models/item-modal';
 import { ServicioVisualizarPerfilService } from '../services/servicio-visualizar-perfil.service';
@@ -14,6 +13,7 @@ import {
 } from 'rxjs';
 import Swal from 'sweetalert2';
 import { SpinnerServiceGeneral } from 'src/app/shared/shared-components/spinner-world-loading/spinner.service';
+import { ModalService } from 'src/app/shared/shared-services/custom-modal.service';
 
 @Component({
   selector: 'app-seguir-modal',

@@ -1,10 +1,10 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
+import { ModalService } from 'src/app/shared/shared-services/custom-modal.service';
 
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { PasswordValidator } from '../../common-register/registrar-usuario1/password-validator';
+import { PasswordValidator } from '../../common-register/register-user-step-1/password-validator';
 import { CambiarContraseniaService } from '../servicios/cambiar-contrasenia.service';
 import { SesionService } from 'src/app/interceptors/sesion.service';
 import { NavbarService } from 'src/app/shared/shared-components/general-navbar/service/navbar.service';

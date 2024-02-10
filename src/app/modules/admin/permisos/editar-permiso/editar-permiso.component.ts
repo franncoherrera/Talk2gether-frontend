@@ -5,7 +5,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable, combineLatest, of, switchMap, tap } from 'rxjs';
 import { PermisosService } from '../service/permisos.service';
 import Swal from 'sweetalert2';
-import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
+import { ModalService } from 'src/app/shared/shared-services/custom-modal.service';
 import { UsuarioService } from '../../ABMUsuario/services/usuario.service';
 
 @Component({

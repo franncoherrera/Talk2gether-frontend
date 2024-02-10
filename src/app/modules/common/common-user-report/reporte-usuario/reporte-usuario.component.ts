@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import Swal from 'sweetalert2';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
+import { ModalService } from 'src/app/shared/shared-services/custom-modal.service';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Reporte } from '../model/reporte';
 import { ReporteUsuarioService } from '../service/reporte-usuario.service';

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { BuscarUsuariosService } from '../servicios/buscar-usuarios.service';
 import { UsuarioBusqueda } from '../modelos/usuario-busqueda';
-import { ModalService } from 'src/app/modules/common/common-register/servicios/modal.service';
+import { ModalService } from 'src/app/shared/shared-services/custom-modal.service';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { FiltrosModalComponent } from '../filtros-modal/filtros-modal.component';
 import { Router } from '@angular/router';
