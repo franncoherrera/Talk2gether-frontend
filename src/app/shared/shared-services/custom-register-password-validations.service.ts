@@ -2,13 +2,12 @@ import { Injectable } from '@angular/core';
 import { FormControl, ValidationErrors } from '@angular/forms';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CustomRegisterPasswordValidationsService {
-
-
   minLengthValidation(control: FormControl): ValidationErrors | null {
     const value: string = control.value;
+    /* No se puede parametrizar minLength porque esta puesto en el backend*/
     const minLength = 8;
     if (value.length < minLength) {
       return { noMinLength: true };
@@ -24,7 +23,6 @@ export class CustomRegisterPasswordValidationsService {
     }
     return null;
   }
-
 
   oneLowerCaseValidation(control: FormControl): ValidationErrors | null {
     const value: string = control.value;
@@ -43,7 +41,6 @@ export class CustomRegisterPasswordValidationsService {
     }
     return null;
   }
-
 
   oneSpecialCharacterValidation(control: FormControl): ValidationErrors | null {
     const value: string = control.value;

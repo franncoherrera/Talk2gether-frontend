@@ -22,12 +22,12 @@ import { EstadisticasComponent } from './modules/common/common-profile-view/esta
 import { SideBarComponent } from './modules/admin/administrador/side-bar/side-bar.component';
 import { DashboardAdministradorComponent } from './modules/admin/administrador/dashboard-administrador/dashboard/dashboard-administrador.component';
 import { general_path } from './constants/ROUTES';
-import { AppComponent } from './app.component';
 import { CommonLoginModule } from './modules/common/common-login/common-login.module';
 import { SinFuncionarComponent } from './shared/shared-components/not-working-layout/sin-funcionar.component';
-import { NuevaContraseniaComponent } from './modules/common/common-change-password/chage-password-components/nueva-contrasenia/nueva-contrasenia.component';
-import { ConfirmarContraseniaComponent } from './modules/common/common-change-password/chage-password-components/confirmar-contrasenia/confirmar-contrasenia.component';
+import { NuevaContraseniaComponent } from './modules/common/common-change-password-DEPRECATED/chage-password-components/change-password-new-password/nueva-contrasenia.component';
 import { SideBarAyudaComponent } from './shared/shared-components/help-side-bar/side-bar-ayuda.component';
+import { ConfirmarContraseniaComponent } from './modules/common/common-change-password-DEPRECATED/chage-password-components/chage-password-confirm-password/confirmar-contrasenia.component';
+import { CambioContraseniaModule } from './modules/common/common-change-password-DEPRECATED/cambio-contrasenia.module';
 
 const routes: Routes = [
   {
@@ -37,6 +37,11 @@ const routes: Routes = [
   {
     path: general_path.main_path,
     loadChildren: () => CommonLoginModule,
+  },
+
+  {
+    path: general_path.main_path,
+    loadChildren: () => CambioContraseniaModule,
   },
 
   {
@@ -85,16 +90,7 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   { path: 'proximamente', component: SinFuncionarComponent },
-  {
-    path: 'nuevaContrasenia',
-    component: NuevaContraseniaComponent,
-    canActivate: [AuthGuard],
-  },
-  {
-    path: 'confirmacion',
-    component: ConfirmarContraseniaComponent,
-    canActivate: [AuthGuard],
-  },
+
 
   {
     path: 'perfilUsuario/:id',

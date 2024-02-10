@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup } from "@angular/forms";
-import { CustomRegisterPasswordValidationsService } from "./custom-register-password-validations.service";
+import { CustomRegisterPasswordValidationsService } from "../../../../../shared/shared-services/custom-register-password-validations.service";
 import { Router } from "@angular/router";
 import Swal from "sweetalert2";
 import { CambioContraseniaService } from "../../change-password-services/cambio-contrasenia.service";
