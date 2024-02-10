@@ -11,9 +11,9 @@ import {
   StorageReference,
 } from '@angular/fire/storage';
 import Swal from 'sweetalert2';
-import { NuevoUsuario2 } from '../register-model/nuevo-usuario2';
-import { RegistroService } from '../register-service/registro.service';
-import { ModalService } from '../../../../shared/shared-services/custom-modal.service';
+import { ModalService } from 'src/app/shared/shared-services/custom-modal.service';
+import { RegistroService } from '../../register-service/registro.service';
+import { NuevoUsuario2 } from '../../register-models/nuevo-usuario2';
 
 @Component({
   selector: 'app-registrar-usuario2',

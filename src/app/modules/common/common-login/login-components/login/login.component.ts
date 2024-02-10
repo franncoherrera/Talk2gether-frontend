@@ -2,7 +2,6 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginService } from '../../login-services/login.service';
-import { VerificarCuentaService } from '../../../common-verify-account-DEPRECATED/servicios/verificar-cuenta.service';
 import {
   common_error,
   common_login,
@@ -14,6 +13,7 @@ import { AlertsService } from 'src/app/helpers/alerts.service';
 import { TokenSession } from '../../login-models/TokenSession';
 import { icon_class } from 'src/assets/icons_class/icon_class';
 import { SpinnerServiceGeneral } from 'src/app/shared/shared-components/spinner-world-loading/spinner.service';
+import { VerificarCuentaService } from 'src/app/modules/common/common-verify-account-DEPRECATED/servicios/verificar-cuenta.service';
 
 @Component({
   selector: 'app-login',

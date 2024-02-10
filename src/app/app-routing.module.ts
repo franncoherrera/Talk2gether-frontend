@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { RegistroPadreComponent } from './modules/common/common-register/registro-padre.component';
-import { TerminosComponent } from './modules/common/common-register/terminos/terminos.component';
 import { PantallaInicioBusquedaComponent } from './modules/common/common-room-search/pantalla-inicio-busqueda/pantalla-inicio-busqueda.component';
 import { HomePageComponent } from './modules/common/common-home-page/home-page.component';
 import { AuthGuard } from './security/auth-guard.guard';
@@ -20,11 +18,13 @@ import { EstadisticasComponent } from './modules/common/common-profile-view/esta
 import { SideBarComponent } from './modules/admin/administrador/side-bar/side-bar.component';
 import { DashboardAdministradorComponent } from './modules/admin/administrador/dashboard-administrador/dashboard/dashboard-administrador.component';
 import { general_path } from './constants/ROUTES';
-import { CommonLoginModule } from './modules/common/common-login/common-login.module';
 import { SinFuncionarComponent } from './shared/shared-components/not-working-layout/sin-funcionar.component';
 import { SideBarAyudaComponent } from './shared/shared-components/help-side-bar/side-bar-ayuda.component';
 import { CambioContraseniaModule } from './modules/common/common-change-password-DEPRECATED/cambio-contrasenia.module';
 import { VerificarCuentaModule } from './modules/common/common-verify-account-DEPRECATED/verificar-cuenta.module';
+import { CommonLoginModule } from './modules/common/common-login/common-login.module';
+import { RegistroPadreComponent } from './modules/common/common-register/register-components/registro-padre.component';
+import { TerminosComponent } from './modules/common/common-register/register-components/terms-and-conditions/terminos.component';
 
 const routes: Routes = [
   {

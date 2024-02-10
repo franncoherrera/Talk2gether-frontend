@@ -2,7 +2,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PasswordValidator } from './password-validator';
-import { NuevoUsuario } from '../register-model/nuevo-usuario';
+import { NuevoUsuario } from '../../register-models/nuevo-usuario';
 
 @Component({
   selector: 'app-registrar-usuario1',

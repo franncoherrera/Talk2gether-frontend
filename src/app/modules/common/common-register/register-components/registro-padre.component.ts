@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { NuevoUsuario } from './register-model/nuevo-usuario';
 import Swal from 'sweetalert2';
-import { RegistroService } from './register-service/registro.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { NuevoUsuario2 } from './register-model/nuevo-usuario2';
-import { Usuario } from './register-model/usuario';
 import { TitleCasePipe } from '@angular/common';
+import { NuevoUsuario } from '../register-models/nuevo-usuario';
+import { NuevoUsuario2 } from '../register-models/nuevo-usuario2';
+import { RegistroService } from '../register-service/registro.service';
+import { Usuario } from '../register-models/usuario';
 
 @Component({
   selector: 'app-registro-padre',

@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Interes } from '../models/Interes';
-import { ModalService } from '../../../../../shared/shared-services/custom-modal.service';
-import { InteresesService } from '../../register-service/intereses.service';
 import { SpinnerServiceGeneral } from 'src/app/shared/shared-components/spinner-world-loading/spinner.service';
+import { ModalService } from 'src/app/shared/shared-services/custom-modal.service';
+import { InteresesService } from '../../../register-service/intereses.service';
 
 @Component({
   selector: 'app-intereses-modal',

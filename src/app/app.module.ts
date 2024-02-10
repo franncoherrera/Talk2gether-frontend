@@ -23,12 +23,12 @@ import { ConfiguracionModule } from './modules/common/common-profile-configurati
 import { ReportarUsuarioModalModule } from './modules/common/common-profile-view/reportar-usuario-modal/reportar-usuario-modal.module';
 import { ModuloAdministradorModule } from './modules/admin/administrador/modulo-administrador.module';
 import { CalificarUsuarioModule } from './modules/common/common-rate-user/calificar-usuario.module';
-import { CommonLoginModule } from './modules/common/common-login/common-login.module';
 import { SinFuncionarComponent } from './shared/shared-components/not-working-layout/sin-funcionar.component';
 import { SideBarAyudaModule } from './shared/shared-components/help-side-bar/side-bar-ayuda.module';
 import { SpinnerCargaGeneralModule } from './shared/shared-components/spinner-world-loading/spinner-carga-general.module';
 import { NavbarModule } from './shared/shared-components/general-navbar/navbar.module';
 import { RecuperarContraseniaModule } from './modules/common/common-recover-password-DEPRECATED/recuperar-contrasenia.module';
+import { CommonLoginModule } from './modules/common/common-login/common-login.module';
 
 @NgModule({
   declarations: [AppComponent, SinFuncionarComponent],

@@ -2,15 +2,12 @@ import { Injectable } from '@angular/core';
 import {
   ActivatedRouteSnapshot,
   CanActivate,
-  NavigationEnd,
   Router,
   RouterStateSnapshot,
-  UrlTree,
 } from '@angular/router';
 import { Observable, of, switchMap } from 'rxjs';
 import { SesionService } from '../interceptors/sesion.service';
 import Swal from 'sweetalert2';
-import { LoginService } from '../modules/common/common-login/login-services/login.service';
 import { SecurityService } from './security.service';
 
 @Injectable({ providedIn: 'root' })

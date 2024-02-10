@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { Interes } from '../register-user-step-2/models/Interes';
+import { Interes } from '../register-components/register-user-step-2/models/Interes';
 
 @Injectable({
   providedIn: 'root',
