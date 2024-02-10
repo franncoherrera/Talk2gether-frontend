@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { VerificarCuentaComponent } from './modules/common/common-verify-account-DEPRECATED/verificar-cuenta/verificar-cuenta.component';
-import { CuentaVerificadaComponent } from './modules/common/common-verify-account-DEPRECATED/cuenta-verificada/cuenta-verificada.component';
 import { RegistroPadreComponent } from './modules/common/common-register/registro-padre.component';
 import { TerminosComponent } from './modules/common/common-register/terminos/terminos.component';
 import { PantallaInicioBusquedaComponent } from './modules/common/common-room-search/pantalla-inicio-busqueda/pantalla-inicio-busqueda.component';
@@ -24,9 +22,7 @@ import { DashboardAdministradorComponent } from './modules/admin/administrador/d
 import { general_path } from './constants/ROUTES';
 import { CommonLoginModule } from './modules/common/common-login/common-login.module';
 import { SinFuncionarComponent } from './shared/shared-components/not-working-layout/sin-funcionar.component';
-import { NuevaContraseniaComponent } from './modules/common/common-change-password-DEPRECATED/chage-password-components/change-password-new-password/nueva-contrasenia.component';
 import { SideBarAyudaComponent } from './shared/shared-components/help-side-bar/side-bar-ayuda.component';
-import { ConfirmarContraseniaComponent } from './modules/common/common-change-password-DEPRECATED/chage-password-components/chage-password-confirm-password/confirmar-contrasenia.component';
 import { CambioContraseniaModule } from './modules/common/common-change-password-DEPRECATED/cambio-contrasenia.module';
 import { VerificarCuentaModule } from './modules/common/common-verify-account-DEPRECATED/verificar-cuenta.module';
 
@@ -39,7 +35,6 @@ const routes: Routes = [
     path: general_path.main_path,
     loadChildren: () => CommonLoginModule,
   },
-
   {
     path: general_path.main_path,
     loadChildren: () => CambioContraseniaModule,
@@ -48,8 +43,6 @@ const routes: Routes = [
     path: general_path.main_path,
     loadChildren: () => VerificarCuentaModule,
   },
-
-  
   {
     path: 'registro',
     component: RegistroPadreComponent,

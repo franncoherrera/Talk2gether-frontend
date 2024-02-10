@@ -5,7 +5,6 @@ import { NuevaContraseniaComponent } from './chage-password-components/change-pa
 import { AuthGuard } from 'src/app/security/auth-guard.guard';
 import { ConfirmarContraseniaComponent } from './chage-password-components/chage-password-confirm-password/confirmar-contrasenia.component';
 
-
 export const change_password_routes: Routes = [
   {
     path: 'nuevaContrasenia',
@@ -17,11 +16,13 @@ export const change_password_routes: Routes = [
     component: ConfirmarContraseniaComponent,
     canActivate: [AuthGuard],
   },
-]
-
+];
 
 @NgModule({
   declarations: [],
-  imports: [ChangePasswordNewPasswordModule, RouterModule.forChild(change_password_routes)],
+  imports: [
+    ChangePasswordNewPasswordModule,
+    RouterModule.forChild(change_password_routes),
+  ],
 })
 export class CambioContraseniaModule {}

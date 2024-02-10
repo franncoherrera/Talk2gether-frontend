@@ -1,15 +1,15 @@
 .text-error {
-  padding-top: 0.2rem;
+  padding-top: 0.125rem;
 
   &__input {
     position: absolute;
-    font-size: 1.4rem;
-    line-height: 1rem;
+    font-size: 0.625rem;
+    line-height: 0.625rem;
   }
 
   &-response {
-    font-size: 2rem;
-    line-height: 2.3rem;
+    font-size: 1.25rem;
+    line-height: 1.4375rem;
     text-align: center;
     width: 100%;
   }
@@ -26,17 +26,17 @@
   &__form {
     width: 50%;
     height: auto;
-    padding: 6rem;
+    padding: 3.75rem;
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius-containers);
     background-color: var(--color-principal);
 
     &__title {
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 1.25rem;
       color: var(--color-white);
       font-weight: bold;
-      font-size: 5rem;
+      font-size: 3.125rem;
     }
 
     &__group {
@@ -46,13 +46,13 @@
         display: block;
         font-weight: bold;
         color: var(--color-white);
-        font-size: 2rem;
-        padding-bottom: 2rem;
+        font-size: 1.25rem;
+        padding-bottom: 1.25rem;
         position: relative;
 
         &__input {
           width: 100%;
-          padding: 1rem;
+          padding: 0.625rem;
           border: 1px solid var(--color-border);
           border-radius: var(--border-radius-input);
           color: var(--color-black);
@@ -61,8 +61,8 @@
 
         &-eye {
           position: absolute;
-          right: 2rem;
-          top: 4rem;
+          right: 1.25rem;
+          top: 2.5rem;
           color: var(--color-black);
         }
       }
@@ -74,17 +74,17 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      row-gap: 2rem;
+      row-gap: 1.25rem;
 
       &-submit {
         width: 100%;
-        padding: 1rem;
+        padding: 0.625rem;
         border: none;
         background-color: var(--color-button-submit);
         color: var(--color-letter-button);
-        font-size: 2rem;
+        font-size: 1.25rem;
         font-weight: bold;
-        margin-top: 2rem;
+        margin-top: 1.25rem;
         border-radius: var(--border-radius-containers);
       }
 
@@ -115,35 +115,37 @@
 
       &__title {
         font-weight: bold;
-        font-size: 3rem;
+        font-size: 1.875rem;
       }
 
       &__group {
         &__label {
-          font-size: 1.5rem;
+          font-size: 0.9375rem;
 
         }
       }
 
       &__buttons {
-        row-gap: 1.5rem;
+        row-gap: 0.9375rem;
 
         &-submit {
-          font-size: 1.5rem;
+          font-size: 0.9375rem;
 
         }
 
         &-forgot-pass {
-          font-size: 1.5rem;
-          margin-bottom: 1rem;
+          font-size: 0.9375rem;
+          margin-bottom: 0.625rem;
         }
       }
     }
   }
+
   .text-error {
     font-size: 1.2rem;
-    &-response{
-      font-size: 1.5rem;
+
+    &-response {
+      font-size: 0.9375rem;
     }
   }
 }
@@ -152,9 +154,10 @@
   .login-container {
     display: block;
     overflow: scroll;
-    padding-top: 10.05rem;
+    padding-top: 6.28125rem;
+
     &__form {
-      margin: 3rem auto;
+      margin: 1.875rem auto;
     }
 
   }
@@ -169,31 +172,32 @@
 
       &__title {
         font-weight: bold;
-        font-size: 2rem;
+        font-size: 1.25rem;
       }
 
       &__group {
         &__label {
-          font-size: 1rem;
+          font-size: 0.625rem;
 
           &-eye {
-            top: 2.5rem;
+            top: 1.5625rem;
           }
         }
       }
 
       &__buttons {
         &-submit {
-          font-size: 1rem;
+          font-size: 0.625rem;
         }
 
         &-forgot-pass {
-          font-size: 1rem;
+          font-size: 0.625rem;
         }
       }
     }
   }
+
   .text-error {
-    font-size: 1rem;
+    font-size: 0.625rem;
   }
 }

@@ -1,12 +1,12 @@
 .content {
   height: 100vh;
-  padding-top: 10.05rem;
+  padding-top: 6.28125rem;
 
   &__row {
     display: flex;
 
     &__image {
-      height: 55rem;
+      height: 34.375rem;
       flex-basis: 50%;
 
       &-general {
@@ -16,28 +16,28 @@
     }
 
     &__text {
-      height: 55rem;
+      height: 34.375rem;
       flex-basis: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      row-gap: 2rem;
+      row-gap: 1.25rem;
       text-align: center;
 
       &-title {
-        font-size: 4.5rem;
+        font-size: 2.8125rem;
         font-weight: bold;
       }
 
       &-subtitle {
-        font-size: 3.5rem;
+        font-size: 2.1875rem;
       }
     }
 
     &__epigraph {
-      font-size: 1.5rem;
-      padding: 1.5rem;
+      font-size: 0.9375rem;
+      padding: 0.9375rem;
       color: var(--color-principal);
       font-weight: bold;
     }
@@ -76,11 +76,11 @@
     &__row {
       &__text {
         &-title {
-          font-size: 3rem;
+          font-size: 1.875rem;
           font-weight: bold;
         }
         &-subtitle {
-          font-size: 2rem;
+          font-size: 1.25rem;
         }
       }
     }

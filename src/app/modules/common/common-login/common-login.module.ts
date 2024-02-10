@@ -1,6 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
 import { LoginModule } from './login-components/login/login.module';
 import { LoginDisabledModule } from './login-components/login-disabled/login-disabled.module';
 import { RouterModule, Routes } from '@angular/router';
@@ -24,8 +22,6 @@ export const login_routes: Routes = [
 
 @NgModule({
   imports: [
-    CommonModule,
-    HttpClientModule,
     LoginModule,
     LoginDisabledModule,
     RouterModule.forChild(login_routes),
