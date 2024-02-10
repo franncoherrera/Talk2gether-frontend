@@ -3,11 +3,11 @@
 ![talk2gether](https://github.com/franncoherrera/Talk2gether/assets/88279035/9a0856fb-ad81-40a6-ae4e-859ebaf7ceb8)
 
 
-Proyecto final de la carrera Ingeniería en Sistema de Información.
+# Proyecto final de la carrera Ingeniería en Sistema de Información.
 
 La plataforma se lleva a cabo con el propósito de promover el aprendizaje lingüístico colaborativo, a través de la práctica entre hablantes nativos y estudiantes. Esta solución aborda la necesidad de aprender idiomas extranjeros de manera práctica, brindando espacios de comunicación directa entre las personas y creando un ambiente de diálogo real. El propósito del sistema es crear un entorno inmersivo y romper con las estructuras tradicionales de aprendizaje de idiomas.
 
-**Módulos principales.**
+## **Módulos principales.**
 
 - Módulo de usuario
 - Módulo de seguridad
@@ -19,8 +19,8 @@ La plataforma se lleva a cabo con el propósito de promover el aprendizaje ling�
 - Módulo de reportes
 - Módulo de calificación
 
-
-**Tecnologías.**
+> [!TIP]
+> Tecnologías.
 
 - Angular CLI 16.1.1
 - Node 18.16.0
@@ -28,7 +28,8 @@ La plataforma se lleva a cabo con el propósito de promover el aprendizaje ling�
 - HTML/SCSS
 - Bootstrap 5
 
-**Modulos deprecados (DEPRECATED).**
+> [!WARNING]
+> Modulos deprecados (DEPRECATED).
 
 - common-change-password-DEPRECATED --> modulo deprecado debido a que no funciona el servidor de correo para poder modificar la contraseña. Lo que implica que se pasaron por alto las modificaciones de buenas prácticas de este módulo. No visualizar este módulo o desestimar su implementación
 
