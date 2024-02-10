@@ -14,9 +14,8 @@ import { SesionService } from './interceptors/sesion.service';
 import { CambioContraseniaModule } from './modules/common/common-change-password-DEPRECATED/cambio-contrasenia.module';
 import { InicioModule } from './modules/common/common-room-search/inicio.module';
 import { PantallaPrincipalModule } from './modules/common/common-home-page/home-page.module';
-import { RecuperarContraseniaModule } from './modules/common/common-recover-password/recuperar-contrasenia.module';
 import { RegistroModule } from './modules/common/common-register/registro.module';
-import { VerificarCuentaModule } from './modules/common/common-verify-account/verificar-cuenta.module';
+import { VerificarCuentaModule } from './modules/common/common-verify-account-DEPRECATED/verificar-cuenta.module';
 import { SeguirModalModule } from './modules/common/common-profile-view/seguir-modal/seguir-modal.module';
 import { ChatModule } from './modules/common/common-chat/chat.module';
 import { PregFreqModule } from './modules/common/common-help-section/preg-freq.module';
@@ -29,6 +28,7 @@ import { SinFuncionarComponent } from './shared/shared-components/not-working-la
 import { SideBarAyudaModule } from './shared/shared-components/help-side-bar/side-bar-ayuda.module';
 import { SpinnerCargaGeneralModule } from './shared/shared-components/spinner-world-loading/spinner-carga-general.module';
 import { NavbarModule } from './shared/shared-components/general-navbar/navbar.module';
+import { RecuperarContraseniaModule } from './modules/common/common-recover-password-DEPRECATED/recuperar-contrasenia.module';
 
 @NgModule({
   declarations: [AppComponent, SinFuncionarComponent],

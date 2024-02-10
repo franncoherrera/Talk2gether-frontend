@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginService } from '../../login-services/login.service';
-import { VerificarCuentaService } from '../../../common-verify-account/servicios/verificar-cuenta.service';
+import { VerificarCuentaService } from '../../../common-verify-account-DEPRECATED/servicios/verificar-cuenta.service';
 import {
   common_error,
   common_login,
