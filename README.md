@@ -28,4 +28,9 @@ La plataforma se lleva a cabo con el propósito de promover el aprendizaje ling�
 - HTML/SCSS
 - Bootstrap 5
 
+**Modulos deprecados (DEPRECATED).**
+
+- common-change-password-DEPRECATED --> modulo deprecado debido a que no funciona el servidor de correo para poder modificar la contraseña. Lo que implica que se pasaron por alto las modificaciones de buenas prácticas de este módulo. No visualizar este módulo o desestimar su implementación
+
+
 ![images](https://github.com/franncoherrera/Talk2gether/assets/88279035/09bfc75c-a9fb-4f4a-8f3e-fa4e000f9046)
