@@ -1,3 +1,5 @@
+@import "../../../../../../assets/custom-scss/variables.scss";
+
 .text-error {
   padding-top: 0.125rem;
 
@@ -27,14 +29,14 @@
     width: 50%;
     height: auto;
     padding: 3.75rem;
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius-containers);
-    background-color: var(--color-principal);
+    border: 1px solid $color-border;
+    border-radius: $border-radius-containers;
+    background-color: $color-principal;
 
     &__title {
       text-align: center;
       margin-bottom: 1.25rem;
-      color: var(--color-white);
+      color: $color-white;
       font-weight: bold;
       font-size: 3.125rem;
     }
@@ -45,7 +47,7 @@
       &__label {
         display: block;
         font-weight: bold;
-        color: var(--color-white);
+        color: $color-white;
         font-size: 1.25rem;
         padding-bottom: 1.25rem;
         position: relative;
@@ -53,9 +55,9 @@
         &__input {
           width: 100%;
           padding: 0.625rem;
-          border: 1px solid var(--color-border);
-          border-radius: var(--border-radius-input);
-          color: var(--color-black);
+          border: 1px solid $color-border;
+          border-radius: $border-radius-input;
+          color: $color-black;
 
         }
 
@@ -63,7 +65,7 @@
           position: absolute;
           right: 1.25rem;
           top: 2.5rem;
-          color: var(--color-black);
+          color: $color-black;
         }
       }
 
@@ -80,18 +82,18 @@
         width: 100%;
         padding: 0.625rem;
         border: none;
-        background-color: var(--color-button-submit);
-        color: var(--color-letter-button);
+        background-color: $color-button-submit;
+        color: --color-letter-button;
         font-size: 1.25rem;
         font-weight: bold;
         margin-top: 1.25rem;
-        border-radius: var(--border-radius-containers);
+        border-radius: $border-radius-containers;
       }
 
       &-forgot-pass {
         text-align: center;
         width: 100%;
-        color: var(--color-white);
+        color: $color-white;
         font-weight: bold;
       }
     }

@@ -8,7 +8,7 @@ import { CambiarContraseniaService } from '../servicios/cambiar-contrasenia.serv
 import { SesionService } from 'src/app/interceptors/sesion.service';
 import { NavbarService } from 'src/app/shared/shared-components/general-navbar/service/navbar.service';
 import { SpinnerServiceGeneral } from 'src/app/shared/shared-components/spinner-world-loading/spinner.service';
-import { PasswordValidator } from '../../common-register/register-components/register-user-step-1/password-validator';
+import { PasswordValidator } from 'src/app/shared/shared-services/custom-register-password-validations.service';
 
 @Component({
   selector: 'app-cambiar-contrasenia-modal',

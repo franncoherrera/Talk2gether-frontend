@@ -6,7 +6,7 @@ import { UsuarioService } from '../services/usuario.service';
 import Swal from 'sweetalert2';
 import { UsuarioPost } from '../modelo/usuarioPost';
 import { SpinnerServiceGeneral } from 'src/app/shared/shared-components/spinner-world-loading/spinner.service';
-import { PasswordValidator } from 'src/app/modules/common/common-register/register-components/register-user-step-1/password-validator';
+import { PasswordValidator } from 'src/app/shared/shared-services/custom-register-password-validations.service';
 
 @Component({
   selector: 'app-aniadir-usuario',

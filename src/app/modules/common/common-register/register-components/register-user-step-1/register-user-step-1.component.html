@@ -1,0 +1,134 @@
+<div class="container register-user-step-1">
+  <div class="row">
+    <!-- Primera columna del registro -->
+    <div class="col-md-6 register-user-step-1__column">
+      <h2>{{common_register.register_step_1.title}}</h2>
+      <form [formGroup]="registerForm">
+        <!-- Campo para "Nombre" -->
+        <div class="register-user-step-1__column__field">
+          <label class="register-user-step-1__column__field__title"
+            for="name">{{common_register.register_step_1.name_label}}</label>
+          <input type="text" id="userName" class="form-control" formControlName="userName"
+            placeholder={{common_register.register_step_1.placeHolder.nameLabel}}>
+          <ng-container *ngIf="registerForm.get('userName').hasError('pattern')">
+            <p class="text-error">
+              {{common_register.register_step_1.error.valid_name}}
+            </p>
+          </ng-container>
+          <ng-container
+            *ngIf="registerForm.get('userName').hasError('required') && registerForm.get('userName').touched">
+            <p class="text-error">{{common_register.register_step_1.error.must_complete}}</p>
+          </ng-container>
+        </div>
+        <!-- Fin campo para "Nombre" -->
+
+        <!-- Campo para "Apellido" -->
+        <div class="register-user-step-1__column__field">
+          <label class="register-user-step-1__column__field__title"
+            for="name">{{common_register.register_step_1.surname_label}}</label>
+          <input type="text" class="form-control" formControlName="surnameUser" id="surnameUser"
+            placeholder={{common_register.register_step_1.placeHolder.surnameLabel}}>
+          <ng-container *ngIf="registerForm.get('surnameUser').hasError('pattern')">
+            <p class="text-error">
+              El apellido ingresado no es válido.
+            </p>
+          </ng-container>
+          <ng-container
+            *ngIf="registerForm.get('surnameUser').hasError('required') && registerForm.get('surnameUser').touched">
+            <p class="text-error">{{common_register.register_step_1.error.must_complete}}</p>
+          </ng-container>
+
+        </div>
+
+        <div class="register-user-step-1__column__field">
+          <label class="register-user-step-1__column__field__title" for="date">Fecha de Nacimiento*</label>
+          <div>
+            <input type="date" class="form-control" id="nacimiento" min="1940-01-01"
+              style="border-radius: 8px; border:0;" (click)="elegirFecha()" onkeydown="return false">
+            <ng-container *ngIf="emptyDate && registerForm.get('dateBorn').touched">
+              <p class="text-error">
+                Este campo es obligatorio.
+              </p>
+            </ng-container>
+          </div>
+        </div>
+
+      </form>
+      <!-- Fin primera columna del registro -->
+
+    </div>
+    <div class="col-md-6 register-user-step-1__column">
+      <h2>&#8203;</h2>
+
+      <form [formGroup]="registerForm">
+        <div class="register-user-step-1__column__field">
+          <label class="register-user-step-1__column__field__title" for="email">Correo electrónico*</label>
+          <input type="email" class="form-control" formControlName="correo" id="email" placeholder="Correo electrónico"
+            style="font-family: Poppins; color: black;">
+          <div *ngIf="registerForm.get('correo').hasError('pattern')">
+            <p class="text-error">
+              El texto ingresado no es un correo válido.
+            </p>
+          </div>
+          <div *ngIf="registerForm.get('correo').hasError('required') && registerForm.get('correo').touched">
+            <p class="text-error">{{common_register.register_step_1.error.must_complete}}</p>
+          </div>
+        </div>
+
+        <div class="register-user-step-1__column__field">
+          <label class="register-user-step-1__column__field__title" for="password">Contraseña*</label>
+          <div class="password-input-container">
+            <input type="{{ showPassword ? 'text' : 'password' }}" class="form-control" formControlName="password"
+              id="password1" placeholder="Ingrese su contraseña" style="font-family: Poppins; color: black;">
+            <a class="password-eyes" (click)="togglePasswordView()">
+              <span *ngIf="showPassword"><i class="fas fa-eye"></i></span>
+              <span *ngIf="!showPassword"><i class="fas fa-eye-slash"></i></span>
+            </a>
+          </div>
+          <div *ngIf="registerForm.get('password').hasError('strong') &&
+            registerForm.get('password').touched && registerForm.get('password').value.length >0">
+            <p class="text-error">
+              La contraseña debe contener mínimo 8 caracteres, una mayúscula y un número.
+            </p>
+          </div>
+          <div *ngIf="registerForm.get('password').hasError('required') && registerForm.get('password').touched">
+            <p class="text-error">La contraseña es obligatoria.</p>
+          </div>
+        </div>
+
+        <div class="register-user-step-1__column__field">
+          <label class="register-user-step-1__column__field__title" for="password">Repetir Contraseña*</label>
+          <div class="password-input-container">
+            <input type="{{ showRepeatPassword ? 'text' : 'password' }}" class="form-control"
+              formControlName="password2" id="password2" pattern="{{ registerForm.get('password').value }}"
+              placeholder="Ingrese su contraseña" style="font-family: Poppins; color: black;">
+            <a class="password-eyes" (click)="toggleRepeatPasswordView()">
+              <span *ngIf="showRepeatPassword"><i class="fas fa-eye"></i></span>
+              <span *ngIf="!showRepeatPassword"><i class="fas fa-eye-slash"></i></span>
+            </a>
+          </div>
+          <div *ngIf="registerForm.get('password').value != registerForm.get('password2').value
+              && registerForm.get('password2').touched">
+            <p class="text-error">
+              Las contraseñas no coinciden.
+            </p>
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+    <div class="d-flex" style="padding-bottom: 3%; padding-left: 4%; padding-right: 4%;">
+      <div>
+        <button id="boton-volver" type="submit" class="btn btn-primary" (click)="volver()">Volver</button>
+      </div>
+
+      <div class="ms-auto">
+        <button id="boton-siguiente" type="submit" class="btn btn-primary" [disabled]="registerForm.invalid"
+          (click)="siguientePantalla()">Siguiente</button>
+      </div>
+    </div>
+
+  </div>
+
+</div>

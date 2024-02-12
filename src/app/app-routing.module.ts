@@ -23,8 +23,7 @@ import { SideBarAyudaComponent } from './shared/shared-components/help-side-bar/
 import { CambioContraseniaModule } from './modules/common/common-change-password-DEPRECATED/cambio-contrasenia.module';
 import { VerificarCuentaModule } from './modules/common/common-verify-account-DEPRECATED/verificar-cuenta.module';
 import { CommonLoginModule } from './modules/common/common-login/common-login.module';
-import { RegistroPadreComponent } from './modules/common/common-register/register-components/registro-padre.component';
-import { TerminosComponent } from './modules/common/common-register/register-components/terms-and-conditions/terminos.component';
+import { RegisterModule } from './modules/common/common-register/register.module';
 
 const routes: Routes = [
   {
@@ -44,10 +43,10 @@ const routes: Routes = [
     loadChildren: () => VerificarCuentaModule,
   },
   {
-    path: 'registro',
-    component: RegistroPadreComponent,
-    canActivate: [AuthGuard],
+    path: general_path.main_path,
+    loadChildren: () => RegisterModule,
   },
+
   {
     path: 'inicio',
     component: PantallaInicioBusquedaComponent,
@@ -73,11 +72,7 @@ const routes: Routes = [
     component: RankingComponent,
     canActivate: [loggedGuard, blockedRoutes],
   },
-  {
-    path: 'terminos-y-condiciones',
-    component: TerminosComponent,
-    canActivate: [AuthGuard],
-  },
+
 
   { path: 'proximamente', component: SinFuncionarComponent },
 

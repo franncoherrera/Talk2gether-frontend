@@ -1,3 +1,5 @@
+@import "../../../../../../assets/custom-scss/variables.scss";
+
 .container-disabled {
   display: flex;
   justify-content: center;
@@ -5,12 +7,12 @@
   height: 100vh;
 
   &__box {
-    border-radius: var(--border-radius-containers);
-    background-color: var(--color-message-error);
+    border-radius: $border-radius-containers;
+    background-color: $color-message-error;
     height: auto;
     width: 50%;
     padding: 3.75rem;
-    color: var(--color-white);
+    color: $color-white;
 
     &__title {
       font-size: 2.1875rem;
@@ -34,9 +36,9 @@
       width: 100%;
       padding: 0.625rem;
       border: none;
-      color: var(--color-white);
-      border-radius: var(--border-radius-containers);
-      background-color: var(--color-black);
+      color: $color-white;
+      border-radius: $border-radius-containers;
+      background-color: $color-black;
       font-size: 0.9375rem;
       margin-top: 1.25rem;
       font-weight: bold;
@@ -49,6 +51,7 @@
     display: block;
     overflow: scroll;
     padding-top: 6.28125rem;
+
     &__box {
       display: block;
       margin: 1.875rem auto;

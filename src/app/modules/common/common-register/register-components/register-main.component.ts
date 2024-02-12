@@ -8,13 +8,12 @@ import { RegistroService } from '../register-service/registro.service';
 import { Usuario } from '../register-models/usuario';
 
 @Component({
-  selector: 'app-registro-padre',
-  templateUrl: './registro-padre.component.html',
-  styleUrls: ['./registro-padre.component.scss'],
+  selector: 'app-register-main',
+  templateUrl: './register-main.component.html',
+  styleUrls: ['./register-main.component.scss'],
 })
-export class RegistroPadreComponent {
-  pantalla2: boolean = false;
-
+export class RegisterMainComponent {
+  step2: boolean = false;
   nuevoUsuario: NuevoUsuario;
   nuevoUsuario2: NuevoUsuario2;
 
@@ -27,7 +26,7 @@ export class RegistroPadreComponent {
 
   recibirDataPantalla1($event) {
     this.nuevoUsuario = $event;
-    this.pantalla2 = true;
+    this.step2 = true;
   }
 
   recibirDataPantalla2($event) {
@@ -36,7 +35,7 @@ export class RegistroPadreComponent {
   }
 
   volverPantalla1($event) {
-    this.pantalla2 = $event;
+    this.step2 = $event;
   }
 
   registrarUsuario() {

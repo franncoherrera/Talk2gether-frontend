@@ -14,7 +14,7 @@ import { SesionService } from './interceptors/sesion.service';
 import { CambioContraseniaModule } from './modules/common/common-change-password-DEPRECATED/cambio-contrasenia.module';
 import { InicioModule } from './modules/common/common-room-search/inicio.module';
 import { PantallaPrincipalModule } from './modules/common/common-home-page/home-page.module';
-import { RegistroModule } from './modules/common/common-register/registro.module';
+import { RegisterModule } from './modules/common/common-register/register.module';
 import { VerificarCuentaModule } from './modules/common/common-verify-account-DEPRECATED/verificar-cuenta.module';
 import { SeguirModalModule } from './modules/common/common-profile-view/seguir-modal/seguir-modal.module';
 import { ChatModule } from './modules/common/common-chat/chat.module';
@@ -41,7 +41,7 @@ import { CommonLoginModule } from './modules/common/common-login/common-login.mo
     NgxPaginationModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideStorage(() => getStorage()),
-    RegistroModule,
+    RegisterModule,
     VerificarCuentaModule,
     InicioModule,
     AppRoutingModule,

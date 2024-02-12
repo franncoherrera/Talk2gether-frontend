@@ -11,4 +11,7 @@ export const routes_path = {
   user_bloqued_by_admin: 'bloqueado',
   /* Rutas de la pantalla principal */
   principal_path: 'inicio',
+  /* Rutas del registro */
+  register_path: 'registro',
+  terms_path: 'terminos'
 };
