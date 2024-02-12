@@ -13,6 +13,8 @@ export class RegistroService {
 
   constructor(private httpClient: HttpClient) {}
 
+  
+
   crear(usuario: Usuario): Observable<any> {
     const options = {
       headers: new HttpHeaders({
@@ -60,4 +62,6 @@ export class RegistroService {
   obtenerIntereses() {
     return this.httpClient.get(this.obtenerInteresesURL);
   }
+
+
 }

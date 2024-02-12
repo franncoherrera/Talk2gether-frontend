@@ -1,30 +1,36 @@
-import { Component, EventEmitter, OnInit, Output, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  OnInit,
+  Output,
+  ViewEncapsulation,
+} from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { NuevoUsuario } from '../../register-models/nuevo-usuario';
 import { PasswordValidator } from 'src/app/shared/shared-services/custom-register-password-validations.service';
 import { VALIDATOR_PATTERNS } from 'src/app/constants/PATTERNS';
 import { common_register } from 'src/app/transalation/es/common/common_message_register_es';
+import { NewUser } from '../../register-models/new-user-step-1';
+import { Location } from '@angular/common';
+import { icon_class } from 'src/assets/icons_class/icon_class';
 
 @Component({
   selector: 'app-register-user-step-1',
   templateUrl: './register-user-step-1.component.html',
   styleUrls: ['./register-user-step-1.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
 export class RegisterUserStep1Component implements OnInit {
-  registerForm : FormGroup;
+  registerForm: FormGroup;
   patternEmail = VALIDATOR_PATTERNS;
   common_register = common_register;
+  icon_class = icon_class;
   emptyDate: boolean = true;
-  prevUrl: string = '';
-  
   showPassword: boolean = false;
   showRepeatPassword: boolean = false;
 
   @Output() sendData: EventEmitter<any> = new EventEmitter();
 
-  constructor(private router: Router) {}
+  constructor(private location: Location) {}
 
   ngOnInit(): void {
     this.registerForm = new FormGroup(
@@ -38,7 +44,7 @@ export class RegisterUserStep1Component implements OnInit {
           Validators.pattern(VALIDATOR_PATTERNS.patterOnlyLetters),
         ]),
         dateBorn: new FormControl('', [Validators.required]),
-        correo: new FormControl('', [
+        email: new FormControl('', [
           Validators.pattern(this.patternEmail.patternEmail),
           Validators.required,
         ]),
@@ -53,10 +59,9 @@ export class RegisterUserStep1Component implements OnInit {
       }
     );
 
-    const nacimiento = document.getElementById(
-      'nacimiento'
-    ) as HTMLInputElement;
+    const nacimiento = document.getElementById('dateBorn') as HTMLInputElement;
     let today = new Date();
+    /** Debería ser un parámetro traído del backend */
     let minAge = 18;
     nacimiento.max = new Date(
       today.getFullYear() - minAge,
@@ -66,13 +71,9 @@ export class RegisterUserStep1Component implements OnInit {
       .toISOString()
       .split('T')[0];
 
-    if (sessionStorage.getItem('previousUrl') == '/login') {
-      this.prevUrl = 'login';
-    }
-
     if (sessionStorage.getItem('userName')) {
       const inputFecha = document.getElementById(
-        'nacimiento'
+        'dateBorn'
       ) as HTMLInputElement;
       inputFecha.value = sessionStorage.getItem('dateBorn');
       this.registerForm
@@ -82,17 +83,14 @@ export class RegisterUserStep1Component implements OnInit {
         .get('surnameUser')
         .setValue(sessionStorage.getItem('surnameUser'));
       this.registerForm.get('dateBorn').setValue(inputFecha.value);
-      this.registerForm
-        .get('correo')
-        .setValue(sessionStorage.getItem('correo'));
+      this.registerForm.get('email').setValue(sessionStorage.getItem('email'));
     }
   }
 
-  elegirFecha() {
+  // Método para validar la fecha y disparar errores
+  selectDate() {
     this.registerForm.get('dateBorn').markAsTouched();
-    const inputFecha = document.getElementById(
-      'nacimiento'
-    ) as HTMLInputElement;
+    const inputFecha = document.getElementById('dateBorn') as HTMLInputElement;
     inputFecha.oninput = (event) => {
       const fechaSeleccionada = inputFecha.value;
       if (fechaSeleccionada != '') {
@@ -106,30 +104,27 @@ export class RegisterUserStep1Component implements OnInit {
     };
   }
 
+  // Método para manejar abrir y cerrar el ojo del input
   togglePasswordView(): void {
     this.showPassword = !this.showPassword;
   }
-
   toggleRepeatPasswordView(): void {
     this.showRepeatPassword = !this.showRepeatPassword;
   }
-
-  siguientePantalla() {
-    const nuevoUsuario = new NuevoUsuario(
-      this.registerForm.get('userName').value,
-      this.registerForm.get('surnameUser').value,
-      this.registerForm.get('dateBorn').value,
-      this.registerForm.get('correo').value,
-      this.registerForm.get('password').value
-    );
-    sessionStorage.setItem('userName', nuevoUsuario.nombreUsuario);
-    sessionStorage.setItem('surnameUser', nuevoUsuario.apellidoUsuario);
-    sessionStorage.setItem('dateBorn', nuevoUsuario.fechaNacimiento);
-    sessionStorage.setItem('correo', nuevoUsuario.correo);
+  
+  // Metódo para emitir la primer parte del formulario
+  goSecondPartForm() {
+    const nuevoUsuario: NewUser = {
+      userName: this.registerForm.get('userName').value,
+      surnameUser: this.registerForm.get('surnameUser').value,
+      dateBorn: this.registerForm.get('dateBorn').value,
+      email: this.registerForm.get('email').value,
+      password: this.registerForm.get('password').value,
+    };
     this.sendData.emit(nuevoUsuario);
   }
 
-  volver() {
-    this.router.navigate([this.prevUrl]);
+  returnPage() {
+    this.location.back();;
   }
 }

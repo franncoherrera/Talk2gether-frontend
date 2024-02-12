@@ -30,75 +30,85 @@
             placeholder={{common_register.register_step_1.placeHolder.surnameLabel}}>
           <ng-container *ngIf="registerForm.get('surnameUser').hasError('pattern')">
             <p class="text-error">
-              El apellido ingresado no es válido.
+              {{common_register.register_step_1.error.valid_surname}}
             </p>
           </ng-container>
           <ng-container
             *ngIf="registerForm.get('surnameUser').hasError('required') && registerForm.get('surnameUser').touched">
             <p class="text-error">{{common_register.register_step_1.error.must_complete}}</p>
           </ng-container>
-
         </div>
+        <!-- Fin campo para "Apellido" -->
 
+        <!-- Campo para "Fecha" -->
         <div class="register-user-step-1__column__field">
-          <label class="register-user-step-1__column__field__title" for="date">Fecha de Nacimiento*</label>
+          <label class="register-user-step-1__column__field__title"
+            for="date">{{common_register.register_step_1.dateBorn_label}}</label>
           <div>
-            <input type="date" class="form-control" id="nacimiento" min="1940-01-01"
-              style="border-radius: 8px; border:0;" (click)="elegirFecha()" onkeydown="return false">
+            <input type="date" class="form-control" id="dateBorn" min="1940-01-01" (click)="selectDate()"
+              onkeydown="return false">
             <ng-container *ngIf="emptyDate && registerForm.get('dateBorn').touched">
               <p class="text-error">
-                Este campo es obligatorio.
+                {{common_register.register_step_1.error.obligatory_field}}
               </p>
             </ng-container>
           </div>
         </div>
-
+        <!-- Fin campo para "Fecha" -->
       </form>
-      <!-- Fin primera columna del registro -->
-
     </div>
+    <!-- Fin primera columna del registro -->
+
+    <!-- Segunda columna del registro -->
     <div class="col-md-6 register-user-step-1__column">
       <h2>&#8203;</h2>
 
       <form [formGroup]="registerForm">
+        <!-- Campo para "Email" -->
         <div class="register-user-step-1__column__field">
-          <label class="register-user-step-1__column__field__title" for="email">Correo electrónico*</label>
-          <input type="email" class="form-control" formControlName="correo" id="email" placeholder="Correo electrónico"
-            style="font-family: Poppins; color: black;">
-          <div *ngIf="registerForm.get('correo').hasError('pattern')">
+          <label class="register-user-step-1__column__field__title"
+            for="email">{{common_register.register_step_1.email_label}}</label>
+          <input type="email" class="form-control" formControlName="email" id="email"
+            placeholder={{common_register.register_step_1.placeHolder.emailLabel}}>
+          <div *ngIf="registerForm.get('email').hasError('pattern')">
             <p class="text-error">
-              El texto ingresado no es un correo válido.
+              {{common_register.register_step_1.error.valid_email}}
             </p>
           </div>
-          <div *ngIf="registerForm.get('correo').hasError('required') && registerForm.get('correo').touched">
+          <div *ngIf="registerForm.get('email').hasError('required') && registerForm.get('email').touched">
             <p class="text-error">{{common_register.register_step_1.error.must_complete}}</p>
           </div>
         </div>
+        <!-- Fin campo para "Email" -->
 
+        <!-- Campo para "Password1" -->
         <div class="register-user-step-1__column__field">
-          <label class="register-user-step-1__column__field__title" for="password">Contraseña*</label>
-          <div class="password-input-container">
+          <label class="register-user-step-1__column__field__title"
+            for="password">{{common_register.register_step_1.password_label}}</label>
+          <div class="register-user-step-1__column__field__container">
             <input type="{{ showPassword ? 'text' : 'password' }}" class="form-control" formControlName="password"
-              id="password1" placeholder="Ingrese su contraseña" style="font-family: Poppins; color: black;">
+              id="password1" placeholder={{common_register.register_step_1.placeHolder.passwordLabel}}>
             <a class="password-eyes" (click)="togglePasswordView()">
-              <span *ngIf="showPassword"><i class="fas fa-eye"></i></span>
-              <span *ngIf="!showPassword"><i class="fas fa-eye-slash"></i></span>
+              <span *ngIf="showPassword"><i class={{icon_class.eye_open}}></i></span>
+              <span *ngIf="!showPassword"><i class={{icon_class.eye_close}}></i></span>
             </a>
           </div>
           <div *ngIf="registerForm.get('password').hasError('strong') &&
             registerForm.get('password').touched && registerForm.get('password').value.length >0">
             <p class="text-error">
-              La contraseña debe contener mínimo 8 caracteres, una mayúscula y un número.
+              {{common_register.register_step_1.error.valid_password}}
             </p>
           </div>
           <div *ngIf="registerForm.get('password').hasError('required') && registerForm.get('password').touched">
-            <p class="text-error">La contraseña es obligatoria.</p>
+            <p class="text-error">{{common_register.register_step_1.error.must_password}}</p>
           </div>
         </div>
+        <!-- Fin campo para "Password1" -->
 
+        <!-- Campo para "Password2" -->
         <div class="register-user-step-1__column__field">
           <label class="register-user-step-1__column__field__title" for="password">Repetir Contraseña*</label>
-          <div class="password-input-container">
+          <div class="register-user-step-1__column__field__container">
             <input type="{{ showRepeatPassword ? 'text' : 'password' }}" class="form-control"
               formControlName="password2" id="password2" pattern="{{ registerForm.get('password').value }}"
               placeholder="Ingrese su contraseña" style="font-family: Poppins; color: black;">
@@ -110,25 +120,27 @@
           <div *ngIf="registerForm.get('password').value != registerForm.get('password2').value
               && registerForm.get('password2').touched">
             <p class="text-error">
-              Las contraseñas no coinciden.
+              {{common_register.register_step_1.error.must_equal}}
             </p>
           </div>
         </div>
-
+        <!-- Fin campo para "Password2" -->
       </form>
     </div>
+    <!-- Fin segunda columna del registro -->
 
-    <div class="d-flex" style="padding-bottom: 3%; padding-left: 4%; padding-right: 4%;">
+    <!-- Botones -->
+    <div class="d-flex register-user-step-1__buttons">
       <div>
-        <button id="boton-volver" type="submit" class="btn btn-primary" (click)="volver()">Volver</button>
+        <button type="submit" class="btn btn-primary register-user-step-1__buttons__back animation-button"
+          (click)="returnPage()">Volver</button>
       </div>
-
       <div class="ms-auto">
-        <button id="boton-siguiente" type="submit" class="btn btn-primary" [disabled]="registerForm.invalid"
-          (click)="siguientePantalla()">Siguiente</button>
+        <button type="submit" class="btn btn-primary register-user-step-1__buttons__submit animation-button"
+          [disabled]="registerForm.invalid" (click)="goSecondPartForm()">Siguiente</button>
       </div>
     </div>
-
+    <!-- Fin -->
   </div>
 
 </div>

@@ -13,7 +13,7 @@ import {
 import Swal from 'sweetalert2';
 import { ModalService } from 'src/app/shared/shared-services/custom-modal.service';
 import { RegistroService } from '../../register-service/registro.service';
-import { NuevoUsuario2 } from '../../register-models/nuevo-usuario2';
+import { newUser2 } from '../../register-models/new-user-step-2';
 
 @Component({
   selector: 'app-registrar-usuario2',
@@ -264,15 +264,16 @@ export class RegistrarUsuario2Component {
       uploadBytes(this.imgRef, this.file)
         .then(async (response) => {
           this.urlFoto = await getDownloadURL(this.imgRef);
-          const infoUsuario = new NuevoUsuario2(
-            this.registroForm.get('pais').value,
-            this.registroForm.get('idiomaNativo').value,
-            this.urlFoto,
-            this.registroForm.get('descripcionUsuario').value,
-            this.registroForm.get('idiomaAprendiz').value,
-            this.registroForm.get('nivelIdioma').value,
-            this.registroForm.get('intereses').value
-          );
+          const infoUsuario: newUser2 = {
+            country: this.registroForm.get('country').value,
+            nativeLanguage: this.registroForm.get('nativeLanguage').value,
+            urlPhoto: this.urlFoto,
+            descriptionUser: this.registroForm.get('descriptionUser').value,
+            learnLanguage: this.registroForm.get('learnLanguage').value,
+            languageLevel: this.registroForm.get('languageLevel').value,
+            interest: this.registroForm.get('interest').value,
+          };
+
           this.enviarData2.emit(infoUsuario);
         })
         .catch((error) => console.log(error));

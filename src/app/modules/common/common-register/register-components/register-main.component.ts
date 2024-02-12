@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import Swal from 'sweetalert2';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TitleCasePipe } from '@angular/common';
-import { NuevoUsuario } from '../register-models/nuevo-usuario';
-import { NuevoUsuario2 } from '../register-models/nuevo-usuario2';
 import { RegistroService } from '../register-service/registro.service';
 import { Usuario } from '../register-models/usuario';
+import { NewUser } from '../register-models/new-user-step-1';
+import { newUser2 } from '../register-models/new-user-step-2';
 
 @Component({
   selector: 'app-register-main',
@@ -14,8 +14,8 @@ import { Usuario } from '../register-models/usuario';
 })
 export class RegisterMainComponent {
   step2: boolean = false;
-  nuevoUsuario: NuevoUsuario;
-  nuevoUsuario2: NuevoUsuario2;
+  nuevoUsuario: NewUser;
+  nuevoUsuario2: newUser2;
 
   constructor(
     private registroService: RegistroService,
@@ -40,18 +40,18 @@ export class RegisterMainComponent {
 
   registrarUsuario() {
     const usuario = new Usuario(
-      this.titleCase.transform(this.nuevoUsuario.nombreUsuario),
-      this.titleCase.transform(this.nuevoUsuario.apellidoUsuario),
-      this.nuevoUsuario.fechaNacimiento,
-      this.nuevoUsuario.correo,
-      this.nuevoUsuario.contrasenia,
-      this.nuevoUsuario2.nombrePais,
-      this.nuevoUsuario2.nombreIdiomaNativo,
-      this.nuevoUsuario2.urlFoto,
-      this.nuevoUsuario2.descripcion,
-      this.nuevoUsuario2.nombreIdiomaAprendiz,
-      this.nuevoUsuario2.nombreNivelIdiomaAprendiz,
-      this.nuevoUsuario2.nombreIntereses
+      this.titleCase.transform(this.nuevoUsuario.userName),
+      this.titleCase.transform(this.nuevoUsuario.surnameUser),
+      this.nuevoUsuario.dateBorn,
+      this.nuevoUsuario.email,
+      this.nuevoUsuario.password,
+      this.nuevoUsuario2.country,
+      this.nuevoUsuario2.nativeLanguage,
+      this.nuevoUsuario2.urlPhoto,
+      this.nuevoUsuario2.descriptionUser,
+      this.nuevoUsuario2.learnLanguage,
+      this.nuevoUsuario2.languageLevel,
+      this.nuevoUsuario2.interest
     );
 
     Swal.fire({
@@ -70,7 +70,7 @@ export class RegisterMainComponent {
                   this.mensajeConfirmacion();
                   this.router.navigate(['verificar-cuenta']);
                   sessionStorage.clear();
-                  localStorage.setItem('correo', this.nuevoUsuario.correo);
+                  localStorage.setItem('correo', this.nuevoUsuario.email);
                 },
                 error: (error) => {
                   Swal.hideLoading();
@@ -84,7 +84,7 @@ export class RegisterMainComponent {
                 this.mensajeConfirmacion();
                 this.router.navigate(['verificar-cuenta']);
                 sessionStorage.clear();
-                localStorage.setItem('correo', this.nuevoUsuario.correo);
+                localStorage.setItem('correo', this.nuevoUsuario.email);
               },
               error: (error) => {
                 Swal.hideLoading();
