@@ -34,7 +34,7 @@ export class RegisterMainComponent {
     this.registrarUsuario();
   }
 
-  volverPantalla1($event) {
+  backStep1($event) {
     this.step2 = $event;
   }
 

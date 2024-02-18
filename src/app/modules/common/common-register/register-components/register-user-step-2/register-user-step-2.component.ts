@@ -39,7 +39,7 @@ import { AlertsService } from 'src/app/helpers/alerts.service';
   styleUrls: ['./register-user-step-2.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class RegistrarUsuario2Component implements OnInit, OnDestroy {
+export class RegisterUserStep2Component implements OnInit, OnDestroy {
   /* Constantes */
   common_register = common_register;
   validatorSize = VALIDATOR_SIZE;
@@ -72,8 +72,8 @@ export class RegistrarUsuario2Component implements OnInit, OnDestroy {
   file!: File;
   imgRef!: StorageReference;
 
-  @Output() sendData2: EventEmitter<any> = new EventEmitter();
-  @Output() volverPantalla1: EventEmitter<any> = new EventEmitter();
+  @Output() sendData2: EventEmitter<newUser2> = new EventEmitter();
+  @Output() backStep1: EventEmitter<boolean> = new EventEmitter();
 
   constructor(
     private modalService: ModalService,
@@ -301,9 +301,9 @@ export class RegistrarUsuario2Component implements OnInit, OnDestroy {
     this.unabledRegister = true;
     if (this.file != undefined) {
       uploadBytes(this.imgRef, this.file)
-        .then(async (response) => {
+        .then(async () => {
           this.urlPhoto = await getDownloadURL(this.imgRef);
-          const infoUsuario: newUser2 = {
+          const NewUser2: newUser2 = {
             country: this.registerForm.get('country').value,
             nativeLanguage: this.registerForm.get('nativeLanguage').value,
             urlPhoto: this.urlPhoto,
@@ -313,7 +313,7 @@ export class RegistrarUsuario2Component implements OnInit, OnDestroy {
             interest: this.registerForm.get('interest').value,
           };
 
-          this.sendData2.emit(infoUsuario);
+          this.sendData2.emit(NewUser2);
         })
         .catch((error) => console.log(error));
     }
@@ -344,7 +344,7 @@ export class RegistrarUsuario2Component implements OnInit, OnDestroy {
     );
     sessionStorage.setItem('interest', JSON.stringify(this.interestList));
     sessionStorage.setItem('interest', this.registerForm.get('interest').value);
-    this.volverPantalla1.emit(false);
+    this.backStep1.emit(false);
   }
 
   redirectTerms(): void {

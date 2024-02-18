@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RegistrarUsuario2Component } from './register-user-step-2.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { InterestModalComponent } from '../../../../../shared/shared-components/interest-modal/intereses-modal.component';
+import { RegisterUserStep2Component } from './register-user-step-2.component';
 
 @NgModule({
-  declarations: [RegistrarUsuario2Component, InterestModalComponent],
+  declarations: [RegisterUserStep2Component],
   imports: [CommonModule, ReactiveFormsModule],
-  exports: [RegistrarUsuario2Component, InterestModalComponent],
+  exports: [RegisterUserStep2Component],
 })
 export class RegisterUserStep2Module {}

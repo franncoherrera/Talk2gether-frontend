@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { PasswordValidator } from 'src/app/shared/shared-services/custom-register-password-validations.service';
-import { VALIDATOR_PATTERNS } from 'src/app/constants/PATTERNS';
+import { VALIDATOR_PATTERNS, VALIDATOR_SIZE } from 'src/app/constants/PATTERNS';
 import { common_register } from 'src/app/transalation/es/common/common_message_register_es';
 import { NewUser } from '../../register-models/new-user-step-1';
 import { Location } from '@angular/common';
@@ -20,15 +20,19 @@ import { icon_class } from 'src/assets/icons_class/icon_class';
   encapsulation: ViewEncapsulation.None,
 })
 export class RegisterUserStep1Component implements OnInit {
-  registerForm: FormGroup;
+  // Constantes
   patternEmail = VALIDATOR_PATTERNS;
   common_register = common_register;
   icon_class = icon_class;
+  validator_size = VALIDATOR_SIZE;
+  // Validaciones
   emptyDate: boolean = true;
   showPassword: boolean = false;
   showRepeatPassword: boolean = false;
 
-  @Output() sendData: EventEmitter<any> = new EventEmitter();
+  registerForm: FormGroup;
+
+  @Output() sendData: EventEmitter<NewUser> = new EventEmitter();
 
   constructor(private location: Location) {}
 
@@ -61,10 +65,8 @@ export class RegisterUserStep1Component implements OnInit {
 
     const nacimiento = document.getElementById('dateBorn') as HTMLInputElement;
     let today = new Date();
-    /** Debería ser un parámetro traído del backend */
-    let minAge = 18;
     nacimiento.max = new Date(
-      today.getFullYear() - minAge,
+      today.getFullYear() - this.validator_size.minimunAge,
       today.getMonth(),
       today.getDate()
     )
@@ -88,10 +90,10 @@ export class RegisterUserStep1Component implements OnInit {
   }
 
   // Método para validar la fecha y disparar errores
-  selectDate() {
+  selectDate(): void {
     this.registerForm.get('dateBorn').markAsTouched();
     const inputFecha = document.getElementById('dateBorn') as HTMLInputElement;
-    inputFecha.oninput = (event) => {
+    inputFecha.oninput = () => {
       const fechaSeleccionada = inputFecha.value;
       if (fechaSeleccionada != '') {
         this.emptyDate = false;
@@ -111,20 +113,20 @@ export class RegisterUserStep1Component implements OnInit {
   toggleRepeatPasswordView(): void {
     this.showRepeatPassword = !this.showRepeatPassword;
   }
-  
+
   // Metódo para emitir la primer parte del formulario
-  goSecondPartForm() {
-    const nuevoUsuario: NewUser = {
+  goSecondPartForm(): void {
+    const newUser: NewUser = {
       userName: this.registerForm.get('userName').value,
       surnameUser: this.registerForm.get('surnameUser').value,
       dateBorn: this.registerForm.get('dateBorn').value,
       email: this.registerForm.get('email').value,
       password: this.registerForm.get('password').value,
     };
-    this.sendData.emit(nuevoUsuario);
+    this.sendData.emit(newUser);
   }
 
-  returnPage() {
-    this.location.back();;
+  returnPage(): void {
+    this.location.back();
   }
 }
