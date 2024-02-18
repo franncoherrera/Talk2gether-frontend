@@ -1,6 +1,6 @@
-export class Interes {
+export class Interest {
     id: number;
     name: string;
     icon: string;
-    seleccionado: boolean;
+    selected: boolean;
 }

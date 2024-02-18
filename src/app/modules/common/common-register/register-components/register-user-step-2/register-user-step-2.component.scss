@@ -1,0 +1,94 @@
+@import "../../../../../../assets/custom_scss/variables.scss";
+
+app-register-user-step-2 {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .register-user-step-2 {
+    background-color: $color-principal;
+    border-radius: $border-radius-containers;
+
+    &__column {
+      padding: 2%;
+      padding-left: 4%;
+      padding-bottom: 0;
+
+      h2 {
+        padding: 3% 0;
+        font-weight: bold;
+        color: $color-white;
+      }
+
+      &__field {
+        margin-bottom: 1rem;
+
+        &__title {
+          font-weight: bold;
+          font-size: 1.438rem;
+          color: $color-white;
+        }
+
+        &__terms {
+          color: $color-white;
+          font-weight: bold;
+          padding-left: 2%;
+
+          a {
+            text-decoration: underline;
+            border: 0;
+            filter: drop-shadow($color-shadow);
+          }
+        }
+
+        &__icon {
+          color: $color-white;
+          font-size: 1.375rem;
+          margin-left: 3%;
+        }
+
+      }
+
+      &__field--interest {
+        display: flex;
+        flex-direction: column;
+
+        button {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        &__show {
+          display: flex;
+          flex-direction: row;
+        }
+      }
+    }
+
+    &__buttons {
+      padding-bottom: 3%;
+      padding-left: 4%;
+      padding-right: 4%;
+
+      &__back {
+        background-color: $color-button-back;
+        font-weight: bold;
+        border-radius: $border-radius-button;
+        border: 0;
+        filter: drop-shadow($color-shadow);
+      }
+
+      &__next {
+        background-color: $color-button-submit;
+        border: 0;
+        font-weight: bold;
+        border-radius: $border-radius-button;
+        filter: drop-shadow($color-shadow);
+      }
+    }
+
+  }
+}

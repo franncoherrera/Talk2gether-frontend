@@ -7,9 +7,9 @@
         </div>
         <div class="intereses">
             <div *ngFor="let interes of intereses" class="intereses_items">
-                <div [id]="interes.id" class="interes" [ngClass]="{'seleccionado': interes.seleccionado}">
-                    <a (click)="(interesesSeleccionados.length >= 5 && !interes.seleccionado) ? false : seleccionarInteres(interes.id)"
-                        [ngClass]="{'interes-deshabilitado': interesesSeleccionados.length >= 5 && !interes.seleccionado}">
+                <div [id]="interes.id" class="interes" [ngClass]="{'seleccionado': interes.selected}">
+                    <a (click)="(interesesSeleccionados.length >= 5 && !interes.selected) ? false : seleccionarInteres(interes.id)"
+                        [ngClass]="{'interes-deshabilitado': interesesSeleccionados.length >= 5 && !interes.selected}">
                         <i [class]="interes.icon"></i>
                         <p class="interes_name">{{interes.name}}</p>
                     </a>

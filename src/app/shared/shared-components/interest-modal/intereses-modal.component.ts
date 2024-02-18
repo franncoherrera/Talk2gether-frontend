@@ -1,8 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Interes } from '../models/Interes';
-import { SpinnerServiceGeneral } from 'src/app/shared/shared-components/spinner-world-loading/spinner.service';
 import { ModalService } from 'src/app/shared/shared-services/custom-modal.service';
-import { InteresesService } from '../../../register-service/intereses.service';
+import { InteresesService } from '../../../modules/common/common-register/register-service/intereses.service';
+import { Interest } from '../../../modules/common/common-register/register-models/interest';
 
 @Component({
   selector: 'app-intereses-modal',
@@ -10,14 +9,13 @@ import { InteresesService } from '../../../register-service/intereses.service';
   styleUrls: ['./intereses-modal.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class InteresesModalComponent implements OnInit {
-  intereses: Interes[] = [];
+export class InterestModalComponent implements OnInit {
+  intereses: Interest[] = [];
   interesesCargados = false;
 
   constructor(
     private modalService: ModalService,
-    private interesesService: InteresesService,
-    private spinner: SpinnerServiceGeneral
+    private interesesService: InteresesService
   ) {}
 
   ngOnInit() {
@@ -32,8 +30,8 @@ export class InteresesModalComponent implements OnInit {
     });
   }
 
-  interesesPrecargados: Interes[] = [];
-  interesesSeleccionados: Interes[] = [];
+  interesesPrecargados: Interest[] = [];
+  interesesSeleccionados: Interest[] = [];
 
   seleccionarInteres(id: number) {
     const interesSelect = this.intereses.find((interes) => interes.id == id);
@@ -41,12 +39,12 @@ export class InteresesModalComponent implements OnInit {
       this.interesesSeleccionados.length > 0 &&
       this.interesesSeleccionados.find((interes) => interes.id == id)
     ) {
-      interesSelect.seleccionado = false;
+      interesSelect.selected = false;
       this.interesesSeleccionados = this.interesesSeleccionados.filter(
         (interes) => interes.id !== id
       );
     } else {
-      interesSelect.seleccionado = true;
+      interesSelect.selected = true;
       this.interesesSeleccionados.push(interesSelect);
     }
   }

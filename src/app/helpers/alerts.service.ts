@@ -2,11 +2,10 @@ import { Injectable } from '@angular/core';
 import Swal from 'sweetalert2';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AlertsService {
-
-  errorAlert(message: string, title: string){
+  errorAlert(message: string, title: string) {
     Swal.fire({
       icon: 'error',
       title: title,
@@ -15,4 +14,13 @@ export class AlertsService {
     });
   }
 
+  errorAlertTimer(message: string, time: number) {
+    Swal.fire({
+      position: 'top-end',
+      icon: 'error',
+      title: message,
+      showConfirmButton: false,
+      timer: time,
+    });
+  }
 }

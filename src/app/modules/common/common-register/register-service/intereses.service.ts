@@ -1,18 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { Interes } from '../register-components/register-user-step-2/models/Interes';
+import { Interest } from '../register-models/interest';
 
 @Injectable({
   providedIn: 'root',
 })
 export class InteresesService {
-  //localhost:8080/intereses/listarinteresesactivos
   obtenerInteresesURL = environment.apiUrl + 'intereses/listarinteresesactivos';
 
   constructor(private httpClient: HttpClient) {}
 
   obtenerIntereses() {
-    return this.httpClient.get<Interes[]>(this.obtenerInteresesURL);
+    return this.httpClient.get<Interest[]>(this.obtenerInteresesURL);
   }
 }

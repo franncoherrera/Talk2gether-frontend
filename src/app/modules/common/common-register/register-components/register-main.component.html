@@ -1,8 +1,8 @@
-<ng-container *ngIf="!step2; else irPantalla2">
-    <app-register-user-step-1 (sendData)="recibirDataPantalla1($event)"></app-register-user-step-1>
+<ng-container *ngIf="!step2; else goStep2">
+    <app-register-user-step-1 (sendData)="getDataStep1($event)"></app-register-user-step-1>
 </ng-container>
 
-<ng-template #irPantalla2>
-    <app-registrar-usuario2 (enviarData2)="recibirDataPantalla2($event)"
-        (volverPantalla1)="volverPantalla1($event)"></app-registrar-usuario2>
+<ng-template #goStep2>
+    <app-register-user-step-2 (sendData2)="getDataStep2($event)"
+        (volverPantalla1)="volverPantalla1($event)"></app-register-user-step-2>
 </ng-template>

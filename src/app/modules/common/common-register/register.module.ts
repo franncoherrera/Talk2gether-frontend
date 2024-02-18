@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { InteresesModalComponent } from './register-components/register-user-step-2/intereses-modal/intereses-modal.component';
 import { TermsConditionComponent } from './register-components/term-and-conditions/term-and-condition.component';
 import { RegisterMainModule } from './register-components/register-main.module';
 import { RegisterMainComponent } from './register-components/register-main.component';
@@ -22,12 +21,10 @@ export const register_routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [InteresesModalComponent],
   imports: [
     CommonModule,
     RegisterMainModule,
     RouterModule.forChild(register_routes),
   ],
-  exports: [InteresesModalComponent],
 })
 export class RegisterModule {}

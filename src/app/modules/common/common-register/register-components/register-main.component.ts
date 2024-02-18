@@ -24,12 +24,12 @@ export class RegisterMainComponent {
     private route: ActivatedRoute
   ) {}
 
-  recibirDataPantalla1($event) {
+  getDataStep1($event) {
     this.nuevoUsuario = $event;
     this.step2 = true;
   }
 
-  recibirDataPantalla2($event) {
+  getDataStep2($event) {
     this.nuevoUsuario2 = $event;
     this.registrarUsuario();
   }

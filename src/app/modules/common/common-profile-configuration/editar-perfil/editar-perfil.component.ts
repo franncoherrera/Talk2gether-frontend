@@ -17,8 +17,8 @@ import { lastValueFrom } from 'rxjs';
 import { ChatService } from '../../common-chat/services/chat-service.service';
 import { SpinnerServiceGeneral } from 'src/app/shared/shared-components/spinner-world-loading/spinner.service';
 import { ModalService } from 'src/app/shared/shared-services/custom-modal.service';
-import { Interes } from '../../common-register/register-components/register-user-step-2/models/Interes';
-import { InteresesModalComponent } from '../../common-register/register-components/register-user-step-2/intereses-modal/intereses-modal.component';
+import { Interest } from '../../common-register/register-models/interest';
+import { InterestModalComponent } from '../../../../shared/shared-components/interest-modal/intereses-modal.component';
 
 @Component({
   selector: 'app-editar-perfil',
@@ -35,7 +35,7 @@ export class EditarPerfilComponent implements OnInit {
   file!: File;
   imgRef!: StorageReference;
   modalRef: NgbModalRef;
-  intereses: Interes[] = [];
+  intereses: Interest[] = [];
   listaPaises = [];
   listaIdiomas = [];
   listaNivelesIdiomas = [];
@@ -247,7 +247,7 @@ export class EditarPerfilComponent implements OnInit {
     this.editarUsuarioForm.markAsDirty();
     this.listaIntereses = [];
     let modalInstance: any;
-    this.modalRef = this.modalService.open(InteresesModalComponent, {
+    this.modalRef = this.modalService.open(InterestModalComponent, {
       centered: true,
     });
     modalInstance = this.modalRef.componentInstance;
