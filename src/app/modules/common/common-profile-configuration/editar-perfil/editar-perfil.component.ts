@@ -9,7 +9,6 @@ import {
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import Swal from 'sweetalert2';
-import { RegistroService } from '../../common-register/register-service/registro.service';
 import { Router } from '@angular/router';
 import { EditarUsuarioService } from '../servicios/editar-usuario.service';
 import { EditarUsuario } from '../modelos/editar-usuario';
@@ -17,8 +16,9 @@ import { lastValueFrom } from 'rxjs';
 import { ChatService } from '../../common-chat/services/chat-service.service';
 import { SpinnerServiceGeneral } from 'src/app/shared/shared-components/spinner-world-loading/spinner.service';
 import { ModalService } from 'src/app/shared/shared-services/custom-modal.service';
-import { Interest } from '../../common-register/register-models/interest';
-import { InterestModalComponent } from '../../../../shared/shared-components/interest-modal/intereses-modal.component';
+import { Interest } from '../../common-register/register-models/Interest';
+import { InterestModalComponent } from '../../../../shared/shared-components/interest-modal/interest-modal.component';
+import { RegisterService } from '../../common-register/register-service/register.service';
 
 @Component({
   selector: 'app-editar-perfil',
@@ -51,7 +51,7 @@ export class EditarPerfilComponent implements OnInit {
 
   constructor(
     private modalService: ModalService,
-    private registroService: RegistroService,
+    private registroService: RegisterService,
     private editarUsuarioService: EditarUsuarioService,
     private chatService: ChatService,
     private spinnerServiceGeneral: SpinnerServiceGeneral,

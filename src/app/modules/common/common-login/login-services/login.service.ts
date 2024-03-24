@@ -10,7 +10,7 @@ import { UserSession } from '../login-models/UserSession';
 })
 export class LoginService {
   url: string = environment?.apiUrl;
-  
+
   reasonReport = new BehaviorSubject<string[]>(null);
   reasonReport$ = this.reasonReport.asObservable();
 
@@ -43,17 +43,16 @@ export class LoginService {
   }
 
   /* Guardar observables */
-  saveReason(reasons: string[]) {
+  saveReason(reasons: string[]): void {
     this.reasonReport.next(reasons);
   }
   getReason(): Observable<string[]> {
     return this.reasonReport$;
   }
-  saveRole(role: string) {
+  saveRole(role: string): void {
     this.role.next(role);
   }
   getRole(): Observable<string> {
     return this.role$;
   }
-
 }

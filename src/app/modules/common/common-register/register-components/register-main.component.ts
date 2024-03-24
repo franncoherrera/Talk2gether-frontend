@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import Swal from 'sweetalert2';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TitleCasePipe } from '@angular/common';
-import { RegistroService } from '../register-service/registro.service';
 import { Usuario } from '../register-models/usuario';
-import { NewUser } from '../register-models/new-user-step-1';
-import { newUser2 } from '../register-models/new-user-step-2';
+import { NewUser } from '../register-models/NewUserStep1';
+import { newUser2 } from '../register-models/NewUserStep2';
+import { RegisterService } from '../register-service/register.service';
 
 @Component({
   selector: 'app-register-main',
@@ -18,7 +18,7 @@ export class RegisterMainComponent {
   nuevoUsuario2: newUser2;
 
   constructor(
-    private registroService: RegistroService,
+    private registroService: RegisterService,
     private titleCase: TitleCasePipe,
     private router: Router,
     private route: ActivatedRoute

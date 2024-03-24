@@ -29,6 +29,7 @@ import { SpinnerCargaGeneralModule } from './shared/shared-components/spinner-wo
 import { NavbarModule } from './shared/shared-components/general-navbar/navbar.module';
 import { RecuperarContraseniaModule } from './modules/common/common-recover-password-DEPRECATED/recuperar-contrasenia.module';
 import { CommonLoginModule } from './modules/common/common-login/common-login.module';
+import { InterestModule } from './shared/shared-components/interest-modal/interest-modal.module';
 
 @NgModule({
   declarations: [AppComponent, SinFuncionarComponent],
@@ -59,6 +60,7 @@ import { CommonLoginModule } from './modules/common/common-login/common-login.mo
     SideBarAyudaModule,
     PregFreqModule,
     ConfiguracionModule,
+    InterestModule
   ],
   providers: [
     SesionService,

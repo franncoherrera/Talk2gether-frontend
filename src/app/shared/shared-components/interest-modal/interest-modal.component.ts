@@ -1,12 +1,12 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ModalService } from 'src/app/shared/shared-services/custom-modal.service';
 import { InteresesService } from '../../../modules/common/common-register/register-service/intereses.service';
-import { Interest } from '../../../modules/common/common-register/register-models/interest';
+import { Interest } from '../../../modules/common/common-register/register-models/Interest';
 
 @Component({
-  selector: 'app-intereses-modal',
-  templateUrl: './intereses-modal.component.html',
-  styleUrls: ['./intereses-modal.component.scss'],
+  selector: 'app-interest-modal',
+  templateUrl: './interest-modal.component.html',
+  styleUrls: ['./interest-modal.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class InterestModalComponent implements OnInit {

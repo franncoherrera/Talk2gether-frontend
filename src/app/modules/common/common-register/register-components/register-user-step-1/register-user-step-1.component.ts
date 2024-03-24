@@ -9,7 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { PasswordValidator } from 'src/app/shared/shared-services/custom-register-password-validations.service';
 import { VALIDATOR_PATTERNS, VALIDATOR_SIZE } from 'src/app/constants/PATTERNS';
 import { common_register } from 'src/app/transalation/es/common/common_message_register_es';
-import { NewUser } from '../../register-models/new-user-step-1';
+import { NewUser } from '../../register-models/NewUserStep1';
 import { Location } from '@angular/common';
 import { icon_class } from 'src/assets/icons_class/icon_class';
 

@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { RegistroService } from '../../common-register/register-service/registro.service';
 import { ModalService } from 'src/app/shared/shared-services/custom-modal.service';
+import { RegisterService } from '../../common-register/register-service/register.service';
 
 @Component({
   selector: 'app-filtros-modal',
@@ -18,7 +18,7 @@ export class FiltrosModalComponent {
 
   constructor(
     private modalService: ModalService,
-    private parametrosService: RegistroService
+    private parametrosService: RegisterService
   ) {
     for (let i = 18; i <= 100; i++) {
       this.edades.push(i);

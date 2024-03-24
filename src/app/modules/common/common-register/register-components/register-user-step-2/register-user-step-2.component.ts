@@ -8,8 +8,8 @@ import {
 } from '@angular/core';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { InterestModalComponent } from '../../../../../shared/shared-components/interest-modal/intereses-modal.component';
-import { Interest } from '../../register-models/interest';
+import { InterestModalComponent } from '../../../../../shared/shared-components/interest-modal/interest-modal.component';
+import { Interest } from '../../register-models/Interest';
 import {
   Storage,
   ref,
@@ -19,8 +19,7 @@ import {
 } from '@angular/fire/storage';
 import Swal from 'sweetalert2';
 import { ModalService } from 'src/app/shared/shared-services/custom-modal.service';
-import { RegistroService } from '../../register-service/registro.service';
-import { newUser2 } from '../../register-models/new-user-step-2';
+import { newUser2 } from '../../register-models/NewUserStep2';
 import { common_register } from 'src/app/transalation/es/common/common_message_register_es';
 import {
   IMAGE_FORMAT,
@@ -30,8 +29,9 @@ import {
 import { routes_path } from 'src/app/constants/ROUTES';
 import { icon_class } from 'src/assets/icons_class/icon_class';
 import { Observable, Subscription, combineLatest, map } from 'rxjs';
-import { ParameterList } from '../../register-models/parameterList';
+import { ParameterList } from '../../register-models/ParameterList';
 import { AlertsService } from 'src/app/helpers/alerts.service';
+import { RegisterService } from '../../register-service/register.service';
 
 @Component({
   selector: 'app-register-user-step-2',
@@ -77,16 +77,16 @@ export class RegisterUserStep2Component implements OnInit, OnDestroy {
 
   constructor(
     private modalService: ModalService,
-    private registroService: RegistroService,
+    private registerService: RegisterService,
     private storage: Storage,
     private alertService: AlertsService
   ) {}
 
   ngOnInit(): void {
     this.parametersList$ = combineLatest([
-      this.registroService.opcionesPais(),
-      this.registroService.opcionesIdiomas(),
-      this.registroService.opcionesNivelIdiomas(),
+      this.registerService.opcionesPais(),
+      this.registerService.opcionesIdiomas(),
+      this.registerService.opcionesNivelIdiomas(),
     ]).pipe(
       map(([countryList, languageList, languageLevelList]) => {
         return {
