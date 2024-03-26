@@ -19,6 +19,7 @@ import { ModalService } from 'src/app/shared/shared-services/custom-modal.servic
 import { Interest } from '../../common-register/register-models/Interest';
 import { InterestModalComponent } from '../../../../shared/shared-components/interest-modal/interest-modal.component';
 import { RegisterService } from '../../common-register/register-service/register.service';
+import { ParametersService } from 'src/app/shared/shared-services/parameters.service';
 
 @Component({
   selector: 'app-editar-perfil',
@@ -51,7 +52,7 @@ export class EditarPerfilComponent implements OnInit {
 
   constructor(
     private modalService: ModalService,
-    private registroService: RegisterService,
+    private parameterService: ParametersService,
     private editarUsuarioService: EditarUsuarioService,
     private chatService: ChatService,
     private spinnerServiceGeneral: SpinnerServiceGeneral,
@@ -63,14 +64,14 @@ export class EditarPerfilComponent implements OnInit {
     this.editarUsuarioService.getInformacion().subscribe((data: any) => {
       this.datosUsuario = data;
 
-      this.registroService.opcionesPais().subscribe((data: any[]) => {
+      this.parameterService.opcionesPais().subscribe((data: any[]) => {
         this.listaPaises = data;
         if (!this.listaPaises.includes(this.datosUsuario.nombrePais)) {
           this.paisVacio = true;
         }
       });
 
-      this.registroService.opcionesIdiomas().subscribe((data: any[]) => {
+      this.parameterService.opcionesIdiomas().subscribe((data: any[]) => {
         this.listaIdiomas = data;
 
         if (!this.listaIdiomas.includes(this.datosUsuario.nombreIdiomaNativo)) {
@@ -84,7 +85,7 @@ export class EditarPerfilComponent implements OnInit {
         }
       });
 
-      this.registroService.opcionesNivelIdiomas().subscribe((data: any[]) => {
+      this.parameterService.opcionesNivelIdiomas().subscribe((data: any[]) => {
         this.listaNivelesIdiomas = data;
         if (
           !this.listaNivelesIdiomas.includes(

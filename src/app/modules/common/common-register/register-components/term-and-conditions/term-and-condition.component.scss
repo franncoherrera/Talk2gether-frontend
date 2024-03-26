@@ -1,47 +1,42 @@
-body {
-  background-color: #fff;
-  display: flex;
-}
+@import "../../../../../../assets/custom_scss/variables.scss";
+.term-and-condition {
+  background-color: $color-principal;
+  border-radius: $border-radius-containers;
+  margin: 6.6rem 3rem 2rem 3rem;
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    color: $color-white;
+    text-decoration: underline;
+    font-size: 1.5rem;
+    padding: 2rem;
+    &__icon {
+      display: flex;
+      align-items: center;
+      color: $color-icon-princial;
+      font-size: 1.875rem;
+    }
+  }
+  &__description {
+    padding: 0 2rem 2rem 2rem;
+    h4 {
+      font-weight: bold;
+      color: $color-white;
+      text-decoration: underline;
+    }
 
-h2 {
-  padding-top: 5%;
-  font-style: normal;
-  font-weight: bold;
-  color: white;
-  font-family: Poppins;
-  text-decoration: underline;
-}
+    h5 {
+      padding-top: 1.5rem;
+      font-weight: bold;
+      color: $color-white;
+    }
 
-h4 {
-  padding-top: 3%;
-  font-style: normal;
-  font-weight: bold;
-  color: white;
-  font-family: Poppins;
-  text-decoration: underline;
-}
-
-h5 {
-  padding-top: 2.5%;
-  font-style: normal;
-  font-weight: bold;
-  color: white;
-  font-family: Poppins;
-}
-
-.container {
-  background-color: #2b6a78;
-  border-radius: 20px;
-  margin-left: 12%;
-  margin-right: 12%;
-  margin-top: 105px;
-  margin-bottom: 4%;
-}
-
-p {
-  font-family: Poppins;
-  text-align: justify;
-  font-style: normal;
-  color: white;
-  font-size: 20px;
+    p {
+      text-align: justify;
+      color: $color-white;
+      font-size: 1.25rem;
+    }
+  }
 }

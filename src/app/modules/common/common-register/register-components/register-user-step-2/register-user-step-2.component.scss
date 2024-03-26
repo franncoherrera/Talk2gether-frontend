@@ -1,7 +1,6 @@
 @import "../../../../../../assets/custom_scss/variables.scss";
 
 app-register-user-step-2 {
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,10 +11,7 @@ app-register-user-step-2 {
     border-radius: $border-radius-containers;
 
     &__column {
-      padding: 2%;
-      padding-left: 4%;
-      padding-bottom: 0;
-
+      padding: 2% 4% 0 4%;
       h2 {
         padding: 3% 0;
         font-weight: bold;
@@ -35,7 +31,7 @@ app-register-user-step-2 {
           color: $color-white;
           font-weight: bold;
           padding-left: 2%;
-
+          cursor: pointer;
           a {
             text-decoration: underline;
             border: 0;
@@ -48,7 +44,6 @@ app-register-user-step-2 {
           font-size: 1.375rem;
           margin-left: 3%;
         }
-
       }
 
       &__field--interest {
@@ -89,6 +84,5 @@ app-register-user-step-2 {
         filter: drop-shadow($color-shadow);
       }
     }
-
   }
 }

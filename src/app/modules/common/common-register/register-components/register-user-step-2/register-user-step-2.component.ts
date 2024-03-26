@@ -32,6 +32,7 @@ import { Observable, Subscription, combineLatest, map } from 'rxjs';
 import { ParameterList } from '../../register-models/ParameterList';
 import { AlertsService } from 'src/app/helpers/alerts.service';
 import { RegisterService } from '../../register-service/register.service';
+import { ParametersService } from 'src/app/shared/shared-services/parameters.service';
 
 @Component({
   selector: 'app-register-user-step-2',
@@ -77,16 +78,16 @@ export class RegisterUserStep2Component implements OnInit, OnDestroy {
 
   constructor(
     private modalService: ModalService,
-    private registerService: RegisterService,
     private storage: Storage,
-    private alertService: AlertsService
+    private alertService: AlertsService,
+    private parameterService: ParametersService
   ) {}
 
   ngOnInit(): void {
     this.parametersList$ = combineLatest([
-      this.registerService.opcionesPais(),
-      this.registerService.opcionesIdiomas(),
-      this.registerService.opcionesNivelIdiomas(),
+      this.parameterService.opcionesPais(),
+      this.parameterService.opcionesIdiomas(),
+      this.parameterService.opcionesNivelIdiomas(),
     ]).pipe(
       map(([countryList, languageList, languageLevelList]) => {
         return {

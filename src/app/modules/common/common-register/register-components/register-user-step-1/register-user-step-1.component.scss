@@ -9,12 +9,9 @@ app-register-user-step-1 {
   .register-user-step-1 {
     background-color: $color-principal;
     border-radius: $border-radius-containers;
-
+    margin-top: 3rem;
     &__column {
-      padding: 2%;
-      padding-left: 4%;
-      padding-bottom: 0;
-
+      padding: 2% 4% 0 4%;
       h2 {
         padding: 3% 0;
         font-weight: bold;

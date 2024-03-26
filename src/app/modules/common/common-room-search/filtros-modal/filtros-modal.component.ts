@@ -1,6 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { ModalService } from 'src/app/shared/shared-services/custom-modal.service';
 import { RegisterService } from '../../common-register/register-service/register.service';
+import { ParametersService } from 'src/app/shared/shared-services/parameters.service';
 
 @Component({
   selector: 'app-filtros-modal',
@@ -18,7 +19,8 @@ export class FiltrosModalComponent {
 
   constructor(
     private modalService: ModalService,
-    private parametrosService: RegisterService
+    private parametrosService: RegisterService,
+    private parameterService: ParametersService
   ) {
     for (let i = 18; i <= 100; i++) {
       this.edades.push(i);
@@ -26,15 +28,15 @@ export class FiltrosModalComponent {
   }
 
   ngOnInit(): void {
-    this.parametrosService.opcionesPais().subscribe((data: any[]) => {
+    this.parameterService.opcionesPais().subscribe((data: any[]) => {
       this.listaPaises = data;
     });
 
-    this.parametrosService.opcionesNivelIdiomas().subscribe((data: any[]) => {
+    this.parameterService.opcionesNivelIdiomas().subscribe((data: any[]) => {
       this.listaNivelesIdiomas = data;
     });
 
-    this.parametrosService.obtenerIntereses().subscribe((data: any[]) => {
+    this.parameterService.obtenerIntereses().subscribe((data: any[]) => {
       this.listaIntereses = data.map((diccionario) => diccionario.name);
     });
   }
