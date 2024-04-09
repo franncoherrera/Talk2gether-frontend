@@ -9,7 +9,7 @@ import {
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { InterestModalComponent } from '../../../../../shared/shared-components/interest-modal/interest-modal.component';
-import { Interest } from '../../register-models/Interest';
+import { Interest } from '../../../../../shared/shared-models/Interest';
 import {
   Storage,
   ref,
@@ -298,7 +298,7 @@ export class RegisterUserStep2Component implements OnInit, OnDestroy {
     }
   }
 
-  registrarUsuario(): void {
+  registerUser(): void {
     this.unabledRegister = true;
     if (this.file != undefined) {
       uploadBytes(this.imgRef, this.file)

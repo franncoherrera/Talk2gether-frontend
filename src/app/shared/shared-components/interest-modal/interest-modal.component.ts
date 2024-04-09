@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ModalService } from 'src/app/shared/shared-services/custom-modal.service';
 import { InteresesService } from '../../../modules/common/common-register/register-service/intereses.service';
-import { Interest } from '../../../modules/common/common-register/register-models/Interest';
+import { Interest } from '../../shared-models/Interest';
 
 @Component({
   selector: 'app-interest-modal',

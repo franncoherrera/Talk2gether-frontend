@@ -33,7 +33,7 @@ export class LoginDisabledComponent implements OnInit {
     );
   }
 
-  redirectMainPage() {
+  redirectMainPage(): void {
     this.router.navigate([general_path.main_path]);
   }
 }

@@ -1,4 +1,5 @@
 @import "../../../../../../assets/custom_scss/variables.scss";
+@import "../../../../../../assets/custom_scss/media-queries.scss";
 
 .container-disabled {
   display: flex;
@@ -46,26 +47,24 @@
   }
 }
 
-@media(max-height: 700px) {
+@include media-breakpoint-down(lg) {
   .container-disabled {
-    display: block;
-    overflow: scroll;
-    padding-top: 6.28125rem;
-
     &__box {
-      display: block;
-      margin: 1.875rem auto;
-      overflow: scroll;
+      width: 90%;
     }
   }
 }
 
-/* Small (SM) */
-@media (max-width: 767.98px) {
+@include media-breakpoint-down(md) {
   .container-disabled {
+    display: block;
+    overflow: scroll;
+    padding-top: 6.28125rem;
     &__box {
       padding: 2.5rem;
-
+      display: block;
+      margin: 1.875rem auto;
+      overflow: scroll;
       &__title {
         font-size: 1.25rem;
       }
@@ -81,15 +80,6 @@
       &__button {
         font-size: 0.625rem;
       }
-    }
-  }
-}
-
-/* Medium (MD) */
-@media (max-width: 991.98px) {
-  .container-disabled {
-    &__box {
-      width: 90%;
     }
   }
 }

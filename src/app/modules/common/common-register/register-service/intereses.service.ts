@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { Interest } from '../register-models/Interest';
+import { Interest } from '../../../../shared/shared-models/Interest';
 
 @Injectable({
   providedIn: 'root',

@@ -14,44 +14,44 @@ import { RegisterService } from '../register-service/register.service';
 })
 export class RegisterMainComponent {
   step2: boolean = false;
-  nuevoUsuario: NewUser;
-  nuevoUsuario2: newUser2;
+  newUser: NewUser;
+  newUser2: newUser2;
 
   constructor(
     private registroService: RegisterService,
     private titleCase: TitleCasePipe,
     private router: Router,
-    private route: ActivatedRoute
+    private activatedRoute: ActivatedRoute
   ) {}
 
-  getDataStep1($event) {
-    this.nuevoUsuario = $event;
+  getDataStep1($event): void {
+    this.newUser = $event;
     this.step2 = true;
   }
 
-  getDataStep2($event) {
-    this.nuevoUsuario2 = $event;
-    this.registrarUsuario();
+  getDataStep2($event): void {
+    this.newUser2 = $event;
+    this.registerUser();
   }
 
   backStep1($event) {
     this.step2 = $event;
   }
 
-  registrarUsuario() {
+  registerUser(): void {
     const usuario = new Usuario(
-      this.titleCase.transform(this.nuevoUsuario.userName),
-      this.titleCase.transform(this.nuevoUsuario.surnameUser),
-      this.nuevoUsuario.dateBorn,
-      this.nuevoUsuario.email,
-      this.nuevoUsuario.password,
-      this.nuevoUsuario2.country,
-      this.nuevoUsuario2.nativeLanguage,
-      this.nuevoUsuario2.urlPhoto,
-      this.nuevoUsuario2.descriptionUser,
-      this.nuevoUsuario2.learnLanguage,
-      this.nuevoUsuario2.languageLevel,
-      this.nuevoUsuario2.interest
+      this.titleCase.transform(this.newUser.userName),
+      this.titleCase.transform(this.newUser.surnameUser),
+      this.newUser.dateBorn,
+      this.newUser.email,
+      this.newUser.password,
+      this.newUser2.country,
+      this.newUser2.nativeLanguage,
+      this.newUser2.urlPhoto,
+      this.newUser2.descriptionUser,
+      this.newUser2.learnLanguage,
+      this.newUser2.languageLevel,
+      this.newUser2.interest
     );
 
     Swal.fire({
@@ -59,7 +59,7 @@ export class RegisterMainComponent {
       allowOutsideClick: false,
       didOpen: () => {
         Swal.showLoading();
-        this.route.queryParams.subscribe((params) => {
+        this.activatedRoute.queryParams.subscribe((params) => {
           const referidoValue = params['referido'];
           if (referidoValue) {
             this.registroService
@@ -70,7 +70,7 @@ export class RegisterMainComponent {
                   this.mensajeConfirmacion();
                   this.router.navigate(['verificar-cuenta']);
                   sessionStorage.clear();
-                  localStorage.setItem('correo', this.nuevoUsuario.email);
+                  localStorage.setItem('correo', this.newUser.email);
                 },
                 error: (error) => {
                   Swal.hideLoading();
@@ -84,7 +84,7 @@ export class RegisterMainComponent {
                 this.mensajeConfirmacion();
                 this.router.navigate(['verificar-cuenta']);
                 sessionStorage.clear();
-                localStorage.setItem('correo', this.nuevoUsuario.email);
+                localStorage.setItem('correo', this.newUser.email);
               },
               error: (error) => {
                 Swal.hideLoading();

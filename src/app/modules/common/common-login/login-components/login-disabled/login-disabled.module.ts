@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginDisabledComponent } from './login-inhabilitado.component';
+import { LoginDisabledComponent } from './login-disabled.component';
 
 @NgModule({
   declarations: [LoginDisabledComponent],

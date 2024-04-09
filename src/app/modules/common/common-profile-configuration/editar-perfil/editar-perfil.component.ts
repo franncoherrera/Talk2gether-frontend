@@ -16,7 +16,7 @@ import { lastValueFrom } from 'rxjs';
 import { ChatService } from '../../common-chat/services/chat-service.service';
 import { SpinnerServiceGeneral } from 'src/app/shared/shared-components/spinner-world-loading/spinner.service';
 import { ModalService } from 'src/app/shared/shared-services/custom-modal.service';
-import { Interest } from '../../common-register/register-models/Interest';
+import { Interest } from '../../../../shared/shared-models/Interest';
 import { InterestModalComponent } from '../../../../shared/shared-components/interest-modal/interest-modal.component';
 import { RegisterService } from '../../common-register/register-service/register.service';
 import { ParametersService } from 'src/app/shared/shared-services/parameters.service';

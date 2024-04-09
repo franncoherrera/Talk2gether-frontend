@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { routes_path } from 'src/app/constants/ROUTES';
 import { LoginComponent } from './login-components/login/login.component';
 import { AuthGuard } from 'src/app/security/auth-guard.guard';
-import { LoginDisabledComponent } from './login-components/login-disabled/login-inhabilitado.component';
+import { LoginDisabledComponent } from './login-components/login-disabled/login-disabled.component';
 
 export const login_routes: Routes = [
   {

@@ -1,4 +1,5 @@
 @import "../../../../../../assets/custom_scss/variables.scss";
+@import "../../../../../../assets/custom_scss/media-queries.scss";
 
 .text-error {
   padding-top: 0.125rem;
@@ -58,7 +59,6 @@
           border: 1px solid $color-border;
           border-radius: $border-radius-input;
           color: $color-black;
-
         }
 
         &-eye {
@@ -68,7 +68,6 @@
           color: $color-black;
         }
       }
-
     }
 
     &__buttons {
@@ -100,8 +99,7 @@
   }
 }
 
-/* Large (LG) */
-@media (max-width: 1199.98px) {
+@include media-breakpoint-down(lg) {
   .login-container {
     &__form {
       width: 60%;
@@ -109,8 +107,7 @@
   }
 }
 
-/* Medium (MD) */
-@media (max-width: 991.98px) {
+@include media-breakpoint-down(md) {
   .login-container {
     &__form {
       width: 70%;
@@ -123,7 +120,6 @@
       &__group {
         &__label {
           font-size: 0.9375rem;
-
         }
       }
 
@@ -132,7 +128,6 @@
 
         &-submit {
           font-size: 0.9375rem;
-
         }
 
         &-forgot-pass {
@@ -152,7 +147,7 @@
   }
 }
 
-@media(max-height: 700px) {
+@include media-max-height {
   .login-container {
     display: block;
     overflow: scroll;
@@ -161,13 +156,10 @@
     &__form {
       margin: 1.875rem auto;
     }
-
   }
-
 }
 
-/* Small (SM) */
-@media (max-width: 767.98px) {
+@include media-breakpoint-down(sm) {
   .login-container {
     &__form {
       width: 90%;

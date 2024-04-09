@@ -10,7 +10,7 @@ import { icon_class } from 'src/assets/icons_class/icon_class';
 export class TermsConditionComponent {
   common_register = common_register;
   icon_class = icon_class;
-  closeTermsAndConditions() {
+  closeTermsAndConditions(): void {
     window.self.close();
   }
 }

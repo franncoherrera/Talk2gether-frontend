@@ -21,7 +21,6 @@ import { common_error } from 'src/app/transalation/es/common/common_message_erro
 export class LoginComponent implements OnInit, OnDestroy {
   loginForm: FormGroup;
   submitForm: boolean = false;
-
   submitError: boolean = false;
 
   /* Variable de mostrar y ocultar contraseña */
@@ -59,11 +58,11 @@ export class LoginComponent implements OnInit, OnDestroy {
     );
   }
 
-  recoverPassword() {
+  recoverPassword(): void {
     this.router.navigate([routes_path.recover_pass_path]);
   }
 
-  sendLoginSession() {
+  sendLoginSession(): void {
     this.submitForm = true;
     if (this.loginForm.invalid) return;
     this.spinnerServiceGeneral.showSpinner();
@@ -96,7 +95,10 @@ export class LoginComponent implements OnInit, OnDestroy {
       });
   }
 
-  errorNumberSessionResponse(numberError: number, reasonReport: string[]) {
+  errorNumberSessionResponse(
+    numberError: number,
+    reasonReport: string[]
+  ): void {
     switch (numberError) {
       case 1: {
         /* Usuario o contraseña no válida*/
@@ -141,7 +143,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     }
   }
   /* Método para mostrar u ocultar contraseña */
-  togglePasswordView(fromRepeat: boolean = false) {
+  togglePasswordView(fromRepeat: boolean = false): void {
     if (!fromRepeat) {
       this.showPassword = !this.showPassword;
       if (this.showPassword) {

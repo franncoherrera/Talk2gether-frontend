@@ -1,3 +1,5 @@
+@import "./../assets/custom_scss/variables.scss";
+@import "./../assets/custom_scss/media-queries.scss";
 app-navbar {
   position: fixed;
   width: 100%;
@@ -5,25 +7,3 @@ app-navbar {
   min-height: 6.28125rem;
   top: 0;
 }
-
-
-/* Extra Small (XS) */
-@media (max-width: 575.98px) {
-  /* Estilos para dispositivos extra pequeños */
-}
-
-/* Small (SM) */
-@media (max-width: 767.98px) {
-  /* Estilos para dispositivos pequeños */
-}
-
-/* Medium (MD) */
-@media (max-width: 991.98px) {
-  /* Estilos para dispositivos medianos */
-}
-
-/* Large (LG) */
-@media (max-width: 1199.98px) {
-  /* Estilos para dispositivos grandes */
-}
-
